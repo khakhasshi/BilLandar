@@ -6,6 +6,9 @@ struct AnalyticsView: View {
     @Query private var bills: [Bill]
     @Query private var payments: [PaymentRecord]
     @Environment(ExchangeRateStore.self) private var exchangeRates
+    @Environment(AppFeedbackCenter.self) private var feedbackCenter
+    @State private var selectedHistoryMonth: Date?
+    @State private var selectedCategoryTitle: String?
 
     private var activeBills: [Bill] { bills.filter { $0.status == .active } }
 
@@ -38,6 +41,19 @@ struct AnalyticsView: View {
             (month, values.reduce(0) { $0 + $1.1 })
         }
         .sorted { $0.month < $1.month }
+    }
+
+    private var selectedHistoryItem: (month: Date, amount: Double)? {
+        guard let selectedHistoryMonth else { return nil }
+        return monthlySpending.min {
+            abs($0.month.timeIntervalSince(selectedHistoryMonth))
+                < abs($1.month.timeIntervalSince(selectedHistoryMonth))
+        }
+    }
+
+    private var selectedCategoryItem: (category: BillCategory, amount: Double)? {
+        guard let selectedCategoryTitle else { return nil }
+        return categoryData.first { $0.category.title == selectedCategoryTitle }
     }
 
     private var hasIncompleteHistory: Bool {
@@ -82,19 +98,27 @@ struct AnalyticsView: View {
                 }
                 .padding(.horizontal, AppTheme.horizontalPadding)
                 .padding(.bottom, 24)
+                .billioTabBarClearance()
             }
             .billioCanvas()
-            .navigationTitle("Analytics")
-            .navigationBarTitleDisplayMode(.inline)
+            .refreshable {
+                await exchangeRates.refresh()
+                exchangeRates.hasUsableRates ? feedbackCenter.success() : feedbackCenter.warning()
+            }
+            .billioNavigationTitle("Analytics")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        Task { await exchangeRates.refresh() }
+                        Task {
+                            await exchangeRates.refresh()
+                            exchangeRates.hasUsableRates ? feedbackCenter.success() : feedbackCenter.warning()
+                        }
                     } label: {
                         if exchangeRates.isLoading {
                             ProgressView()
                         } else {
                             Image(systemName: "arrow.clockwise")
+                                .font(.system(size: 17))
                         }
                     }
                     .accessibilityLabel("Refresh exchange rates")
@@ -125,7 +149,16 @@ struct AnalyticsView: View {
                 if exchangeRates.isLoadingHistory { ProgressView() }
             }
 
-            if monthlySpending.isEmpty {
+            if exchangeRates.isLoadingHistory {
+                VStack(spacing: 12) {
+                    BillioSkeleton(height: 138, cornerRadius: 14)
+                    HStack {
+                        BillioSkeleton(width: 54, height: 10)
+                        Spacer()
+                        BillioSkeleton(width: 54, height: 10)
+                    }
+                }
+            } else if monthlySpending.isEmpty {
                 Text(historicalPayments.isEmpty ? "No confirmed payments yet." : "Historical rates are unavailable for these payments.")
                     .font(.subheadline)
                     .foregroundStyle(AppTheme.textSecondary)
@@ -144,18 +177,51 @@ struct AnalyticsView: View {
                     )
                     .foregroundStyle(AppTheme.accent)
                     .interpolationMethod(.catmullRom)
+                    .accessibilityLabel(item.month.formatted(.dateTime.month(.wide).year()))
+                    .accessibilityValue(item.amount.formatted(.currency(code: exchangeRates.displayCurrency)))
                     PointMark(
                         x: .value("Month", item.month),
                         y: .value("Paid", item.amount)
                     )
                     .foregroundStyle(AppTheme.accent)
+
+                    if let selectedHistoryItem,
+                       selectedHistoryItem.month == item.month {
+                        RuleMark(x: .value("Selected month", item.month))
+                            .foregroundStyle(AppTheme.textSecondary.opacity(0.45))
+                            .lineStyle(StrokeStyle(lineWidth: 1, dash: [3, 3]))
+                        PointMark(
+                            x: .value("Selected month", item.month),
+                            y: .value("Selected amount", item.amount)
+                        )
+                        .symbolSize(70)
+                        .foregroundStyle(AppTheme.accent)
+                        .annotation(position: .top, spacing: 8) {
+                            VStack(spacing: 2) {
+                                Text(item.month, format: .dateTime.month(.abbreviated))
+                                    .font(.caption2)
+                                    .foregroundStyle(AppTheme.textSecondary)
+                                Text(item.amount, format: .currency(code: exchangeRates.displayCurrency))
+                                    .font(.caption.weight(.bold))
+                            }
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 6)
+                            .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 8))
+                        }
+                    }
                 }
                 .chartXAxis {
                     AxisMarks(values: .stride(by: .month)) { _ in
                         AxisValueLabel(format: .dateTime.month(.abbreviated))
                     }
                 }
+                .chartXSelection(value: $selectedHistoryMonth)
+                .onChange(of: selectedHistoryItem?.month) { _, newValue in
+                    if newValue != nil { feedbackCenter.selection() }
+                }
                 .frame(height: 170)
+                .accessibilityLabel("Actual monthly payment history")
+                .accessibilityHint("Swipe across the chart to inspect each month")
 
                 if hasIncompleteHistory || exchangeRates.historicalErrorMessage != nil {
                     Label("Some payments were excluded because a historical rate was unavailable.", systemImage: "exclamationmark.triangle.fill")
@@ -196,6 +262,8 @@ struct AnalyticsView: View {
                     )
                     .foregroundStyle(AppTheme.accent.gradient)
                     .cornerRadius(5)
+                    .accessibilityLabel(item.category.title)
+                    .accessibilityValue(item.amount.formatted(.currency(code: exchangeRates.displayCurrency)))
                 }
                 .chartYAxis(.hidden)
                 .chartXAxis {
@@ -207,8 +275,26 @@ struct AnalyticsView: View {
                         }
                     }
                 }
+                .chartXSelection(value: $selectedCategoryTitle)
+                .onChange(of: selectedCategoryTitle) { _, newValue in
+                    if newValue != nil { feedbackCenter.selection() }
+                }
                 .frame(height: 150)
                 .padding(.top, 8)
+                .accessibilityLabel("Monthly recurring total by category")
+
+                if let selectedCategoryItem {
+                    HStack {
+                        Label(selectedCategoryItem.category.title, systemImage: selectedCategoryItem.category.symbolName)
+                            .font(.caption.weight(.semibold))
+                        Spacer()
+                        Text(selectedCategoryItem.amount, format: .currency(code: exchangeRates.displayCurrency))
+                            .font(.caption.weight(.bold))
+                    }
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 8)
+                    .background(AppTheme.accentSoft, in: RoundedRectangle(cornerRadius: 10))
+                }
             }
         }
         .billioCard()

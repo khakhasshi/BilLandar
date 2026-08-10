@@ -1,10 +1,32 @@
 import SwiftUI
 
 struct BillRow: View {
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     let bill: Bill
     var showsDueBadge = false
 
     var body: some View {
+        Group {
+            if dynamicTypeSize.isAccessibilitySize {
+                VStack(alignment: .leading, spacing: 10) {
+                    identity
+                    amountAndDue
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+            } else {
+                HStack(spacing: 12) {
+                    identity
+                    Spacer(minLength: 8)
+                    amountAndDue
+                }
+            }
+        }
+        .padding(.vertical, 7)
+        .contentShape(Rectangle())
+        .accessibilityElement(children: .combine)
+    }
+
+    private var identity: some View {
         HStack(spacing: 12) {
             BillIcon(bill: bill)
 
@@ -17,25 +39,23 @@ struct BillRow: View {
                     .foregroundStyle(AppTheme.textSecondary)
                     .lineLimit(1)
             }
+        }
+    }
 
-            Spacer(minLength: 8)
+    private var amountAndDue: some View {
+        VStack(alignment: dynamicTypeSize.isAccessibilitySize ? .leading : .trailing, spacing: 4) {
+            Text(bill.amount, format: .currency(code: bill.currencyCode))
+                .font(.subheadline.weight(.semibold))
+                .foregroundStyle(AppTheme.textPrimary)
 
-            VStack(alignment: .trailing, spacing: 4) {
-                Text(bill.amount, format: .currency(code: bill.currencyCode))
-                    .font(.subheadline.weight(.semibold))
-                    .foregroundStyle(AppTheme.textPrimary)
-
-                if showsDueBadge {
-                    dueBadge
-                } else {
-                    Text(bill.nextDueDate, format: .dateTime.month(.abbreviated).day())
-                        .font(.caption2)
-                        .foregroundStyle(AppTheme.textSecondary)
-                }
+            if showsDueBadge {
+                dueBadge
+            } else {
+                Text(bill.nextDueDate, format: .dateTime.month(.abbreviated).day())
+                    .font(.caption2)
+                    .foregroundStyle(AppTheme.textSecondary)
             }
         }
-        .padding(.vertical, 7)
-        .contentShape(Rectangle())
     }
 
     private var dueBadge: some View {

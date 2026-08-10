@@ -5,6 +5,7 @@ struct NotificationsView: View {
     @Query(sort: \Bill.nextDueDate) private var bills: [Bill]
     @Query private var payments: [PaymentRecord]
     @Environment(NotificationManager.self) private var notificationManager
+    @Environment(AppFeedbackCenter.self) private var feedbackCenter
     @State private var filter = NotificationFilter.all
 
     private var upcomingBills: [Bill] {
@@ -29,6 +30,7 @@ struct NotificationsView: View {
                     }
                 }
                 .pickerStyle(.segmented)
+                .onChange(of: filter) { _, _ in feedbackCenter.selection() }
 
                 if filter != .updates {
                     VStack(alignment: .leading, spacing: 6) {
@@ -93,12 +95,14 @@ struct NotificationsView: View {
                     Label("Reminder Settings", systemImage: "bell.badge")
                         .font(.subheadline.weight(.semibold))
                         .frame(maxWidth: .infinity)
+                        .frame(minHeight: AppTheme.minimumTouchSize)
                         .padding(.vertical, 13)
                         .background(AppTheme.accentSoft, in: RoundedRectangle(cornerRadius: 12))
                 }
             }
             .padding(.horizontal, AppTheme.horizontalPadding)
             .padding(.bottom, 24)
+            .billioTabBarClearance()
         }
         .billioCanvas()
         .navigationTitle("Notifications")

@@ -14,6 +14,7 @@ struct RootTabView: View {
     @Environment(NotificationManager.self) private var notificationManager
     @Environment(CloudSyncMonitor.self) private var cloudSync
     @Environment(AppErrorCenter.self) private var errorCenter
+    @Environment(AppFeedbackCenter.self) private var feedbackCenter
     @Environment(\.modelContext) private var modelContext
     @Query private var bills: [Bill]
     @Query private var payments: [PaymentRecord]
@@ -42,6 +43,7 @@ struct RootTabView: View {
                 .tag(AppTab.settings)
         }
         .tint(AppTheme.accent)
+        .onChange(of: selection) { _, _ in feedbackCenter.selection() }
         .task {
             await notificationManager.refreshStatus()
             reconcileBills()

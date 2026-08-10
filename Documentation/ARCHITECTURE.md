@@ -13,6 +13,8 @@ Billio targets iOS 17 and uses SwiftUI, SwiftData, and Swift Charts without thir
 
 Views read and mutate `Bill`, `PaymentRecord`, and `PaymentMethod` through SwiftData's environment `ModelContext`. Feature views own transient navigation and filtering state. External services are injected through SwiftUI's environment so views do not construct network, notification, or CloudKit dependencies.
 
+`AppFeedbackCenter` centralizes semantic selection, success, warning, and error feedback. Features publish intent to that environment service while the composition root owns the corresponding SwiftUI sensory-feedback modifiers. This keeps haptics consistent and makes them easy to disable or replace without embedding UIKit generators throughout feature views.
+
 ## Persistence and iCloud
 
 `DataStoreFactory` creates a single schema containing `Bill`, `PaymentRecord`, and `PaymentMethod`. Production uses the user's private CloudKit database in `iCloud.JIANGJINGZHE.Billio`; if the CloudKit-backed container cannot be created, the app falls back to a local SwiftData store and exposes that state in Settings. Unit tests deliberately use an isolated local store.
@@ -45,10 +47,22 @@ The notifications screen implements three real views: all upcoming items, schedu
 
 `PaymentMethod` is a reference model for organizing bills. It intentionally cannot store full account numbers, tokens, CVVs, or banking credentials and is not a payment-processing integration.
 
+## Payment correction and undo
+
+`PaymentWorkflowService` owns payment confirmation, editing, and undo. Every mutation returns a receipt containing the before/after state needed for a short-lived undo action. A newly inserted payment can be removed again, while confirming an existing pending payment restores its original status and metadata. Bill due-date advancement is reversed together with the payment so the two records cannot drift apart.
+
+The bill-detail screen also provides a permanent edit path for historical records; undo is an immediate convenience, not the only correction mechanism. Destructive payment-method deletion and unsaved form dismissal require confirmation.
+
+## Presentation and accessibility
+
+`AppTheme` uses semantic system colors and adaptive accent colors, so cards, labels, separators, and statuses remain legible in light mode, dark mode, and increased-contrast mode. Reusable modifiers define a 44-point minimum touch target, tab-bar clearance, adaptive card depth, and reduced-motion-aware transitions.
+
+Bill rows change layout at accessibility Dynamic Type sizes instead of compressing merchant identity and amount into one line. Charts expose spoken values and selectable details, calendar days and week-strip dates are buttons with explicit accessibility labels, and loading summaries use a reduced-motion-aware skeleton rather than replacing content with an unexplained blank state.
+
 ## Product navigation
 
 The main app has five tabs: Overview, Calendar, Bills, Analytics, and Settings. Add/Edit Bill and payment-method creation use sheets; Bill Detail, Notifications, Payment Methods, and Privacy use navigation pushes. Bill Detail exposes valid status transitions for active, paused, and cancelled records.
 
 ## Test boundaries
 
-The `BillioTests` target covers billing-cycle advancement, reminder fire dates, overdue lifecycle idempotency, merchant normalization and cancellation-domain verification, safe payment-method normalization, current and historical exchange-rate conversion/failure behavior, insight generation, and idempotent sample-data generation with an in-memory SwiftData container.
+The `BillioTests` target covers billing-cycle advancement, reminder fire dates, overdue lifecycle idempotency, merchant normalization and cancellation-domain verification, safe payment-method normalization, current and historical exchange-rate conversion/failure behavior, insight generation, payment confirmation/undo for both new and pending records, and idempotent sample-data generation with an in-memory SwiftData container.

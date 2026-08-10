@@ -2,13 +2,19 @@ import SwiftData
 import SwiftUI
 
 struct CalendarView: View {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @Query(sort: \Bill.nextDueDate) private var bills: [Bill]
     @Environment(ExchangeRateStore.self) private var exchangeRates
+    @Environment(AppFeedbackCenter.self) private var feedbackCenter
     @State private var displayedMonth = Date.now
     @State private var selectedDate = Date.now.startOfDay
 
     private let weekdaySymbols = Calendar.billio.veryShortWeekdaySymbols
-    private let columns = Array(repeating: GridItem(.flexible(), spacing: 3), count: 7)
+    private var calendarCellSize: CGFloat { dynamicTypeSize.isAccessibilitySize ? 58 : AppTheme.minimumTouchSize }
+    private var columns: [GridItem] {
+        Array(repeating: GridItem(.fixed(calendarCellSize), spacing: 3), count: 7)
+    }
 
     private var selectedBills: [Bill] {
         bills.filter { $0.nextDueDate.isSameDay(as: selectedDate) && $0.status == .active }
@@ -24,10 +30,10 @@ struct CalendarView: View {
                 }
                 .padding(.horizontal, AppTheme.horizontalPadding)
                 .padding(.bottom, 24)
+                .billioTabBarClearance()
             }
             .billioCanvas()
-            .navigationTitle("Calendar")
-            .navigationBarTitleDisplayMode(.inline)
+            .billioNavigationTitle("Calendar")
             .task {
                 await exchangeRates.refreshIfNeeded()
             }
@@ -39,51 +45,76 @@ struct CalendarView: View {
             Button { moveMonth(by: -1) } label: {
                 Image(systemName: "chevron.left")
             }
+            .billioTouchTarget()
+            .accessibilityLabel("Previous month")
             Spacer()
             Text(displayedMonth, format: .dateTime.month(.wide).year())
                 .font(.headline)
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
             Spacer()
             Button { moveMonth(by: 1) } label: {
                 Image(systemName: "chevron.right")
             }
+            .billioTouchTarget()
+            .accessibilityLabel("Next month")
         }
         .padding(.horizontal, 8)
     }
 
     private var calendarGrid: some View {
-        LazyVGrid(columns: columns, spacing: 12) {
-            ForEach(weekdaySymbols, id: \.self) { symbol in
-                Text(symbol)
-                    .font(.caption2.weight(.semibold))
-                    .foregroundStyle(AppTheme.textSecondary)
-            }
+        ScrollView(.horizontal, showsIndicators: false) {
+            LazyVGrid(columns: columns, spacing: 12) {
+                ForEach(weekdaySymbols, id: \.self) { symbol in
+                    Text(symbol)
+                        .font(.caption2.weight(.semibold))
+                        .foregroundStyle(AppTheme.textSecondary)
+                }
 
-            ForEach(Array(monthCells.enumerated()), id: \.offset) { _, date in
-                if let date {
-                    Button { selectedDate = date } label: {
-                        VStack(spacing: 4) {
-                            Text(date, format: .dateTime.day())
-                                .font(.subheadline.weight(.medium))
-                                .foregroundStyle(date.isSameDay(as: selectedDate) ? .white : AppTheme.textPrimary)
-                                .frame(width: 34, height: 34)
-                                .background(date.isSameDay(as: selectedDate) ? AppTheme.accent : .clear, in: Circle())
-                            HStack(spacing: 2) {
-                                ForEach(Array(dueBills(on: date).prefix(3).enumerated()), id: \.offset) { index, _ in
-                                    Circle()
-                                        .fill([AppTheme.warning, AppTheme.danger, AppTheme.success][index])
-                                        .frame(width: 4, height: 4)
+                ForEach(Array(monthCells.enumerated()), id: \.offset) { _, date in
+                    if let date {
+                        Button { select(date) } label: {
+                            VStack(spacing: 4) {
+                                Text(date, format: .dateTime.day())
+                                    .font(.subheadline.weight(.medium))
+                                    .foregroundStyle(date.isSameDay(as: selectedDate) ? .white : AppTheme.textPrimary)
+                                    .lineLimit(1)
+                                    .minimumScaleFactor(0.7)
+                                    .frame(
+                                        width: dynamicTypeSize.isAccessibilitySize ? 52 : 36,
+                                        height: dynamicTypeSize.isAccessibilitySize ? 52 : 36
+                                    )
+                                    .background(date.isSameDay(as: selectedDate) ? AppTheme.accent : .clear, in: Circle())
+                                HStack(spacing: 2) {
+                                    ForEach(Array(dueBills(on: date).prefix(3).enumerated()), id: \.offset) { index, _ in
+                                        Circle()
+                                            .fill([AppTheme.warning, AppTheme.danger, AppTheme.success][index])
+                                            .frame(width: 4, height: 4)
+                                    }
                                 }
+                                .frame(height: 4)
                             }
-                            .frame(height: 4)
                         }
+                        .buttonStyle(.plain)
+                        .billioTouchTarget()
+                        .accessibilityLabel(date.formatted(.dateTime.weekday(.wide).month(.wide).day()))
+                        .accessibilityValue(dueBills(on: date).isEmpty ? "No bills due" : "\(dueBills(on: date).count) bills due")
+                    } else {
+                        Color.clear.frame(height: AppTheme.minimumTouchSize)
                     }
-                    .buttonStyle(.plain)
-                } else {
-                    Color.clear.frame(height: 42)
                 }
             }
+            .frame(width: 7 * calendarCellSize + 18)
         }
         .billioCard(padding: 14)
+        .simultaneousGesture(
+            DragGesture(minimumDistance: 28)
+                .onEnded { value in
+                    guard abs(value.translation.width) > abs(value.translation.height),
+                          abs(value.translation.width) > 44 else { return }
+                    moveMonth(by: value.translation.width < 0 ? 1 : -1)
+                }
+        )
     }
 
     private var selectedDayCard: some View {
@@ -109,22 +140,33 @@ struct CalendarView: View {
                 }
 
                 Divider()
-                HStack {
-                    Text("Total").fontWeight(.semibold)
-                    Spacer()
-                    if let total = exchangeRates.convertedTotal(for: selectedBills) {
-                        Text(total, format: .currency(code: exchangeRates.displayCurrency))
-                            .fontWeight(.bold)
-                    } else {
-                        Text("— \(exchangeRates.displayCurrency)")
-                            .fontWeight(.bold)
-                            .foregroundStyle(AppTheme.textSecondary)
+                ViewThatFits(in: .horizontal) {
+                    HStack {
+                        Text("Total").fontWeight(.semibold)
+                        Spacer()
+                        selectedDayTotal
+                    }
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Total").fontWeight(.semibold)
+                        selectedDayTotal
                     }
                 }
                 .padding(.top, 4)
             }
         }
         .billioCard()
+    }
+
+    @ViewBuilder
+    private var selectedDayTotal: some View {
+        if let total = exchangeRates.convertedTotal(for: selectedBills) {
+            Text(total, format: .currency(code: exchangeRates.displayCurrency))
+                .fontWeight(.bold)
+        } else {
+            Text("— \(exchangeRates.displayCurrency)")
+                .fontWeight(.bold)
+                .foregroundStyle(AppTheme.textSecondary)
+        }
     }
 
     private var monthCells: [Date?] {
@@ -146,6 +188,18 @@ struct CalendarView: View {
     }
 
     private func moveMonth(by value: Int) {
-        displayedMonth = Calendar.billio.date(byAdding: .month, value: value, to: displayedMonth) ?? displayedMonth
+        guard let month = Calendar.billio.date(byAdding: .month, value: value, to: displayedMonth) else { return }
+        withAnimation(reduceMotion ? nil : .snappy(duration: 0.28)) {
+            displayedMonth = month
+            selectedDate = Calendar.billio.dateInterval(of: .month, for: month)?.start ?? month.startOfDay
+        }
+        feedbackCenter.selection()
+    }
+
+    private func select(_ date: Date) {
+        withAnimation(reduceMotion ? nil : .easeOut(duration: 0.18)) {
+            selectedDate = date
+        }
+        feedbackCenter.selection()
     }
 }

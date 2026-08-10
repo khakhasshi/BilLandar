@@ -7,6 +7,7 @@ struct SettingsView: View {
     @Environment(CloudSyncMonitor.self) private var cloudSync
     @Environment(NotificationManager.self) private var notificationManager
     @Environment(AppErrorCenter.self) private var errorCenter
+    @Environment(AppFeedbackCenter.self) private var feedbackCenter
     @Query private var bills: [Bill]
     @Query private var paymentMethods: [PaymentMethod]
     @State private var isExporting = false
@@ -67,7 +68,10 @@ struct SettingsView: View {
                         LabeledContent("Source", value: snapshot.source)
                     }
                     Button {
-                        Task { await exchangeRates.refresh() }
+                        Task {
+                            await exchangeRates.refresh()
+                            exchangeRates.hasUsableRates ? feedbackCenter.success() : feedbackCenter.warning()
+                        }
                     } label: {
                         Label(
                             exchangeRates.isLoading ? "Updating…" : "Refresh exchange rates",
@@ -95,7 +99,10 @@ struct SettingsView: View {
                         }
                     }
                     Button {
-                        Task { await cloudSync.refresh() }
+                        Task {
+                            await cloudSync.refresh()
+                            cloudSync.state == .available ? feedbackCenter.success() : feedbackCenter.warning()
+                        }
                     } label: {
                         Label("Check iCloud status", systemImage: "arrow.clockwise")
                     }
@@ -136,9 +143,9 @@ struct SettingsView: View {
                 }
             }
             .scrollContentBackground(.hidden)
+            .contentMargins(.bottom, AppTheme.tabBarClearance, for: .scrollContent)
             .billioCanvas()
-            .navigationTitle("Settings")
-            .navigationBarTitleDisplayMode(.inline)
+            .billioNavigationTitle("Settings")
             .fileExporter(
                 isPresented: $isExporting,
                 document: BillsCSVDocument(bills: bills, paymentMethods: paymentMethods),
@@ -147,6 +154,8 @@ struct SettingsView: View {
             ) { result in
                 if case .failure(let error) = result {
                     errorCenter.report(error, title: "Couldn’t export bills")
+                } else {
+                    feedbackCenter.success()
                 }
             }
             .task {

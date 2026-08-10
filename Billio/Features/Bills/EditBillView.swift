@@ -6,6 +6,7 @@ struct EditBillView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(NotificationManager.self) private var notificationManager
     @Environment(AppErrorCenter.self) private var errorCenter
+    @Environment(AppFeedbackCenter.self) private var feedbackCenter
     @Query private var paymentMethods: [PaymentMethod]
     @Query private var allBills: [Bill]
     let bill: Bill
@@ -23,6 +24,8 @@ struct EditBillView: View {
     @State private var paymentMethodID: UUID?
     @State private var remindMe: Bool
     @State private var reminderDays: Int
+    @State private var showingDiscardConfirmation = false
+    @FocusState private var focusedField: EditBillField?
 
     init(bill: Bill) {
         self.bill = bill
@@ -46,8 +49,12 @@ struct EditBillView: View {
             Form {
                 Section("Bill details") {
                     TextField("Name", text: $name)
+                        .focused($focusedField, equals: .name)
+                        .submitLabel(.next)
+                        .onSubmit { focusedField = .amount }
                     TextField("Amount", value: $amount, format: .number.precision(.fractionLength(2)))
                         .keyboardType(.decimalPad)
+                        .focused($focusedField, equals: .amount)
                     Picker("Currency", selection: $currencyCode) {
                         ForEach(Currency.supported) { Text($0.code).tag($0.code) }
                     }
@@ -59,6 +66,7 @@ struct EditBillView: View {
                     }
                     DatePicker("Next due date", selection: $nextDueDate, displayedComponents: .date)
                     TextField("Notes", text: $notes, axis: .vertical)
+                        .focused($focusedField, equals: .notes)
                 }
 
                 Section("Plan management") {
@@ -76,9 +84,11 @@ struct EditBillView: View {
                     TextField("Cancellation URL", text: $cancellationURL)
                         .textInputAutocapitalization(.never)
                         .keyboardType(.URL)
+                        .focused($focusedField, equals: .cancellationURL)
                     if let suggestion = MerchantCatalog.suggestion(for: name), cancellationURL.isEmpty {
                         Button("Use verified \(suggestion.displayName) cancellation page") {
                             cancellationURL = suggestion.cancellationURL.absoluteString
+                            feedbackCenter.selection()
                         }
                     }
                     if !cancellationURL.isEmpty {
@@ -99,10 +109,11 @@ struct EditBillView: View {
                     }
                 }
             }
+            .scrollDismissesKeyboard(.interactively)
             .navigationTitle("Edit Bill")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) { Button("Cancel") { dismiss() } }
+                ToolbarItem(placement: .cancellationAction) { Button("Cancel", action: requestDismiss) }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save", action: save)
                         .disabled(
@@ -111,6 +122,17 @@ struct EditBillView: View {
                                 || hasInvalidCancellationURL
                         )
                 }
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Done") { focusedField = nil }
+                }
+            }
+            .interactiveDismissDisabled(hasUnsavedChanges)
+            .confirmationDialog("Discard your changes?", isPresented: $showingDiscardConfirmation, titleVisibility: .visible) {
+                Button("Discard Changes", role: .destructive) { dismiss() }
+                Button("Keep Editing", role: .cancel) {}
+            } message: {
+                Text("This bill will remain unchanged.")
             }
         }
     }
@@ -136,6 +158,7 @@ struct EditBillView: View {
         do {
             try modelContext.save()
             Task { await notificationManager.reschedule(for: allBills) }
+            feedbackCenter.success()
             dismiss()
         } catch {
             modelContext.rollback()
@@ -175,4 +198,36 @@ struct EditBillView: View {
         case .empty: AppTheme.textSecondary
         }
     }
+
+    private var hasUnsavedChanges: Bool {
+        name != bill.name
+            || amount != bill.amount
+            || currencyCode != bill.currencyCode
+            || category != bill.category
+            || cycle != bill.cycle
+            || nextDueDate != bill.nextDueDate
+            || notes != bill.notes
+            || hasTrial != (bill.trialEndDate != nil)
+            || trialEndDate != (bill.trialEndDate ?? bill.nextDueDate)
+            || cancellationURL != (bill.cancellationURLString ?? "")
+            || paymentMethodID != bill.paymentMethodID
+            || remindMe != (bill.reminderDaysBefore > 0)
+            || reminderDays != max(1, bill.reminderDaysBefore)
+    }
+
+    private func requestDismiss() {
+        focusedField = nil
+        if hasUnsavedChanges {
+            showingDiscardConfirmation = true
+        } else {
+            dismiss()
+        }
+    }
+}
+
+private enum EditBillField: Hashable {
+    case name
+    case amount
+    case notes
+    case cancellationURL
 }

@@ -8,6 +8,7 @@ struct BillioApp: App {
     @State private var cloudSyncMonitor: CloudSyncMonitor
     @State private var notificationManager = NotificationManager()
     @State private var errorCenter = AppErrorCenter()
+    @State private var feedbackCenter = AppFeedbackCenter()
 
     init() {
         let result = DataStoreFactory.makeContainer()
@@ -32,6 +33,7 @@ struct BillioApp: App {
                 .environment(cloudSyncMonitor)
                 .environment(notificationManager)
                 .environment(errorCenter)
+                .environment(feedbackCenter)
         }
         .modelContainer(modelContainer)
     }

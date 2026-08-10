@@ -7,12 +7,16 @@ struct BillDetailView: View {
     @Environment(ExchangeRateStore.self) private var exchangeRates
     @Environment(NotificationManager.self) private var notificationManager
     @Environment(AppErrorCenter.self) private var errorCenter
+    @Environment(AppFeedbackCenter.self) private var feedbackCenter
     @Query(sort: \PaymentRecord.paidAt, order: .reverse) private var payments: [PaymentRecord]
     @Query private var paymentMethods: [PaymentMethod]
     @Query private var allBills: [Bill]
     let bill: Bill
     @State private var showingDeleteConfirmation = false
     @State private var showingEditBill = false
+    @State private var showingMarkPaidConfirmation = false
+    @State private var editingPayment: PaymentRecord?
+    @State private var undoState: PaymentMutationReceipt?
 
     private var billPayments: [PaymentRecord] {
         payments.filter { $0.billID == bill.id }
@@ -127,14 +131,20 @@ struct BillDetailView: View {
                                         Text(payment.status.title)
                                             .font(.caption2.weight(.medium))
                                             .foregroundStyle(statusColor(payment.status))
+                                        Button {
+                                            editingPayment = payment
+                                        } label: {
+                                            Image(systemName: "pencil.circle")
+                                        }
+                                        .billioTouchTarget()
+                                        .accessibilityLabel("Edit \(payment.billName) payment")
                                     }
                                     if payment.status == .pending {
-                                        HStack {
-                                            Button("Paid") { update(payment, to: .paid) }
-                                            Button("Failed") { update(payment, to: .failed) }
-                                            Button("Refunded") { update(payment, to: .refunded) }
+                                        HStack(spacing: 8) {
+                                            PaymentStatusButton(title: "Paid", color: AppTheme.success) { update(payment, to: .paid) }
+                                            PaymentStatusButton(title: "Failed", color: AppTheme.danger) { update(payment, to: .failed) }
+                                            PaymentStatusButton(title: "Refunded", color: Color(hex: "4E89D8")) { update(payment, to: .refunded) }
                                         }
-                                        .font(.caption.weight(.semibold))
                                     }
                                 }
                                 .padding(.vertical, 12)
@@ -164,7 +174,7 @@ struct BillDetailView: View {
                 }
 
                 if bill.status != .cancelled {
-                    Button(action: markAsPaid) {
+                    Button { showingMarkPaidConfirmation = true } label: {
                         Label("Mark as Paid", systemImage: "checkmark.circle.fill")
                     }
                     .buttonStyle(BillioActionButtonStyle(color: AppTheme.success))
@@ -203,6 +213,12 @@ struct BillDetailView: View {
         } message: {
             Text("Billio will stop including it in upcoming totals and reminders.")
         }
+        .confirmationDialog("Confirm payment?", isPresented: $showingMarkPaidConfirmation, titleVisibility: .visible) {
+            Button("Mark as Paid", action: markAsPaid)
+            Button("Not Now", role: .cancel) {}
+        } message: {
+            Text("Billio will record a confirmed payment. You can undo the change immediately afterward.")
+        }
         .task {
             await exchangeRates.refreshIfNeeded()
         }
@@ -212,44 +228,74 @@ struct BillDetailView: View {
             }
         }
         .sheet(isPresented: $showingEditBill) { EditBillView(bill: bill) }
+        .sheet(item: $editingPayment) { PaymentRecordEditView(payment: $0) }
+        .safeAreaInset(edge: .bottom) {
+            if let undoState {
+                HStack(spacing: 12) {
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundStyle(AppTheme.success)
+                    Text(undoState.message)
+                        .font(.subheadline.weight(.medium))
+                    Spacer()
+                    Button("Undo") { undoPaymentChange() }
+                        .font(.subheadline.weight(.bold))
+                        .billioTouchTarget()
+                }
+                .padding(.horizontal, 14)
+                .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 15, style: .continuous))
+                .overlay {
+                    RoundedRectangle(cornerRadius: 15, style: .continuous)
+                        .stroke(AppTheme.divider.opacity(0.55), lineWidth: 0.7)
+                }
+                .padding(.horizontal, AppTheme.horizontalPadding)
+                .padding(.bottom, 6)
+                .transition(.move(edge: .bottom).combined(with: .opacity))
+                .task(id: undoState.id) {
+                    try? await Task.sleep(for: .seconds(6))
+                    if self.undoState?.id == undoState.id {
+                        withAnimation { self.undoState = nil }
+                    }
+                }
+            }
+        }
     }
 
     private func markAsPaid() {
-        if let pending = billPayments.first(where: { $0.status == .pending }) {
-            pending.status = .paid
-            pending.paidAt = .now
-            pending.note = "Confirmed manually"
-        } else {
-            let payment = PaymentRecord(
-                billID: bill.id,
-                billName: bill.name,
-                amount: bill.amount,
-                currencyCode: bill.currencyCode,
-                paidAt: .now,
-                dueDate: bill.nextDueDate,
-                status: .paid,
-                note: "Confirmed manually"
+        do {
+            undoState = try PaymentWorkflowService.confirmPayment(
+                for: bill,
+                payments: billPayments,
+                in: modelContext
             )
-            modelContext.insert(payment)
-            bill.nextDueDate = bill.renewalDate(after: bill.nextDueDate)
-        }
-        bill.trialEndDate = nil
-        bill.updatedAt = .now
-        if save(title: "Couldn’t record payment") {
+            feedbackCenter.success()
             Task { await notificationManager.reschedule(for: allBills) }
+        } catch {
+            modelContext.rollback()
+            undoState = nil
+            errorCenter.report(error, title: "Couldn’t record payment")
         }
     }
 
     private func update(_ payment: PaymentRecord, to status: PaymentStatus) {
-        payment.status = status
-        if status == .paid { payment.paidAt = .now }
-        payment.note = "Updated manually"
-        _ = save(title: "Couldn’t update payment")
+        do {
+            undoState = try PaymentWorkflowService.update(
+                payment,
+                to: status,
+                for: bill,
+                in: modelContext
+            )
+            feedbackCenter.success()
+        } catch {
+            modelContext.rollback()
+            undoState = nil
+            errorCenter.report(error, title: "Couldn’t update payment")
+        }
     }
 
     private func setStatus(_ status: BillStatus, dismissAfterSave: Bool = false) {
         bill.status = status
         guard save(title: "Couldn’t update bill status") else { return }
+        feedbackCenter.selection()
         Task {
             if status == .active {
                 await notificationManager.reschedule(for: allBills)
@@ -272,6 +318,22 @@ struct BillDetailView: View {
         }
     }
 
+    private func undoPaymentChange() {
+        guard let undoState else {
+            self.undoState = nil
+            return
+        }
+        do {
+            try PaymentWorkflowService.undo(undoState, for: bill, in: modelContext)
+            feedbackCenter.selection()
+            Task { await notificationManager.reschedule(for: allBills) }
+        } catch {
+            modelContext.rollback()
+            errorCenter.report(error, title: "Couldn’t undo payment change")
+        }
+        withAnimation { self.undoState = nil }
+    }
+
     private func statusColor(_ status: PaymentStatus) -> Color {
         switch status {
         case .paid: AppTheme.success
@@ -287,6 +349,21 @@ struct BillDetailView: View {
         case .paused: AppTheme.warning
         case .cancelled: AppTheme.danger
         }
+    }
+}
+
+private struct PaymentStatusButton: View {
+    let title: String
+    let color: Color
+    let action: () -> Void
+
+    var body: some View {
+        Button(title, action: action)
+            .font(.caption.weight(.semibold))
+            .foregroundStyle(color)
+            .frame(maxWidth: .infinity, minHeight: AppTheme.minimumTouchSize)
+            .background(color.opacity(0.11), in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+            .contentShape(Rectangle())
     }
 }
 

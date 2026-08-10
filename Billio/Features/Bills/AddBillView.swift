@@ -7,6 +7,7 @@ struct AddBillView: View {
     @Environment(ExchangeRateStore.self) private var exchangeRates
     @Environment(NotificationManager.self) private var notificationManager
     @Environment(AppErrorCenter.self) private var errorCenter
+    @Environment(AppFeedbackCenter.self) private var feedbackCenter
     @Query private var paymentMethods: [PaymentMethod]
     @Query private var allBills: [Bill]
 
@@ -24,6 +25,9 @@ struct AddBillView: View {
     @State private var remindMe = true
     @State private var reminderDays = 1
     @State private var hasInitializedCurrency = false
+    @State private var initialCurrencyCode = "USD"
+    @State private var showingDiscardConfirmation = false
+    @FocusState private var focusedField: AddBillField?
 
     var body: some View {
         NavigationStack {
@@ -41,35 +45,11 @@ struct AddBillView: View {
                     .listRowBackground(Color.clear)
                 }
 
-                Section("Plan management") {
-                    Toggle("Free trial", isOn: $hasTrial)
-                    if hasTrial {
-                        DatePicker("Trial ends", selection: $trialEndDate, displayedComponents: .date)
-                            .onChange(of: trialEndDate) { _, value in nextDueDate = value }
-                    }
-                    Picker("Payment method", selection: $paymentMethodID) {
-                        Text("None").tag(UUID?.none)
-                        ForEach(paymentMethods) { method in
-                            Text(method.displayName).tag(Optional(method.id))
-                        }
-                    }
-                    TextField("Cancellation URL (optional)", text: $cancellationURL)
-                        .textInputAutocapitalization(.never)
-                        .keyboardType(.URL)
-                    if let suggestion = MerchantCatalog.suggestion(for: name), cancellationURL.isEmpty {
-                        Button("Use verified \(suggestion.displayName) cancellation page") {
-                            cancellationURL = suggestion.cancellationURL.absoluteString
-                        }
-                    }
-                    if !cancellationURL.isEmpty {
-                        Label(cancellationValidation.title, systemImage: cancellationValidationSymbol)
-                            .font(.caption)
-                            .foregroundStyle(cancellationValidationColor)
-                    }
-                }
-
                 Section("Bill details") {
                     TextField("Name", text: $name)
+                        .focused($focusedField, equals: .name)
+                        .submitLabel(.next)
+                        .onSubmit { focusedField = .amount }
                     LabeledContent("Amount") {
                         HStack(spacing: 8) {
                             Text(Currency.currency(for: currencyCode).symbol)
@@ -77,6 +57,7 @@ struct AddBillView: View {
                             TextField("0.00", value: $amount, format: .number.precision(.fractionLength(2)))
                                 .keyboardType(.decimalPad)
                                 .multilineTextAlignment(.trailing)
+                                .focused($focusedField, equals: .amount)
                         }
                     }
                     Picker("Currency", selection: $currencyCode) {
@@ -97,6 +78,36 @@ struct AddBillView: View {
                     DatePicker("Next due date", selection: $nextDueDate, displayedComponents: .date)
                     TextField("Notes", text: $notes, axis: .vertical)
                         .lineLimit(2...4)
+                        .focused($focusedField, equals: .notes)
+                }
+
+                Section("Plan management") {
+                    Toggle("Free trial", isOn: $hasTrial)
+                    if hasTrial {
+                        DatePicker("Trial ends", selection: $trialEndDate, displayedComponents: .date)
+                            .onChange(of: trialEndDate) { _, value in nextDueDate = value }
+                    }
+                    Picker("Payment method", selection: $paymentMethodID) {
+                        Text("None").tag(UUID?.none)
+                        ForEach(paymentMethods) { method in
+                            Text(method.displayName).tag(Optional(method.id))
+                        }
+                    }
+                    TextField("Cancellation URL (optional)", text: $cancellationURL)
+                        .textInputAutocapitalization(.never)
+                        .keyboardType(.URL)
+                        .focused($focusedField, equals: .cancellationURL)
+                    if let suggestion = MerchantCatalog.suggestion(for: name), cancellationURL.isEmpty {
+                        Button("Use verified \(suggestion.displayName) cancellation page") {
+                            cancellationURL = suggestion.cancellationURL.absoluteString
+                            feedbackCenter.selection()
+                        }
+                    }
+                    if !cancellationURL.isEmpty {
+                        Label(cancellationValidation.title, systemImage: cancellationValidationSymbol)
+                            .font(.caption)
+                            .foregroundStyle(cancellationValidationColor)
+                    }
                 }
 
                 Section {
@@ -111,12 +122,13 @@ struct AddBillView: View {
                 }
             }
             .scrollContentBackground(.hidden)
+            .scrollDismissesKeyboard(.interactively)
             .billioCanvas()
             .navigationTitle("Add Bill")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel") { dismiss() }
+                    Button("Cancel", action: requestDismiss)
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save", action: save)
@@ -127,11 +139,23 @@ struct AddBillView: View {
                                 || hasInvalidCancellationURL
                         )
                 }
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Done") { focusedField = nil }
+                }
             }
             .onAppear {
                 guard !hasInitializedCurrency else { return }
                 currencyCode = exchangeRates.displayCurrency
+                initialCurrencyCode = exchangeRates.displayCurrency
                 hasInitializedCurrency = true
+            }
+            .interactiveDismissDisabled(hasUnsavedChanges)
+            .confirmationDialog("Discard this new bill?", isPresented: $showingDiscardConfirmation, titleVisibility: .visible) {
+                Button("Discard Changes", role: .destructive) { dismiss() }
+                Button("Keep Editing", role: .cancel) {}
+            } message: {
+                Text("The information you entered will be lost.")
             }
         }
     }
@@ -161,6 +185,7 @@ struct AddBillView: View {
                 uniquingKeysWith: { _, newest in newest }
             )
             Task { await notificationManager.reschedule(for: Array(scheduledBills.values)) }
+            feedbackCenter.success()
             dismiss()
         } catch {
             modelContext.rollback()
@@ -205,4 +230,35 @@ struct AddBillView: View {
         case .empty: AppTheme.textSecondary
         }
     }
+
+    private var hasUnsavedChanges: Bool {
+        !name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+            || amount != 0
+            || currencyCode != initialCurrencyCode
+            || category != .entertainment
+            || cycle != .monthly
+            || !nextDueDate.isSameDay(as: .billioDate(daysFromToday: 1))
+            || !notes.isEmpty
+            || hasTrial
+            || !cancellationURL.isEmpty
+            || paymentMethodID != nil
+            || !remindMe
+            || reminderDays != 1
+    }
+
+    private func requestDismiss() {
+        focusedField = nil
+        if hasUnsavedChanges {
+            showingDiscardConfirmation = true
+        } else {
+            dismiss()
+        }
+    }
+}
+
+private enum AddBillField: Hashable {
+    case name
+    case amount
+    case notes
+    case cancellationURL
 }

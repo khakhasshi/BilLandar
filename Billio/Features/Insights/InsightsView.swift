@@ -49,6 +49,7 @@ struct InsightsView: View {
 }
 
 struct InsightCard: View {
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     let insight: BillInsight
     var showsChevron = false
 
@@ -61,31 +62,55 @@ struct InsightCard: View {
     }
 
     var body: some View {
-        HStack(alignment: .top, spacing: 12) {
-            Image(systemName: insight.symbolName)
-                .font(.subheadline.weight(.semibold))
-                .foregroundStyle(color)
-                .frame(width: 38, height: 38)
-                .background(color.opacity(0.12), in: RoundedRectangle(cornerRadius: 11))
-
-            VStack(alignment: .leading, spacing: 4) {
-                Text(insight.title)
-                    .font(.subheadline.weight(.semibold))
-                    .foregroundStyle(AppTheme.textPrimary)
-                Text(insight.message)
-                    .font(.caption)
-                    .foregroundStyle(AppTheme.textSecondary)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-
-            Spacer(minLength: 4)
-            if showsChevron {
-                Image(systemName: "chevron.right")
-                    .font(.caption.weight(.semibold))
-                    .foregroundStyle(AppTheme.textSecondary.opacity(0.6))
-                    .padding(.top, 10)
+        Group {
+            if dynamicTypeSize.isAccessibilitySize {
+                VStack(alignment: .leading, spacing: 10) {
+                    HStack {
+                        insightIcon
+                        Spacer()
+                        chevron
+                    }
+                    insightCopy
+                }
+            } else {
+                HStack(alignment: .top, spacing: 12) {
+                    insightIcon
+                    insightCopy
+                    Spacer(minLength: 4)
+                    chevron
+                }
             }
         }
         .billioCard(padding: 14)
+    }
+
+    private var insightIcon: some View {
+        Image(systemName: insight.symbolName)
+            .font(.system(size: 17, weight: .semibold))
+            .foregroundStyle(color)
+            .frame(width: 38, height: 38)
+            .background(color.opacity(0.12), in: RoundedRectangle(cornerRadius: 11))
+    }
+
+    private var insightCopy: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(insight.title)
+                .font(.subheadline.weight(.semibold))
+                .foregroundStyle(AppTheme.textPrimary)
+            Text(insight.message)
+                .font(.caption)
+                .foregroundStyle(AppTheme.textSecondary)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+    }
+
+    @ViewBuilder
+    private var chevron: some View {
+        if showsChevron {
+            Image(systemName: "chevron.right")
+                .font(.system(size: 13, weight: .semibold))
+                .foregroundStyle(AppTheme.textSecondary.opacity(0.6))
+                .padding(.top, dynamicTypeSize.isAccessibilitySize ? 0 : 10)
+        }
     }
 }

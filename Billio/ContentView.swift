@@ -3,6 +3,7 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(AppErrorCenter.self) private var errorCenter
+    @Environment(AppFeedbackCenter.self) private var feedbackCenter
 
     var body: some View {
         RootTabView()
@@ -13,6 +14,10 @@ struct ContentView: View {
                     dismissButton: .default(Text("OK"))
                 )
             }
+            .sensoryFeedback(.error, trigger: errorCenter.current?.id)
+            .sensoryFeedback(.selection, trigger: feedbackCenter.selectionEvent)
+            .sensoryFeedback(.success, trigger: feedbackCenter.successEvent)
+            .sensoryFeedback(.warning, trigger: feedbackCenter.warningEvent)
     }
 
     private var errorBinding: Binding<UserFacingError?> {
@@ -30,4 +35,5 @@ struct ContentView: View {
         .environment(CloudSyncMonitor(usesCloudKitStore: false))
         .environment(NotificationManager())
         .environment(AppErrorCenter())
+        .environment(AppFeedbackCenter())
 }
