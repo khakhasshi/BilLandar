@@ -31,7 +31,7 @@ enum BillLifecycleService {
                             paidAt: occurrence,
                             dueDate: occurrence,
                             status: .pending,
-                            note: "Awaiting payment confirmation"
+                            note: String(localized: "Awaiting payment confirmation")
                         )
                     )
                     knownOccurrences.insert(key)

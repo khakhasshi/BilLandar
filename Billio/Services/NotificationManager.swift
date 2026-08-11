@@ -12,10 +12,10 @@ final class NotificationManager {
 
         var title: String {
             switch self {
-            case .unknown: "Not configured"
-            case .denied: "Disabled in Settings"
-            case .authorized: "Enabled"
-            case .provisional: "Quiet delivery"
+            case .unknown: String(localized: "Not configured")
+            case .denied: String(localized: "Disabled in Settings")
+            case .authorized: String(localized: "Enabled")
+            case .provisional: String(localized: "Quiet delivery")
             }
         }
     }

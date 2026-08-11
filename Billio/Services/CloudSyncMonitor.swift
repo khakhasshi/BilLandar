@@ -16,24 +16,24 @@ final class CloudSyncMonitor {
 
         var title: String {
             switch self {
-            case .checking: "Checking iCloud…"
-            case .available: "iCloud Sync Available"
-            case .noAccount: "Sign in to iCloud"
-            case .restricted: "iCloud access restricted"
-            case .couldNotDetermine: "iCloud status unavailable"
-            case .localFallback: "Local storage only"
-            case .error: "iCloud check failed"
+            case .checking: String(localized: "Checking iCloud…")
+            case .available: String(localized: "iCloud Sync Available")
+            case .noAccount: String(localized: "Sign in to iCloud")
+            case .restricted: String(localized: "iCloud access restricted")
+            case .couldNotDetermine: String(localized: "iCloud status unavailable")
+            case .localFallback: String(localized: "Local storage only")
+            case .error: String(localized: "iCloud check failed")
             }
         }
 
         var detail: String {
             switch self {
-            case .checking: "Confirming account access"
-            case .available: "Changes sync through your private CloudKit database"
-            case .noAccount: "Add an iCloud account in Settings to enable sync"
-            case .restricted: "This device does not allow iCloud access"
-            case .couldNotDetermine: "Try again when the network is available"
-            case .localFallback: "Your data remains available on this device"
+            case .checking: String(localized: "Confirming account access")
+            case .available: String(localized: "Changes sync through your private CloudKit database")
+            case .noAccount: String(localized: "Add an iCloud account in Settings to enable sync")
+            case .restricted: String(localized: "This device does not allow iCloud access")
+            case .couldNotDetermine: String(localized: "Try again when the network is available")
+            case .localFallback: String(localized: "Your data remains available on this device")
             case .error(let message): message
             }
         }
@@ -72,7 +72,7 @@ final class CloudSyncMonitor {
             case .noAccount: state = .noAccount
             case .restricted: state = .restricted
             case .couldNotDetermine: state = .couldNotDetermine
-            case .temporarilyUnavailable: state = .error("iCloud is temporarily unavailable")
+            case .temporarilyUnavailable: state = .error(String(localized: "iCloud is temporarily unavailable"))
             @unknown default: state = .couldNotDetermine
             }
         } catch {
@@ -106,10 +106,10 @@ final class CloudSyncMonitor {
     private func handle(_ event: NSPersistentCloudKitContainer.Event) {
         let eventName: String
         switch event.type {
-        case .setup: eventName = "Preparing iCloud sync"
-        case .import: eventName = "Downloading changes"
-        case .export: eventName = "Uploading changes"
-        @unknown default: eventName = "Syncing with iCloud"
+        case .setup: eventName = String(localized: "Preparing iCloud sync")
+        case .import: eventName = String(localized: "Downloading changes")
+        case .export: eventName = String(localized: "Uploading changes")
+        @unknown default: eventName = String(localized: "Syncing with iCloud")
         }
 
         guard event.endDate != nil else {
@@ -125,7 +125,7 @@ final class CloudSyncMonitor {
             UserDefaults.standard.set(event.endDate, forKey: Keys.lastSuccessfulSyncAt)
             UserDefaults.standard.removeObject(forKey: Keys.lastSyncError)
         } else {
-            lastSyncError = event.error?.localizedDescription ?? "iCloud sync failed"
+            lastSyncError = event.error?.localizedDescription ?? String(localized: "iCloud sync failed")
             UserDefaults.standard.set(lastSyncError, forKey: Keys.lastSyncError)
         }
     }

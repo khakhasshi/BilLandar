@@ -74,7 +74,7 @@ enum InsightEngine {
                 id: "duplicate-\(merchant)",
                 kind: .duplicate,
                 severity: .critical,
-                title: "Possible duplicate subscription",
+                title: String(localized: "Possible duplicate subscription"),
                 message: "\(duplicates.map(\.name).joined(separator: " and ")) appear to bill the same service.",
                 billIDs: duplicates.map(\.id)
             )
@@ -121,7 +121,7 @@ enum InsightEngine {
                 severity: days <= 2 ? .critical : .warning,
                 title: "\(bill.name) trial ends soon",
                 message: days == 0
-                    ? "The trial converts to a paid plan today."
+                    ? String(localized: "The trial converts to a paid plan today.")
                     : "The trial converts to \(bill.amount.formatted(.currency(code: bill.currencyCode))) in \(days) days.",
                 billIDs: [bill.id]
             )
@@ -139,7 +139,7 @@ enum InsightEngine {
                 id: "payment-\(bill.id.uuidString)",
                 kind: .paymentIssue,
                 severity: .critical,
-                title: "Payment needs attention",
+                title: String(localized: "Payment needs attention"),
                 message: "The latest \(bill.name) payment failed.",
                 billIDs: [bill.id]
             )
@@ -159,7 +159,7 @@ enum InsightEngine {
             id: "renewal-cluster",
             kind: .renewalCluster,
             severity: .info,
-            title: "Busy renewal week",
+            title: String(localized: "Busy renewal week"),
             message: "\(upcoming.count) bills renew in the next 7 days.",
             billIDs: upcoming.map(\.id)
         )

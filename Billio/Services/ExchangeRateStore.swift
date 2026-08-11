@@ -41,9 +41,9 @@ final class ExchangeRateStore {
     }
 
     var dataStatusText: String {
-        if isLoading { return "Updating rates…" }
+        if isLoading { return String(localized: "Updating rates…") }
         if let errorMessage { return errorMessage }
-        guard let snapshot else { return "Rates not loaded" }
+        guard let snapshot else { return String(localized: "Rates not loaded") }
         return "Rates from \(snapshot.effectiveDate.formatted(.dateTime.month(.abbreviated).day().year()))"
     }
 
@@ -80,7 +80,7 @@ final class ExchangeRateStore {
         } catch {
             guard refreshRequestID == requestID else { return }
             if !(error is CancellationError) {
-                errorMessage = "Using original amounts · rates unavailable"
+                errorMessage = String(localized: "Using original amounts · rates unavailable")
             }
         }
 
@@ -139,7 +139,7 @@ final class ExchangeRateStore {
         } catch {
             guard historyRequestID == requestID else { return }
             if !(error is CancellationError) {
-                historicalErrorMessage = "Historical rates unavailable"
+                historicalErrorMessage = String(localized: "Historical rates unavailable")
             }
         }
         if historyRequestID == requestID { isLoadingHistory = false }
