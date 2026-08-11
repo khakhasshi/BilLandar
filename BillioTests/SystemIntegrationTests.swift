@@ -5,12 +5,14 @@ import SwiftData
 @MainActor
 final class SystemIntegrationTests: XCTestCase {
     private var previousCurrency: Any?
+    private var previousLanguage: Any?
     private var previousSnapshot: Data?
 
     override func setUp() {
         super.setUp()
         let defaults = BillioSharedStore.defaults
         previousCurrency = defaults.object(forKey: BillioSharedStore.Keys.displayCurrency)
+        previousLanguage = defaults.object(forKey: BillioSharedStore.Keys.languageIdentifier)
         previousSnapshot = defaults.data(forKey: snapshotKey)
         defaults.set("USD", forKey: BillioSharedStore.Keys.displayCurrency)
     }
@@ -21,6 +23,11 @@ final class SystemIntegrationTests: XCTestCase {
             defaults.set(previousCurrency, forKey: BillioSharedStore.Keys.displayCurrency)
         } else {
             defaults.removeObject(forKey: BillioSharedStore.Keys.displayCurrency)
+        }
+        if let previousLanguage {
+            defaults.set(previousLanguage, forKey: BillioSharedStore.Keys.languageIdentifier)
+        } else {
+            defaults.removeObject(forKey: BillioSharedStore.Keys.languageIdentifier)
         }
         if let previousSnapshot {
             defaults.set(previousSnapshot, forKey: snapshotKey)
@@ -61,6 +68,28 @@ final class SystemIntegrationTests: XCTestCase {
         XCTAssertNil(AppThemeMode.system.preferredColorScheme)
         XCTAssertEqual(AppThemeMode.light.preferredColorScheme, .light)
         XCTAssertEqual(AppThemeMode.dark.preferredColorScheme, .dark)
+    }
+
+    func testSupportedLanguagesPersistAndExposeExpectedLocale() {
+        XCTAssertEqual(
+            Set(AppLanguage.allCases.map(\.rawValue)),
+            ["system", "en", "zh-Hans", "zh-Hant", "ja", "ko", "fr", "de", "es"]
+        )
+
+        let store = AppLanguageStore()
+        store.language = .simplifiedChinese
+        XCTAssertEqual(store.locale.identifier, "zh-Hans")
+        XCTAssertEqual(
+            BillioSharedStore.defaults.string(forKey: BillioSharedStore.Keys.languageIdentifier),
+            AppLanguage.simplifiedChinese.rawValue
+        )
+
+        store.language = .japanese
+        XCTAssertEqual(store.locale.identifier, "ja")
+        XCTAssertEqual(
+            BillioSharedStore.defaults.string(forKey: BillioSharedStore.Keys.languageIdentifier),
+            AppLanguage.japanese.rawValue
+        )
     }
 
     func testShortcutActionsAddPauseAndConfirmPayment() throws {

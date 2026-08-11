@@ -37,4 +37,5 @@ struct ContentView: View {
         .environment(AppErrorCenter())
         .environment(AppFeedbackCenter())
         .environment(ThemeStore())
+        .environment(AppLanguageStore())
 }

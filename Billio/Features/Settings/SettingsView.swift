@@ -9,6 +9,7 @@ struct SettingsView: View {
     @Environment(AppErrorCenter.self) private var errorCenter
     @Environment(AppFeedbackCenter.self) private var feedbackCenter
     @Environment(ThemeStore.self) private var themeStore
+    @Environment(AppLanguageStore.self) private var languageStore
     @Query private var bills: [Bill]
     @Query private var paymentMethods: [PaymentMethod]
     @State private var isExporting = false
@@ -57,6 +58,13 @@ struct SettingsView: View {
                         }
                     } label: {
                         SettingsLabel(title: "Appearance", symbol: themeStore.mode.symbolName, color: Color(hex: "6750C8"))
+                    }
+                    Picker(selection: languageBinding) {
+                        ForEach(AppLanguage.allCases) { language in
+                            Text(language.title).tag(language)
+                        }
+                    } label: {
+                        SettingsLabel(title: "Language", symbol: "character.book.closed.fill", color: Color(hex: "9B59B6"))
                     }
                     NavigationLink {
                         PaymentMethodsView()
@@ -189,6 +197,19 @@ struct SettingsView: View {
             set: { newValue in
                 withAnimation(.easeInOut(duration: 0.2)) {
                     themeStore.mode = newValue
+                }
+                feedbackCenter.selection()
+            }
+        )
+    }
+
+    private var languageBinding: Binding<AppLanguage> {
+        Binding(
+            get: { languageStore.language },
+            set: { newValue in
+                guard newValue != languageStore.language else { return }
+                withAnimation(.easeInOut(duration: 0.2)) {
+                    languageStore.language = newValue
                 }
                 feedbackCenter.selection()
             }

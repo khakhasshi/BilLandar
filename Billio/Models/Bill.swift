@@ -138,12 +138,12 @@ enum BillCategory: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .entertainment: String(localized: "Entertainment")
-        case .productivity: String(localized: "Productivity")
-        case .storage: String(localized: "Storage")
-        case .finance: String(localized: "Finance")
-        case .utilities: String(localized: "Utilities")
-        case .other: String(localized: "Other")
+        case .entertainment: String(localized: "Entertainment", locale: BillioSharedStore.appLocale)
+        case .productivity: String(localized: "Productivity", locale: BillioSharedStore.appLocale)
+        case .storage: String(localized: "Storage", locale: BillioSharedStore.appLocale)
+        case .finance: String(localized: "Finance", locale: BillioSharedStore.appLocale)
+        case .utilities: String(localized: "Utilities", locale: BillioSharedStore.appLocale)
+        case .other: String(localized: "Other", locale: BillioSharedStore.appLocale)
         }
     }
 
@@ -169,10 +169,10 @@ enum BillingCycle: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .weekly: String(localized: "Every week")
-        case .monthly: String(localized: "Every month")
-        case .quarterly: String(localized: "Every 3 months")
-        case .yearly: String(localized: "Every year")
+        case .weekly: String(localized: "Every week", locale: BillioSharedStore.appLocale)
+        case .monthly: String(localized: "Every month", locale: BillioSharedStore.appLocale)
+        case .quarterly: String(localized: "Every 3 months", locale: BillioSharedStore.appLocale)
+        case .yearly: String(localized: "Every year", locale: BillioSharedStore.appLocale)
         }
     }
 }
@@ -185,9 +185,9 @@ enum BillStatus: String, CaseIterable, Identifiable {
     var id: Self { self }
     var title: String {
         switch self {
-        case .active: String(localized: "Active")
-        case .paused: String(localized: "Paused")
-        case .cancelled: String(localized: "Cancelled")
+        case .active: String(localized: "Active", locale: BillioSharedStore.appLocale)
+        case .paused: String(localized: "Paused", locale: BillioSharedStore.appLocale)
+        case .cancelled: String(localized: "Cancelled", locale: BillioSharedStore.appLocale)
         }
     }
 }

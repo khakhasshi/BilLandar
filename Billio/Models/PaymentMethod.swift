@@ -53,11 +53,11 @@ enum PaymentMethodType: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .card: String(localized: "Card")
-        case .applePay: String(localized: "Apple Pay")
-        case .bank: String(localized: "Bank account")
-        case .wallet: String(localized: "Digital wallet")
-        case .other: String(localized: "Other")
+        case .card: String(localized: "Card", locale: BillioSharedStore.appLocale)
+        case .applePay: String(localized: "Apple Pay", locale: BillioSharedStore.appLocale)
+        case .bank: String(localized: "Bank account", locale: BillioSharedStore.appLocale)
+        case .wallet: String(localized: "Digital wallet", locale: BillioSharedStore.appLocale)
+        case .other: String(localized: "Other", locale: BillioSharedStore.appLocale)
         }
     }
 

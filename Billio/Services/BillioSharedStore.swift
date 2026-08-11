@@ -7,6 +7,16 @@ enum BillioSharedStore {
         UserDefaults(suiteName: appGroupIdentifier) ?? .standard
     }
 
+    /// Locale used by model-backed labels that are rendered as `String` values
+    /// rather than SwiftUI `LocalizedStringKey` values.
+    static var appLocale: Locale {
+        guard let identifier = defaults.string(forKey: Keys.languageIdentifier),
+              identifier != "system" else {
+            return .current
+        }
+        return Locale(identifier: identifier)
+    }
+
     static func migrateLegacyDefaultsIfNeeded() {
         let shared = defaults
         guard !shared.bool(forKey: Keys.didMigrateLegacyDefaults) else { return }
@@ -26,5 +36,6 @@ enum BillioSharedStore {
         static let displayCurrency = "displayCurrencyCode"
         static let exchangeRateSnapshotPrefix = "exchangeRateSnapshot"
         static let themeMode = "billioThemeMode"
+        static let languageIdentifier = "billioLanguageIdentifier"
     }
 }

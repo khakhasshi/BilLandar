@@ -57,10 +57,10 @@ enum PaymentStatus: String, CaseIterable, Identifiable {
     var id: Self { self }
     var title: String {
         switch self {
-        case .paid: String(localized: "Paid")
-        case .pending: String(localized: "Pending")
-        case .failed: String(localized: "Failed")
-        case .refunded: String(localized: "Refunded")
+        case .paid: String(localized: "Paid", locale: BillioSharedStore.appLocale)
+        case .pending: String(localized: "Pending", locale: BillioSharedStore.appLocale)
+        case .failed: String(localized: "Failed", locale: BillioSharedStore.appLocale)
+        case .refunded: String(localized: "Refunded", locale: BillioSharedStore.appLocale)
         }
     }
 }

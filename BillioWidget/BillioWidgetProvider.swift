@@ -80,7 +80,7 @@ struct BillioWidgetProvider: TimelineProvider {
                     currencyCode: BillioSystemData.displayCurrency,
                     originalCurrencyBreakdown: [:]
                 ),
-                loadError: "Open Billio to sync"
+                loadError: String(localized: "Open Billio to sync", locale: BillioSharedStore.appLocale)
             )
         }
     }

@@ -14,6 +14,7 @@ struct NextPaymentWidget: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: BillioWidgetProvider()) { entry in
             NextPaymentWidgetView(entry: entry)
+                .environment(\.locale, BillioSharedStore.appLocale)
                 .containerBackground(for: .widget) { Color(uiColor: .secondarySystemGroupedBackground) }
         }
         .configurationDisplayName("Next Payment")
@@ -28,6 +29,7 @@ struct MonthlySpendingWidget: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: BillioWidgetProvider()) { entry in
             MonthlySpendingWidgetView(entry: entry)
+                .environment(\.locale, BillioSharedStore.appLocale)
                 .containerBackground(for: .widget) { Color(uiColor: .secondarySystemGroupedBackground) }
         }
         .configurationDisplayName("Monthly Spending")
@@ -42,6 +44,7 @@ struct UpcomingBillsWidget: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: BillioWidgetProvider()) { entry in
             UpcomingBillsWidgetView(entry: entry)
+                .environment(\.locale, BillioSharedStore.appLocale)
                 .containerBackground(for: .widget) { Color(uiColor: .secondarySystemGroupedBackground) }
         }
         .configurationDisplayName("Upcoming Bills")
@@ -86,7 +89,10 @@ private struct NextPaymentWidgetView: View {
                 }
             }
         } else {
-            widgetEmptyState(message: entry.loadError ?? String(localized: "No upcoming bills"))
+            widgetEmptyState(
+                message: entry.loadError
+                    ?? String(localized: "No upcoming bills", locale: BillioSharedStore.appLocale)
+            )
         }
     }
 }
@@ -104,13 +110,17 @@ private struct MonthlySpendingWidgetView: View {
                 .minimumScaleFactor(0.65)
                 .lineLimit(family == .systemSmall ? 2 : 1)
                 .privacySensitive()
-            Text(entry.monthlyTotal.amount == nil ? "Shown by original currency" : "Confirmed payments")
+            Text(
+                entry.monthlyTotal.amount == nil
+                    ? String(localized: "Shown by original currency", locale: BillioSharedStore.appLocale)
+                    : String(localized: "Confirmed payments", locale: BillioSharedStore.appLocale)
+            )
                 .font(.caption)
                 .foregroundStyle(.secondary)
             if family == .systemMedium {
                 HStack(spacing: 5) {
                     Image(systemName: "checkmark.shield.fill")
-                    Text("Only payments marked paid are included")
+                    Text(String(localized: "Only payments marked paid are included", locale: BillioSharedStore.appLocale))
                 }
                 .font(.caption2)
                 .foregroundStyle(WidgetPalette.accent)
@@ -132,7 +142,10 @@ private struct UpcomingBillsWidgetView: View {
             widgetHeader("Upcoming bills", symbol: "list.bullet.clipboard.fill")
             if visibleBills.isEmpty {
                 Spacer()
-                widgetEmptyState(message: entry.loadError ?? String(localized: "Nothing due soon"))
+                widgetEmptyState(
+                    message: entry.loadError
+                        ?? String(localized: "Nothing due soon", locale: BillioSharedStore.appLocale)
+                )
                 Spacer()
             } else {
                 ForEach(visibleBills) { bill in
@@ -209,9 +222,14 @@ private func widgetEmptyState(message: String) -> some View {
 }
 
 private func dueText(for date: Date) -> String {
-    if Calendar.billio.isDateInToday(date) { return String(localized: "Due today") }
-    if Calendar.billio.isDateInTomorrow(date) { return String(localized: "Due tomorrow") }
-    return String(localized: "Due") + " " + date.formatted(.dateTime.month(.abbreviated).day())
+    if Calendar.billio.isDateInToday(date) {
+        return String(localized: "Due today", locale: BillioSharedStore.appLocale)
+    }
+    if Calendar.billio.isDateInTomorrow(date) {
+        return String(localized: "Due tomorrow", locale: BillioSharedStore.appLocale)
+    }
+    return String(localized: "Due", locale: BillioSharedStore.appLocale)
+        + " " + date.formatted(.dateTime.month(.abbreviated).day())
 }
 
 private extension Color {

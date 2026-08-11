@@ -11,6 +11,7 @@ struct BillioApp: App {
     @State private var errorCenter = AppErrorCenter()
     @State private var feedbackCenter = AppFeedbackCenter()
     @State private var themeStore = ThemeStore()
+    @State private var languageStore = AppLanguageStore()
 
     init() {
         BillioAppShortcuts.updateAppShortcutParameters()
@@ -38,6 +39,8 @@ struct BillioApp: App {
                 .environment(errorCenter)
                 .environment(feedbackCenter)
                 .environment(themeStore)
+                .environment(languageStore)
+                .environment(\.locale, languageStore.locale)
                 .preferredColorScheme(themeStore.mode.preferredColorScheme)
         }
         .modelContainer(modelContainer)
