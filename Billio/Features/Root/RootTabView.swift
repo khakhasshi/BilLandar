@@ -1,5 +1,6 @@
 import SwiftData
 import SwiftUI
+import WidgetKit
 
 enum AppTab: Hashable {
     case overview
@@ -15,6 +16,7 @@ struct RootTabView: View {
     @Environment(CloudSyncMonitor.self) private var cloudSync
     @Environment(AppErrorCenter.self) private var errorCenter
     @Environment(AppFeedbackCenter.self) private var feedbackCenter
+    @Environment(ExchangeRateStore.self) private var exchangeRates
     @Environment(\.modelContext) private var modelContext
     @Query private var bills: [Bill]
     @Query private var payments: [PaymentRecord]
@@ -44,10 +46,14 @@ struct RootTabView: View {
         }
         .tint(AppTheme.accent)
         .onChange(of: selection) { _, _ in feedbackCenter.selection() }
+        .onChange(of: widgetDataRevision) { _, _ in
+            WidgetCenter.shared.reloadAllTimelines()
+        }
         .task {
             await notificationManager.refreshStatus()
             reconcileBills()
             await notificationManager.reschedule(for: bills)
+            WidgetCenter.shared.reloadAllTimelines()
         }
         .task { await cloudSync.monitorEvents() }
         .onChange(of: scenePhase) { _, newPhase in
@@ -58,6 +64,23 @@ struct RootTabView: View {
                 await notificationManager.reschedule(for: bills)
             }
         }
+    }
+
+    private var widgetDataRevision: String {
+        let billRevision = bills
+            .sorted { $0.id.uuidString < $1.id.uuidString }
+            .map {
+                "\($0.id.uuidString)|\($0.updatedAt.timeIntervalSinceReferenceDate)|\($0.statusRawValue)|\($0.nextDueDate.timeIntervalSinceReferenceDate)"
+            }
+            .joined(separator: ";")
+        let paymentRevision = payments
+            .sorted { $0.id.uuidString < $1.id.uuidString }
+            .map {
+                "\($0.id.uuidString)|\($0.statusRawValue)|\($0.amount)|\($0.paidAt.timeIntervalSinceReferenceDate)"
+            }
+            .joined(separator: ";")
+        let rateRevision = exchangeRates.snapshot?.fetchedAt.timeIntervalSinceReferenceDate ?? 0
+        return "\(billRevision)#\(paymentRevision)#\(exchangeRates.displayCurrency)#\(rateRevision)"
     }
 
     private func reconcileBills() {

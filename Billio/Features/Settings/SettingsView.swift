@@ -8,6 +8,7 @@ struct SettingsView: View {
     @Environment(NotificationManager.self) private var notificationManager
     @Environment(AppErrorCenter.self) private var errorCenter
     @Environment(AppFeedbackCenter.self) private var feedbackCenter
+    @Environment(ThemeStore.self) private var themeStore
     @Query private var bills: [Bill]
     @Query private var paymentMethods: [PaymentMethod]
     @State private var isExporting = false
@@ -49,6 +50,13 @@ struct SettingsView: View {
                         }
                     } label: {
                         SettingsLabel(title: "Currency", symbol: "dollarsign.circle.fill", color: AppTheme.success)
+                    }
+                    Picker(selection: themeBinding) {
+                        ForEach(AppThemeMode.allCases) { mode in
+                            Label(mode.title, systemImage: mode.symbolName).tag(mode)
+                        }
+                    } label: {
+                        SettingsLabel(title: "Appearance", symbol: themeStore.mode.symbolName, color: Color(hex: "6750C8"))
                     }
                     NavigationLink {
                         PaymentMethodsView()
@@ -171,6 +179,18 @@ struct SettingsView: View {
             get: { exchangeRates.displayCurrency },
             set: { newValue in
                 Task { await exchangeRates.setDisplayCurrency(newValue) }
+            }
+        )
+    }
+
+    private var themeBinding: Binding<AppThemeMode> {
+        Binding(
+            get: { themeStore.mode },
+            set: { newValue in
+                withAnimation(.easeInOut(duration: 0.2)) {
+                    themeStore.mode = newValue
+                }
+                feedbackCenter.selection()
             }
         )
     }

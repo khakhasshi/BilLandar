@@ -25,6 +25,8 @@ The models avoid SwiftData unique constraints and required relationships so the 
 
 Debug simulator builds seed ten multi-currency subscriptions and realistic payment history. Device and Release builds never seed demo content.
 
+The app and the `BillioWidget` extension share the same SwiftData store through the `group.JIANGJINGZHE.Billio` App Group. The shared configuration keeps CloudKit as the production backing database and records whether a local fallback is active so extensions open the same configuration. Display-currency, exchange-rate cache, and appearance preferences also use the App Group defaults suite. Widgets never combine unrelated original currencies when the required rate snapshot is unavailable.
+
 ## Currency and exchange rates
 
 Each `Bill` stores its original amount and ISO 4217 currency code. `ExchangeRateStore` owns the user's display currency, cached current snapshots, historical snapshots, refresh state, and conversions. `ExchangeRateProviding` keeps the remote API replaceable; the current implementation reads current and date-ranged reference rates from Frankfurter v2 and caches the current snapshot per base currency for 12 hours.
@@ -63,6 +65,16 @@ Bill rows change layout at accessibility Dynamic Type sizes instead of compressi
 
 The main app has five tabs: Overview, Calendar, Bills, Analytics, and Settings. Add/Edit Bill and payment-method creation use sheets; Bill Detail, Notifications, Payment Methods, and Privacy use navigation pushes. Bill Detail exposes valid status transitions for active, paused, and cancelled records.
 
+Settings exposes System, Light, and Dark appearance modes. The selected mode is applied at the app scene boundary and persisted in the shared defaults suite; System continues following the device appearance.
+
+## Widgets and system actions
+
+The `BillioWidget` extension provides Next Payment, Monthly Spending, and Upcoming Bills widgets. Timeline reads use the shared SwiftData container and cached exchange rates, refresh at least every 30 minutes, and are explicitly reloaded when bills, payments, display currency, or rates change in the app.
+
+Interactive widget buttons call `MarkBillPaidIntent`, which resolves the bill by stable UUID and delegates to `PaymentWorkflowService`. The transaction therefore records or confirms a payment and advances the due date using the same rules as the main app.
+
+App Intents also expose confirmed monthly spending, bill creation, bill pausing, and payment confirmation to Siri, Spotlight, and Shortcuts. `BillEntity` supplies selectable active bills, while `BillioAppShortcuts` publishes four preconfigured shortcuts. Xcode extracts and validates the App Intents metadata during every app and widget build.
+
 ## Test boundaries
 
-The `BillioTests` target covers billing-cycle advancement, reminder fire dates, overdue lifecycle idempotency, merchant normalization and cancellation-domain verification, safe payment-method normalization, current and historical exchange-rate conversion/failure behavior, insight generation, payment confirmation/undo for both new and pending records, and idempotent sample-data generation with an in-memory SwiftData container.
+The `BillioTests` target covers billing-cycle advancement, reminder fire dates, overdue lifecycle idempotency, merchant normalization and cancellation-domain verification, safe payment-method normalization, current and historical exchange-rate conversion/failure behavior, insight generation, payment confirmation/undo for both new and pending records, widget multi-currency safety, appearance-mode definitions, system-action add/pause/pay mutations, and idempotent sample-data generation with an in-memory SwiftData container.

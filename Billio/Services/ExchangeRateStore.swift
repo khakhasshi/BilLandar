@@ -14,7 +14,7 @@ final class ExchangeRateStore {
     var displayCurrency: String {
         didSet {
             guard displayCurrency != oldValue else { return }
-            UserDefaults.standard.set(displayCurrency, forKey: Keys.displayCurrency)
+            BillioSharedStore.defaults.set(displayCurrency, forKey: BillioSharedStore.Keys.displayCurrency)
             snapshot = nil
             historicalSnapshots = []
             errorMessage = nil
@@ -27,12 +27,14 @@ final class ExchangeRateStore {
     private var historyRequestID: UUID?
 
     init() {
+        BillioSharedStore.migrateLegacyDefaultsIfNeeded()
         provider = FrankfurterExchangeRateProvider()
         displayCurrency = Self.savedDisplayCurrency
         loadCachedSnapshot()
     }
 
     init(provider: any ExchangeRateProviding) {
+        BillioSharedStore.migrateLegacyDefaultsIfNeeded()
         self.provider = provider
         displayCurrency = Self.savedDisplayCurrency
         loadCachedSnapshot()
@@ -156,7 +158,7 @@ final class ExchangeRateStore {
     }
 
     private func loadCachedSnapshot() {
-        guard let data = UserDefaults.standard.data(forKey: cacheKey(for: displayCurrency)),
+        guard let data = BillioSharedStore.defaults.data(forKey: cacheKey(for: displayCurrency)),
               let cached = try? JSONDecoder().decode(ExchangeRateSnapshot.self, from: data),
               cached.baseCurrency == displayCurrency else {
             snapshot = nil
@@ -167,21 +169,16 @@ final class ExchangeRateStore {
 
     private func saveCachedSnapshot(_ snapshot: ExchangeRateSnapshot) {
         guard let data = try? JSONEncoder().encode(snapshot) else { return }
-        UserDefaults.standard.set(data, forKey: cacheKey(for: snapshot.baseCurrency))
+        BillioSharedStore.defaults.set(data, forKey: cacheKey(for: snapshot.baseCurrency))
     }
 
     private func cacheKey(for baseCurrency: String) -> String {
-        "\(Keys.snapshotPrefix).\(baseCurrency)"
+        "\(BillioSharedStore.Keys.exchangeRateSnapshotPrefix).\(baseCurrency)"
     }
 
     private static var savedDisplayCurrency: String {
-        UserDefaults.standard.string(forKey: Keys.displayCurrency)
-            ?? UserDefaults.standard.string(forKey: "currencyCode")
+        BillioSharedStore.defaults.string(forKey: BillioSharedStore.Keys.displayCurrency)
+            ?? BillioSharedStore.defaults.string(forKey: "currencyCode")
             ?? "USD"
-    }
-
-    private enum Keys {
-        static let displayCurrency = "displayCurrencyCode"
-        static let snapshotPrefix = "exchangeRateSnapshot"
     }
 }

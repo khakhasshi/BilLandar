@@ -36,4 +36,5 @@ struct ContentView: View {
         .environment(NotificationManager())
         .environment(AppErrorCenter())
         .environment(AppFeedbackCenter())
+        .environment(ThemeStore())
 }

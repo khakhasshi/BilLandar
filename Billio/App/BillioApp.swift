@@ -1,5 +1,6 @@
 import SwiftData
 import SwiftUI
+import AppIntents
 
 @main
 struct BillioApp: App {
@@ -9,8 +10,10 @@ struct BillioApp: App {
     @State private var notificationManager = NotificationManager()
     @State private var errorCenter = AppErrorCenter()
     @State private var feedbackCenter = AppFeedbackCenter()
+    @State private var themeStore = ThemeStore()
 
     init() {
+        BillioAppShortcuts.updateAppShortcutParameters()
         let result = DataStoreFactory.makeContainer()
         modelContainer = result.container
         _cloudSyncMonitor = State(
@@ -34,6 +37,8 @@ struct BillioApp: App {
                 .environment(notificationManager)
                 .environment(errorCenter)
                 .environment(feedbackCenter)
+                .environment(themeStore)
+                .preferredColorScheme(themeStore.mode.preferredColorScheme)
         }
         .modelContainer(modelContainer)
     }

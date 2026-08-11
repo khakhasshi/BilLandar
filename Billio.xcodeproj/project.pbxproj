@@ -6,6 +6,21 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C2000000000000000000001D /* BillioWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C20000000000000000000011 /* BillioWidget.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C20000000000000000000021 /* Billio/Models/Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20000000000000000000001 /* Billio/Models/Bill.swift */; };
+		C20000000000000000000022 /* Billio/Models/PaymentRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20000000000000000000002 /* Billio/Models/PaymentRecord.swift */; };
+		C20000000000000000000023 /* Billio/Models/PaymentMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20000000000000000000003 /* Billio/Models/PaymentMethod.swift */; };
+		C20000000000000000000024 /* Billio/Models/Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20000000000000000000004 /* Billio/Models/Currency.swift */; };
+		C20000000000000000000025 /* Billio/Core/Extensions/Date+Billio.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20000000000000000000005 /* Billio/Core/Extensions/Date+Billio.swift */; };
+		C20000000000000000000026 /* Billio/Services/DataStoreFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20000000000000000000006 /* Billio/Services/DataStoreFactory.swift */; };
+		C20000000000000000000027 /* Billio/Services/PaymentWorkflowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20000000000000000000007 /* Billio/Services/PaymentWorkflowService.swift */; };
+		C20000000000000000000028 /* Billio/Services/BillioSharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20000000000000000000008 /* Billio/Services/BillioSharedStore.swift */; };
+		C20000000000000000000029 /* Billio/Services/ExchangeRateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20000000000000000000009 /* Billio/Services/ExchangeRateProvider.swift */; };
+		C2000000000000000000002A /* Billio/SystemIntegration/BillioSystemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000000000000000000000A /* Billio/SystemIntegration/BillioSystemData.swift */; };
+		C2000000000000000000002B /* Billio/SystemIntegration/BillioAppIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2000000000000000000000B /* Billio/SystemIntegration/BillioAppIntents.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		B10000000000000000000008 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -14,11 +29,44 @@
 			remoteGlobalIDString = AD09B641302A4E100009ED2C;
 			remoteInfo = Billio;
 		};
+		C2000000000000000000001A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD09B63A302A4E100009ED2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C20000000000000000000013;
+			remoteInfo = BillioWidget;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C2000000000000000000001C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C2000000000000000000001D /* BillioWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AD09B642302A4E100009ED2C /* Billio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Billio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B10000000000000000000001 /* BillioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BillioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C20000000000000000000001 /* Billio/Models/Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Billio/Models/Bill.swift; sourceTree = SOURCE_ROOT; };
+		C20000000000000000000002 /* Billio/Models/PaymentRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Billio/Models/PaymentRecord.swift; sourceTree = SOURCE_ROOT; };
+		C20000000000000000000003 /* Billio/Models/PaymentMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Billio/Models/PaymentMethod.swift; sourceTree = SOURCE_ROOT; };
+		C20000000000000000000004 /* Billio/Models/Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Billio/Models/Currency.swift; sourceTree = SOURCE_ROOT; };
+		C20000000000000000000005 /* Billio/Core/Extensions/Date+Billio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Billio/Core/Extensions/Date+Billio.swift"; sourceTree = SOURCE_ROOT; };
+		C20000000000000000000006 /* Billio/Services/DataStoreFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Billio/Services/DataStoreFactory.swift; sourceTree = SOURCE_ROOT; };
+		C20000000000000000000007 /* Billio/Services/PaymentWorkflowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Billio/Services/PaymentWorkflowService.swift; sourceTree = SOURCE_ROOT; };
+		C20000000000000000000008 /* Billio/Services/BillioSharedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Billio/Services/BillioSharedStore.swift; sourceTree = SOURCE_ROOT; };
+		C20000000000000000000009 /* Billio/Services/ExchangeRateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Billio/Services/ExchangeRateProvider.swift; sourceTree = SOURCE_ROOT; };
+		C2000000000000000000000A /* Billio/SystemIntegration/BillioSystemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Billio/SystemIntegration/BillioSystemData.swift; sourceTree = SOURCE_ROOT; };
+		C2000000000000000000000B /* Billio/SystemIntegration/BillioAppIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Billio/SystemIntegration/BillioAppIntents.swift; sourceTree = SOURCE_ROOT; };
+		C20000000000000000000011 /* BillioWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BillioWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -28,6 +76,13 @@
 				Info.plist,
 			);
 			target = AD09B641302A4E100009ED2C /* Billio */;
+		};
+		C20000000000000000000012 /* Exceptions for "BillioWidget" folder in "BillioWidget" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C20000000000000000000013 /* BillioWidget */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -43,6 +98,14 @@
 		B10000000000000000000002 /* BillioTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = BillioTests;
+			sourceTree = "<group>";
+		};
+		C20000000000000000000010 /* BillioWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C20000000000000000000012 /* Exceptions for "BillioWidget" folder in "BillioWidget" target */,
+			);
+			path = BillioWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -62,6 +125,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C20000000000000000000015 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -69,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				AD09B644302A4E100009ED2C /* Billio */,
+				C20000000000000000000010 /* BillioWidget */,
+				C20000000000000000000020 /* Widget Shared Sources */,
 				B10000000000000000000002 /* BillioTests */,
 				AD09B643302A4E100009ED2C /* Products */,
 			);
@@ -78,9 +150,28 @@
 			isa = PBXGroup;
 			children = (
 				AD09B642302A4E100009ED2C /* Billio.app */,
+				C20000000000000000000011 /* BillioWidget.appex */,
 				B10000000000000000000001 /* BillioTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C20000000000000000000020 /* Widget Shared Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C20000000000000000000001 /* Billio/Models/Bill.swift */,
+				C20000000000000000000002 /* Billio/Models/PaymentRecord.swift */,
+				C20000000000000000000003 /* Billio/Models/PaymentMethod.swift */,
+				C20000000000000000000004 /* Billio/Models/Currency.swift */,
+				C20000000000000000000005 /* Billio/Core/Extensions/Date+Billio.swift */,
+				C20000000000000000000006 /* Billio/Services/DataStoreFactory.swift */,
+				C20000000000000000000007 /* Billio/Services/PaymentWorkflowService.swift */,
+				C20000000000000000000008 /* Billio/Services/BillioSharedStore.swift */,
+				C20000000000000000000009 /* Billio/Services/ExchangeRateProvider.swift */,
+				C2000000000000000000000A /* Billio/SystemIntegration/BillioSystemData.swift */,
+				C2000000000000000000000B /* Billio/SystemIntegration/BillioAppIntents.swift */,
+			);
+			name = "Widget Shared Sources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,10 +184,12 @@
 				AD09B63E302A4E100009ED2C /* Sources */,
 				AD09B63F302A4E100009ED2C /* Frameworks */,
 				AD09B640302A4E100009ED2C /* Resources */,
+				C2000000000000000000001C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C2000000000000000000001B /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				AD09B644302A4E100009ED2C /* Billio */,
@@ -131,6 +224,28 @@
 			productReference = B10000000000000000000001 /* BillioTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		C20000000000000000000013 /* BillioWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C20000000000000000000017 /* Build configuration list for PBXNativeTarget "BillioWidget" */;
+			buildPhases = (
+				C20000000000000000000014 /* Sources */,
+				C20000000000000000000015 /* Frameworks */,
+				C20000000000000000000016 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C20000000000000000000010 /* BillioWidget */,
+			);
+			name = BillioWidget;
+			packageProductDependencies = (
+			);
+			productName = BillioWidget;
+			productReference = C20000000000000000000011 /* BillioWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -147,6 +262,9 @@
 					B10000000000000000000003 = {
 						CreatedOnToolsVersion = 26.6;
 						TestTargetID = AD09B641302A4E100009ED2C;
+					};
+					C20000000000000000000013 = {
+						CreatedOnToolsVersion = 26.6;
 					};
 				};
 			};
@@ -165,6 +283,7 @@
 			projectRoot = "";
 			targets = (
 				AD09B641302A4E100009ED2C /* Billio */,
+				C20000000000000000000013 /* BillioWidget */,
 				B10000000000000000000003 /* BillioTests */,
 			);
 		};
@@ -179,6 +298,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B10000000000000000000006 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C20000000000000000000016 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -202,6 +328,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C20000000000000000000014 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C20000000000000000000021 /* Billio/Models/Bill.swift in Sources */,
+				C20000000000000000000022 /* Billio/Models/PaymentRecord.swift in Sources */,
+				C20000000000000000000023 /* Billio/Models/PaymentMethod.swift in Sources */,
+				C20000000000000000000024 /* Billio/Models/Currency.swift in Sources */,
+				C20000000000000000000025 /* Billio/Core/Extensions/Date+Billio.swift in Sources */,
+				C20000000000000000000026 /* Billio/Services/DataStoreFactory.swift in Sources */,
+				C20000000000000000000027 /* Billio/Services/PaymentWorkflowService.swift in Sources */,
+				C20000000000000000000028 /* Billio/Services/BillioSharedStore.swift in Sources */,
+				C20000000000000000000029 /* Billio/Services/ExchangeRateProvider.swift in Sources */,
+				C2000000000000000000002A /* Billio/SystemIntegration/BillioSystemData.swift in Sources */,
+				C2000000000000000000002B /* Billio/SystemIntegration/BillioAppIntents.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -209,6 +353,11 @@
 			isa = PBXTargetDependency;
 			target = AD09B641302A4E100009ED2C /* Billio */;
 			targetProxy = B10000000000000000000008 /* PBXContainerItemProxy */;
+		};
+		C2000000000000000000001B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C20000000000000000000013 /* BillioWidget */;
+			targetProxy = C2000000000000000000001A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -446,6 +595,62 @@
 			};
 			name = Release;
 		};
+		C20000000000000000000018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = BillioWidget/BillioWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3PS7QR8L7W;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BillioWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Billio Widgets";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JIANGJINGZHE.Billio.Widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited) WIDGET_EXTENSION";
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C20000000000000000000019 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = BillioWidget/BillioWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3PS7QR8L7W;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BillioWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Billio Widgets";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = JIANGJINGZHE.Billio.Widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) WIDGET_EXTENSION";
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -472,6 +677,15 @@
 			buildConfigurations = (
 				B1000000000000000000000A /* Debug */,
 				B1000000000000000000000B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C20000000000000000000017 /* Build configuration list for PBXNativeTarget "BillioWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C20000000000000000000018 /* Debug */,
+				C20000000000000000000019 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
