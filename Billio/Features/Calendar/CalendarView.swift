@@ -13,8 +13,8 @@ struct CalendarView: View {
 
     private let weekdaySymbols = Calendar.billio.veryShortWeekdaySymbols
     private var calendarCellSize: CGFloat { dynamicTypeSize.isAccessibilitySize ? 58 : AppTheme.minimumTouchSize }
-    private var calendarColumnSpacing: CGFloat { horizontalSizeClass == .regular ? 10 : 3 }
-    private var calendarRowSpacing: CGFloat { horizontalSizeClass == .regular ? 16 : 12 }
+    private var calendarColumnSpacing: CGFloat { horizontalSizeClass == .regular ? 18 : 3 }
+    private var calendarRowSpacing: CGFloat { horizontalSizeClass == .regular ? 14 : 12 }
     private var columns: [GridItem] {
         Array(repeating: GridItem(.flexible(minimum: calendarCellSize), spacing: calendarColumnSpacing), count: 7)
     }
@@ -82,7 +82,7 @@ struct CalendarView: View {
                         .frame(maxWidth: .infinity)
                 }
 
-                ForEach(Array(monthCells.enumerated()), id: \.offset) { _, date in
+            ForEach(Array(monthCells.enumerated()), id: \.offset) { _, date in
                     if let date {
                         Button { select(date) } label: {
                             VStack(spacing: 4) {
@@ -113,9 +113,10 @@ struct CalendarView: View {
                         .accessibilityValue((billsByDay[date.startOfDay] ?? []).isEmpty ? "No bills due" : "\((billsByDay[date.startOfDay] ?? []).count) bills due")
                     } else {
                         Color.clear.frame(maxWidth: .infinity, minHeight: calendarCellSize)
-                    }
                 }
             }
+            .frame(maxWidth: .infinity)
+        }
         .billioCard(padding: horizontalSizeClass == .regular ? 22 : 14)
         .simultaneousGesture(
             DragGesture(minimumDistance: 28)

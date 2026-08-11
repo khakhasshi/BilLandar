@@ -156,7 +156,17 @@
       }
     },
     "About" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "About" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "关于" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "關於" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "概要" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "정보" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "À propos" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Über" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Acerca de" } }
+      }
     },
     "Active" : {
       "extractionState" : "manual",
@@ -883,6 +893,18 @@
     },
     "Bill details" : {
 
+    },
+    "Bill due soon" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Rechnung bald fällig" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Factura próxima a vencer" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Facture bientôt due" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "請求期限が近づいています" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "청구서 결제 예정" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "账单即将到期" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "帳單即將到期" } }
+      }
     },
     "Bill reminders" : {
 
@@ -3645,6 +3667,9 @@
     "Japanese Yen (JPY)" : {
 
     },
+    "Keep Editing" : {
+
+    },
     "Language" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -3691,9 +3716,6 @@
           }
         }
       }
-    },
-    "Keep Editing" : {
-
     },
     "Last four digits (optional)" : {
 
@@ -7519,12 +7541,6 @@
       }
     },
     "The information you entered will be lost." : {
-
-    },
-    "The payment information you entered will be lost." : {
-
-    },
-    "The payment method information you entered will be lost." : {
 
     },
     "The trial converts to a paid plan today." : {

@@ -12,10 +12,10 @@ final class NotificationManager {
 
         var title: String {
             switch self {
-            case .unknown: String(localized: "Not configured")
-            case .denied: String(localized: "Disabled in Settings")
-            case .authorized: String(localized: "Enabled")
-            case .provisional: String(localized: "Quiet delivery")
+            case .unknown: String(localized: "Not configured", locale: BillioSharedStore.appLocale)
+            case .denied: String(localized: "Disabled in Settings", locale: BillioSharedStore.appLocale)
+            case .authorized: String(localized: "Enabled", locale: BillioSharedStore.appLocale)
+            case .provisional: String(localized: "Quiet delivery", locale: BillioSharedStore.appLocale)
             }
         }
     }
@@ -158,8 +158,14 @@ final class NotificationManager {
         let bill = candidate.bill
 
         let content = UNMutableNotificationContent()
-        content.title = "\(bill.name) renews soon"
-        content.body = "\(bill.amount.formatted(.currency(code: bill.currencyCode))) is due \(candidate.dueDate.formatted(.dateTime.month(.abbreviated).day()))."
+        let amount = bill.amount.formatted(.currency(code: bill.currencyCode).locale(BillioSharedStore.appLocale))
+        let dueDate = candidate.dueDate.formatted(
+            .dateTime.locale(BillioSharedStore.appLocale).month(.abbreviated).day()
+        )
+        content.title = String(localized: "Bill due soon", locale: BillioSharedStore.appLocale) + ": \(bill.name)"
+        content.body = "\(amount) · "
+            + String(localized: "Due", locale: BillioSharedStore.appLocale)
+            + " \(dueDate)."
         content.sound = .default
         content.userInfo = [
             "billID": bill.id.uuidString,

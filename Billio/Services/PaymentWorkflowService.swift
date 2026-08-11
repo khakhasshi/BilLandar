@@ -30,11 +30,11 @@ enum PaymentWorkflowService {
                 payment: pending,
                 bill: bill,
                 insertedPayment: false,
-                message: String(localized: "Payment recorded")
+                message: String(localized: "Payment recorded", locale: BillioSharedStore.appLocale)
             )
             pending.status = .paid
             pending.paidAt = now
-            pending.note = String(localized: "Confirmed manually")
+            pending.note = String(localized: "Confirmed manually", locale: BillioSharedStore.appLocale)
         } else {
             let payment = PaymentRecord(
                 billID: bill.id,
@@ -44,13 +44,13 @@ enum PaymentWorkflowService {
                 paidAt: now,
                 dueDate: bill.nextDueDate,
                 status: .paid,
-                note: String(localized: "Confirmed manually")
+                note: String(localized: "Confirmed manually", locale: BillioSharedStore.appLocale)
             )
             receipt = makeReceipt(
                 payment: payment,
                 bill: bill,
                 insertedPayment: true,
-                message: String(localized: "Payment added")
+                message: String(localized: "Payment added", locale: BillioSharedStore.appLocale)
             )
             context.insert(payment)
             bill.nextDueDate = bill.renewalDate(after: bill.nextDueDate)
@@ -77,7 +77,7 @@ enum PaymentWorkflowService {
         )
         payment.status = status
         if status == .paid { payment.paidAt = now }
-        payment.note = String(localized: "Updated manually")
+        payment.note = String(localized: "Updated manually", locale: BillioSharedStore.appLocale)
         try context.save()
         return receipt
     }

@@ -17,7 +17,7 @@ Views read and mutate `Bill`, `PaymentRecord`, and `PaymentMethod` through Swift
 
 ## Persistence and iCloud
 
-`DataStoreFactory` creates a single schema containing `Bill`, `PaymentRecord`, and `PaymentMethod`. Production uses the user's private CloudKit database in `iCloud.JIANGJINGZHE.Billio`; if the CloudKit-backed container cannot be created, the app falls back to a local SwiftData store and exposes that state in Settings. Unit tests deliberately use an isolated local store.
+`DataStoreFactory` creates a single versioned schema containing `Bill`, `PaymentRecord`, and `PaymentMethod`. `BillioSchemaV1` and `BillioMigrationPlan` make future model changes explicit before they reach production. Production uses the user's private CloudKit database in `iCloud.JIANGJINGZHE.Billio`; if the CloudKit-backed container cannot be created, the app falls back to a local SwiftData store and exposes that state in Settings. Unit tests deliberately use an isolated local store.
 
 The models avoid SwiftData unique constraints and required relationships so the schema remains CloudKit-compatible. Payment history and payment methods use stable identifiers and value snapshots rather than required relationships. Payment-method records contain only descriptive metadata and an optional last four digits.
 
@@ -71,7 +71,9 @@ Settings exposes System, Light, and Dark appearance modes. The selected mode is 
 
 ## Localization
 
-`Localizable.xcstrings` is the single source of truth for user-visible strings. English is the development language; the app and widget extension ship Simplified Chinese (`zh-Hans`), Traditional Chinese (`zh-Hant`), Japanese (`ja`), Korean (`ko`), French (`fr`), German (`de`), and Spanish (`es`). The system language determines the active localization, including App Intents parameter labels and widget copy. Domain enum titles use `String(localized:)` so categories, billing cycles, payment states, and appearance choices follow the same locale as SwiftUI labels.
+`Localizable.xcstrings` is the single source of truth for user-visible strings. English is the development language; the app and widget extension ship Simplified Chinese (`zh-Hans`), Traditional Chinese (`zh-Hant`), Japanese (`ja`), Korean (`ko`), French (`fr`), German (`de`), and Spanish (`es`). Settings also provides an app-level language override with a System fallback. The selected locale is shared with widgets and local notification content. Domain enum titles use the shared app locale so model-backed labels follow SwiftUI labels.
+
+The app and widget targets each include `PrivacyInfo.xcprivacy` for their UserDefaults access. The complete account-level release procedure is in `Documentation/RELEASE_CHECKLIST.md`.
 
 ## Widgets and system actions
 

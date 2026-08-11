@@ -47,7 +47,7 @@ struct SettingsView: View {
                     }
                     Picker(selection: displayCurrencyBinding) {
                         ForEach(Currency.supported) { currency in
-                            Text("\(currency.code) – \(currency.name)").tag(currency.code)
+                            Text("\(currency.code) – \(currency.localizedName)").tag(currency.code)
                         }
                     } label: {
                         SettingsLabel(title: "Currency", symbol: "dollarsign.circle.fill", color: AppTheme.success)
@@ -133,6 +133,15 @@ struct SettingsView: View {
                         Label(syncError, systemImage: "exclamationmark.icloud.fill")
                             .font(.caption)
                             .foregroundStyle(AppTheme.danger)
+                    }
+                    if let fallbackReason = BillioSharedStore.defaults.string(forKey: BillioSharedStore.Keys.cloudKitFallbackReason) {
+                        Label {
+                            Text("Local-only fallback: \(fallbackReason)")
+                        } icon: {
+                            Image(systemName: "externaldrive.fill")
+                        }
+                        .font(.caption)
+                        .foregroundStyle(AppTheme.warning)
                     }
                 } header: {
                     Text("iCloud")

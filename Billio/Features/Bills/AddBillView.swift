@@ -62,7 +62,7 @@ struct AddBillView: View {
                     }
                     Picker("Currency", selection: $currencyCode) {
                         ForEach(Currency.supported) { currency in
-                            Text("\(currency.code) · \(currency.name)").tag(currency.code)
+                            Text("\(currency.code) · \(currency.localizedName)").tag(currency.code)
                         }
                     }
                     Picker("Category", selection: $category) {
@@ -151,7 +151,7 @@ struct AddBillView: View {
                 hasInitializedCurrency = true
             }
             .interactiveDismissDisabled(hasUnsavedChanges)
-            .alert("Discard this new bill?", isPresented: $showingDiscardConfirmation) {
+            .confirmationDialog("Discard this new bill?", isPresented: $showingDiscardConfirmation, titleVisibility: .visible) {
                 Button("Discard Changes", role: .destructive) { dismiss() }
                 Button("Keep Editing", role: .cancel) {}
             } message: {

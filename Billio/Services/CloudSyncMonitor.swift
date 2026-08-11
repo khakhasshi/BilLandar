@@ -16,24 +16,24 @@ final class CloudSyncMonitor {
 
         var title: String {
             switch self {
-            case .checking: String(localized: "Checking iCloud…")
-            case .available: String(localized: "iCloud Sync Available")
-            case .noAccount: String(localized: "Sign in to iCloud")
-            case .restricted: String(localized: "iCloud access restricted")
-            case .couldNotDetermine: String(localized: "iCloud status unavailable")
-            case .localFallback: String(localized: "Local storage only")
-            case .error: String(localized: "iCloud check failed")
+            case .checking: String(localized: "Checking iCloud…", locale: BillioSharedStore.appLocale)
+            case .available: String(localized: "iCloud Sync Available", locale: BillioSharedStore.appLocale)
+            case .noAccount: String(localized: "Sign in to iCloud", locale: BillioSharedStore.appLocale)
+            case .restricted: String(localized: "iCloud access restricted", locale: BillioSharedStore.appLocale)
+            case .couldNotDetermine: String(localized: "iCloud status unavailable", locale: BillioSharedStore.appLocale)
+            case .localFallback: String(localized: "Local storage only", locale: BillioSharedStore.appLocale)
+            case .error: String(localized: "iCloud check failed", locale: BillioSharedStore.appLocale)
             }
         }
 
         var detail: String {
             switch self {
-            case .checking: String(localized: "Confirming account access")
-            case .available: String(localized: "Changes sync through your private CloudKit database")
-            case .noAccount: String(localized: "Add an iCloud account in Settings to enable sync")
-            case .restricted: String(localized: "This device does not allow iCloud access")
-            case .couldNotDetermine: String(localized: "Try again when the network is available")
-            case .localFallback: String(localized: "Your data remains available on this device")
+            case .checking: String(localized: "Confirming account access", locale: BillioSharedStore.appLocale)
+            case .available: String(localized: "Changes sync through your private CloudKit database", locale: BillioSharedStore.appLocale)
+            case .noAccount: String(localized: "Add an iCloud account in Settings to enable sync", locale: BillioSharedStore.appLocale)
+            case .restricted: String(localized: "This device does not allow iCloud access", locale: BillioSharedStore.appLocale)
+            case .couldNotDetermine: String(localized: "Try again when the network is available", locale: BillioSharedStore.appLocale)
+            case .localFallback: String(localized: "Your data remains available on this device", locale: BillioSharedStore.appLocale)
             case .error(let message): message
             }
         }
@@ -72,7 +72,7 @@ final class CloudSyncMonitor {
             case .noAccount: state = .noAccount
             case .restricted: state = .restricted
             case .couldNotDetermine: state = .couldNotDetermine
-            case .temporarilyUnavailable: state = .error(String(localized: "iCloud is temporarily unavailable"))
+            case .temporarilyUnavailable: state = .error(String(localized: "iCloud is temporarily unavailable", locale: BillioSharedStore.appLocale))
             @unknown default: state = .couldNotDetermine
             }
         } catch {
@@ -106,10 +106,10 @@ final class CloudSyncMonitor {
     private func handle(_ event: NSPersistentCloudKitContainer.Event) {
         let eventName: String
         switch event.type {
-        case .setup: eventName = String(localized: "Preparing iCloud sync")
-        case .import: eventName = String(localized: "Downloading changes")
-        case .export: eventName = String(localized: "Uploading changes")
-        @unknown default: eventName = String(localized: "Syncing with iCloud")
+        case .setup: eventName = String(localized: "Preparing iCloud sync", locale: BillioSharedStore.appLocale)
+        case .import: eventName = String(localized: "Downloading changes", locale: BillioSharedStore.appLocale)
+        case .export: eventName = String(localized: "Uploading changes", locale: BillioSharedStore.appLocale)
+        @unknown default: eventName = String(localized: "Syncing with iCloud", locale: BillioSharedStore.appLocale)
         }
 
         guard event.endDate != nil else {
@@ -125,7 +125,7 @@ final class CloudSyncMonitor {
             UserDefaults.standard.set(event.endDate, forKey: Keys.lastSuccessfulSyncAt)
             UserDefaults.standard.removeObject(forKey: Keys.lastSyncError)
         } else {
-            lastSyncError = event.error?.localizedDescription ?? String(localized: "iCloud sync failed")
+            lastSyncError = event.error?.localizedDescription ?? String(localized: "iCloud sync failed", locale: BillioSharedStore.appLocale)
             UserDefaults.standard.set(lastSyncError, forKey: Keys.lastSyncError)
         }
     }

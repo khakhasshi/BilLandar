@@ -172,7 +172,7 @@ private struct AddPaymentMethodView: View {
                 initialDefault = isDefault
             }
             .interactiveDismissDisabled(hasUnsavedChanges)
-            .alert("Discard this payment method?", isPresented: $showingDiscardConfirmation) {
+            .confirmationDialog("Discard this payment method?", isPresented: $showingDiscardConfirmation, titleVisibility: .visible) {
                 Button("Discard Changes", role: .destructive) { dismiss() }
                 Button("Keep Editing", role: .cancel) {}
             } message: {

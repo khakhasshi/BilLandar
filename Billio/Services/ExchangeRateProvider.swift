@@ -40,12 +40,16 @@ extension ExchangeRateProviding {
 enum ExchangeRateError: LocalizedError {
     case invalidURL
     case invalidResponse
+    case rateLimited
+    case serviceUnavailable
     case emptyRates
 
     var errorDescription: String? {
         switch self {
         case .invalidURL: "The exchange-rate request could not be created."
         case .invalidResponse: "The exchange-rate service returned an invalid response."
+        case .rateLimited: "The exchange-rate service is temporarily rate limited."
+        case .serviceUnavailable: "The exchange-rate service is temporarily unavailable."
         case .emptyRates: "No exchange rates were available for these currencies."
         }
     }
@@ -82,11 +86,7 @@ struct FrankfurterExchangeRateProvider: ExchangeRateProviding {
         ]
         guard let url = components?.url else { throw ExchangeRateError.invalidURL }
 
-        let (data, response) = try await session.data(from: url)
-        guard let httpResponse = response as? HTTPURLResponse,
-              (200..<300).contains(httpResponse.statusCode) else {
-            throw ExchangeRateError.invalidResponse
-        }
+        let data = try await fetch(url: url)
 
         let records = try JSONDecoder().decode([FrankfurterRateRecord].self, from: data)
         guard !records.isEmpty else { throw ExchangeRateError.emptyRates }
@@ -135,11 +135,7 @@ struct FrankfurterExchangeRateProvider: ExchangeRateProviding {
         ]
         guard let url = components?.url else { throw ExchangeRateError.invalidURL }
 
-        let (data, response) = try await session.data(from: url)
-        guard let httpResponse = response as? HTTPURLResponse,
-              (200..<300).contains(httpResponse.statusCode) else {
-            throw ExchangeRateError.invalidResponse
-        }
+        let data = try await fetch(url: url)
 
         let records = try JSONDecoder().decode([FrankfurterRateRecord].self, from: data)
         guard !records.isEmpty else { throw ExchangeRateError.emptyRates }
@@ -158,6 +154,47 @@ struct FrankfurterExchangeRateProvider: ExchangeRateProviding {
                 )
             }
             .sorted { $0.effectiveDate < $1.effectiveDate }
+    }
+
+    private func fetch(url: URL) async throws -> Data {
+        var request = URLRequest(url: url)
+        request.timeoutInterval = 20
+        request.cachePolicy = .reloadIgnoringLocalCacheData
+
+        for attempt in 0..<2 {
+            do {
+                let (data, response) = try await session.data(for: request)
+                guard let httpResponse = response as? HTTPURLResponse else {
+                    throw ExchangeRateError.invalidResponse
+                }
+                switch httpResponse.statusCode {
+                case 200..<300:
+                    return data
+                case 429:
+                    if attempt == 0 {
+                        try await Task.sleep(nanoseconds: 300_000_000)
+                        continue
+                    }
+                    throw ExchangeRateError.rateLimited
+                case 500...599:
+                    if attempt == 0 {
+                        try await Task.sleep(nanoseconds: 300_000_000)
+                        continue
+                    }
+                    throw ExchangeRateError.serviceUnavailable
+                default:
+                    throw ExchangeRateError.invalidResponse
+                }
+            } catch is CancellationError {
+                throw CancellationError()
+            } catch let error as URLError where attempt == 0 && error.code == .timedOut {
+                try await Task.sleep(nanoseconds: 300_000_000)
+            } catch {
+                throw error
+            }
+        }
+
+        throw ExchangeRateError.serviceUnavailable
     }
 }
 

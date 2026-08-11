@@ -44,7 +44,7 @@ struct PaymentRecordEditView: View {
                     }
                     Picker("Currency", selection: $currencyCode) {
                         ForEach(Currency.supported) { currency in
-                            Text("\(currency.code) · \(currency.name)").tag(currency.code)
+                            Text("\(currency.code) · \(currency.localizedName)").tag(currency.code)
                         }
                     }
                     DatePicker("Due date", selection: $dueDate, displayedComponents: .date)
@@ -74,7 +74,7 @@ struct PaymentRecordEditView: View {
                 }
             }
             .interactiveDismissDisabled(hasUnsavedChanges)
-            .alert("Discard payment changes?", isPresented: $showingDiscardConfirmation) {
+            .confirmationDialog("Discard payment changes?", isPresented: $showingDiscardConfirmation, titleVisibility: .visible) {
                 Button("Discard Changes", role: .destructive) { dismiss() }
                 Button("Keep Editing", role: .cancel) {}
             } message: {

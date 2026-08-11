@@ -31,7 +31,7 @@ enum BillLifecycleService {
                             paidAt: occurrence,
                             dueDate: occurrence,
                             status: .pending,
-                            note: String(localized: "Awaiting payment confirmation")
+                            note: String(localized: "Awaiting payment confirmation", locale: BillioSharedStore.appLocale)
                         )
                     )
                     knownOccurrences.insert(key)

@@ -41,9 +41,9 @@ final class ExchangeRateStore {
     }
 
     var dataStatusText: String {
-        if isLoading { return String(localized: "Updating rates…") }
+        if isLoading { return String(localized: "Updating rates…", locale: BillioSharedStore.appLocale) }
         if let errorMessage { return errorMessage }
-        guard let snapshot else { return String(localized: "Rates not loaded") }
+        guard let snapshot else { return String(localized: "Rates not loaded", locale: BillioSharedStore.appLocale) }
         return "Rates from \(snapshot.effectiveDate.formatted(.dateTime.month(.abbreviated).day().year()))"
     }
 
@@ -80,7 +80,7 @@ final class ExchangeRateStore {
         } catch {
             guard refreshRequestID == requestID else { return }
             if !(error is CancellationError) {
-                errorMessage = String(localized: "Using original amounts · rates unavailable")
+                errorMessage = String(localized: "Using original amounts · rates unavailable", locale: BillioSharedStore.appLocale)
             }
         }
 
@@ -139,7 +139,7 @@ final class ExchangeRateStore {
         } catch {
             guard historyRequestID == requestID else { return }
             if !(error is CancellationError) {
-                historicalErrorMessage = String(localized: "Historical rates unavailable")
+                historicalErrorMessage = String(localized: "Historical rates unavailable", locale: BillioSharedStore.appLocale)
             }
         }
         if historyRequestID == requestID { isLoadingHistory = false }

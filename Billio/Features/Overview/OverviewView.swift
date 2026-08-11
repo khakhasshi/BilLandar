@@ -103,14 +103,15 @@ struct OverviewView: View {
                                 Text(notificationBadgeCount > 9 ? "9+" : "\(notificationBadgeCount)")
                                     .font(.system(size: 9, weight: .bold, design: .rounded))
                                     .foregroundStyle(.white)
-                                    .frame(minWidth: 18, minHeight: 18)
-                                    .padding(.horizontal, 1)
+                                    .frame(minWidth: 20, minHeight: 20)
+                                    .padding(.horizontal, 2)
                                     .background(AppTheme.danger, in: Capsule())
                                     .fixedSize(horizontal: true, vertical: true)
-                                    .offset(x: -1, y: 2)
+                                    .offset(x: -2, y: 4)
                             }
                         }
                         .frame(width: 44, height: 44)
+                        .clipped()
                     }
                     .accessibilityLabel("Notifications, \(notificationBadgeCount) items")
                 }

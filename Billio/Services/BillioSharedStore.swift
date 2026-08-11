@@ -33,6 +33,7 @@ enum BillioSharedStore {
     enum Keys {
         static let didMigrateLegacyDefaults = "sharedStore.didMigrateLegacyDefaults"
         static let usesCloudKit = "sharedStore.usesCloudKit"
+        static let cloudKitFallbackReason = "sharedStore.cloudKitFallbackReason"
         static let displayCurrency = "displayCurrencyCode"
         static let exchangeRateSnapshotPrefix = "exchangeRateSnapshot"
         static let themeMode = "billioThemeMode"

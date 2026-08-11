@@ -128,6 +128,13 @@ final class SystemIntegrationTests: XCTestCase {
         XCTAssertGreaterThan(bill.nextDueDate, dueDate)
     }
 
+    func testVersionedSchemaKeepsAllPersistedModels() {
+        XCTAssertEqual(BillioSchemaV1.versionIdentifier, Schema.Version(1, 0, 0))
+        XCTAssertEqual(Set(BillioSchemaV1.models.map { String(describing: $0) }), ["Bill", "PaymentRecord", "PaymentMethod"])
+        XCTAssertEqual(BillioMigrationPlan.schemas.count, 1)
+        XCTAssertTrue(BillioMigrationPlan.stages.isEmpty)
+    }
+
     private var snapshotKey: String {
         "\(BillioSharedStore.Keys.exchangeRateSnapshotPrefix).USD"
     }

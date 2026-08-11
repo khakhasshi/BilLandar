@@ -7,6 +7,10 @@ struct Currency: Identifiable, Hashable {
 
     var id: String { code }
 
+    var localizedName: String {
+        String(localized: String.LocalizationValue(name), locale: BillioSharedStore.appLocale)
+    }
+
     static let supported: [Currency] = [
         Currency(code: "USD", name: "US Dollar", symbol: "$"),
         Currency(code: "CNY", name: "Chinese Yuan", symbol: "¥"),
