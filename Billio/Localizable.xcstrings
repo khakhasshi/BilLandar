@@ -2,16 +2,188 @@
   "sourceLanguage" : "en",
   "strings" : {
     "" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
     "—" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "—"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "—"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "—"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "—"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "—"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "—"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "—"
+          }
+        }
+      }
     },
     "— %@" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "— %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "— %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "— %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "— %@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "— %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "— %@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "— %@"
+          }
+        }
+      }
     },
     "%@" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
     },
     "%@ – %@" : {
       "localizations" : {
@@ -19,6 +191,48 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "%1$@ – %2$@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ – %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ – %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ – %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ – %@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ – %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ – %@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ – %@"
           }
         }
       }
@@ -30,11 +244,96 @@
             "state" : "new",
             "value" : "%1$@ · %2$@"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · %@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · %@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · %@"
+          }
         }
       }
     },
     "%lld" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        }
+      }
     },
     "%lld %@" : {
       "localizations" : {
@@ -43,23 +342,280 @@
             "state" : "new",
             "value" : "%1$lld %2$@"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld %@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld %@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld %@"
+          }
         }
       }
     },
     "%lld bills due" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld Rechnungen fällig"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Facturas de %lld vencidas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Factures %lld dues"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 請求書の期限が切れています"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 청구서 지불 기한"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 账单到期"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 帳單到期"
+          }
+        }
+      }
     },
     "%lld days before" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld Tage zuvor"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld días antes"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld jours avant"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 日前"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld일 전"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 天前"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 天前"
+          }
+        }
+      }
     },
     "0.00" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "0.00"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "0.00"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "0.00"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "0.00"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "0.00"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "0.00"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "0.00"
+          }
+        }
+      }
     },
     "1 day before" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 Tag vorher"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 dia antes"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 jour avant"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1日前"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1일 전"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1天前"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1天前"
+          }
+        }
+      }
     },
     "9+" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "9+"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "9+"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "9+"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "9+"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "9+"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "9+"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "9+"
+          }
+        }
+      }
     },
     "200 GB Storage" : {
       "extractionState" : "manual",
@@ -158,14 +714,54 @@
     "About" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "About" } },
-        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "关于" } },
-        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "關於" } },
-        "ja" : { "stringUnit" : { "state" : "translated", "value" : "概要" } },
-        "ko" : { "stringUnit" : { "state" : "translated", "value" : "정보" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "À propos" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Über" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Acerca de" } }
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Über"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acerca de"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "À propos"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "概要"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "정보"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关于"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "關於"
+          }
+        }
       }
     },
     "Active" : {
@@ -216,7 +812,50 @@
       }
     },
     "Actual monthly payment history" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tatsächlicher monatlicher Zahlungsverlauf"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historial de pagos mensuales real"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historique réel des paiements mensuels"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "実際の月々の支払い履歴"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "실제 월별 결제 내역"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每月实际付款记录"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每月實際付款記錄"
+          }
+        }
+      }
     },
     "Actual payment history" : {
       "extractionState" : "manual",
@@ -266,7 +905,50 @@
       }
     },
     "Add ${name} for ${amount} ${currency} due ${nextDueDate}" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fügen Sie ${name} für ${amount} ${currency} fällig ${nextDueDate} hinzu"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agregue ${name} para ${amount} ${currency} adeudado en ${nextDueDate}"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajoutez ${name} pour ${amount} ${currency} dû ${nextDueDate}"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "${name} を ${amount} ${currency} に追加して ${nextDueDate} に支払います"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "${nextDueDate}에 ${amount} ${currency}에 ${name} 추가"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加 ${name}，金额为 ${amount} ${currency}，到期日期为 ${nextDueDate}"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加 ${name}，金額為 ${amount} ${currency}，到期日為 ${nextDueDate}"
+          }
+        }
+      }
     },
     "Add an iCloud account in Settings to enable sync" : {
       "extractionState" : "manual",
@@ -410,13 +1092,109 @@
       }
     },
     "Add Payment Method" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Add Payment Method" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "添加支付方式" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "新增付款方式" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "支払い方法を追加" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "결제 수단 추가" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ajouter un moyen de paiement" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Zahlungsmethode hinzufügen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Añadir método de pago" } }
+      }
     },
     "Added %@ to Billio." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ zu Billio hinzugefügt."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se agregó %@ a Billio."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajout de %@ à Billio."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio に %@ を追加しました。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio에 %@를 추가했습니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将 %@ 添加到 Billio。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "將 %@ 加入 Billio。"
+          }
+        }
+      }
     },
     "Adds a recurring bill to Billio." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fügt Billio eine wiederkehrende Rechnung hinzu."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agrega una factura recurrente a Billio."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajoute une facture récurrente à Billio."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio に定期的な請求を追加します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio에 반복 청구서를 추가합니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "向 Billio 添加定期账单。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "向 Billio 添加定期帳單。"
+          }
+        }
+      }
     },
     "All" : {
       "extractionState" : "manual",
@@ -748,7 +1526,50 @@
       }
     },
     "Australian Dollar (AUD)" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Australischer Dollar (AUD)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dólar australiano (AUD)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dollar australien (AUD)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オーストラリアドル (AUD)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "호주 달러(AUD)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "澳元 (AUD)"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "澳幣 (AUD)"
+          }
+        }
+      }
     },
     "Awaiting payment confirmation" : {
       "extractionState" : "manual",
@@ -892,22 +1713,156 @@
       }
     },
     "Bill details" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Bill details" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "账单详情" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "帳單詳細資料" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "請求の詳細" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "청구서 세부 정보" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Détails de la facture" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Rechnungsdetails" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Detalles de la factura" } }
+      }
     },
     "Bill due soon" : {
       "extractionState" : "manual",
       "localizations" : {
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Rechnung bald fällig" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Factura próxima a vencer" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Facture bientôt due" } },
-        "ja" : { "stringUnit" : { "state" : "translated", "value" : "請求期限が近づいています" } },
-        "ko" : { "stringUnit" : { "state" : "translated", "value" : "청구서 결제 예정" } },
-        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "账单即将到期" } },
-        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "帳單即將到期" } }
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechnung bald fällig"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Factura próxima a vencer"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Facture bientôt due"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請求期限が近づいています"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "청구서 결제 예정"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "账单即将到期"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "帳單即將到期"
+          }
+        }
       }
     },
     "Bill reminders" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechnungserinnerungen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "recordatorios de facturas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rappels de factures"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請求書のリマインダー"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "청구서 알림"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "账单提醒"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "帳單提醒"
+          }
+        }
+      }
+    },
+    "Bill reminders are scheduled locally on your device. You can disable them at any time in Billio or iOS Settings." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechnungserinnerungen werden lokal auf Ihrem Gerät geplant. Sie können sie jederzeit in den Billio- oder iOS-Einstellungen deaktivieren."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los recordatorios de facturas se programan localmente en su dispositivo. Puedes desactivarlos en cualquier momento en Billio o en la configuración de iOS."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les rappels de factures sont programmés localement sur votre appareil. Vous pouvez les désactiver à tout moment dans Billio ou dans les paramètres iOS."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請求書のリマインダーはデバイス上でローカルにスケジュールされます。 Billio または iOS の設定でいつでも無効にできます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "청구서 알림은 귀하의 장치에 로컬로 예약됩니다. Billio 또는 iOS 설정에서 언제든지 비활성화할 수 있습니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "帐单提醒是在您的设备上本地安排的。您可以随时在 Bi​​llio 或 iOS 设置中禁用它们。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "帳單提醒是在您的裝置上本地安排的。您可以隨時在 Billio 或 iOS 設定中停用它們。"
+          }
+        }
+      }
     },
     "Billing cycle" : {
       "extractionState" : "manual",
@@ -957,19 +1912,326 @@
       }
     },
     "Billing Cycle" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrechnungszyklus"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ciclo de facturación"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cycle de facturation"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請求サイクル"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "청구주기"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "计费周期"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "計費週期"
+          }
+        }
+      }
     },
     "Billio" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "billio"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ビリオ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "빌리오"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "比利奥"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "比利奧"
+          }
+        }
+      }
+    },
+    "Billio does not process payments and never asks for full card numbers, bank credentials, or security codes. Payment methods contain only labels and optional last-four-digit references." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio verarbeitet keine Zahlungen und fragt niemals nach vollständigen Kartennummern, Bankdaten oder Sicherheitscodes. Zahlungsmethoden enthalten nur Bezeichnungen und optionale Referenzen der letzten vier Ziffern."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio no procesa pagos y nunca solicita números de tarjeta completos, credenciales bancarias o códigos de seguridad. Los métodos de pago contienen solo etiquetas y referencias opcionales de los últimos cuatro dígitos."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio ne traite pas les paiements et ne demande jamais les numéros de carte complets, les identifiants bancaires ou les codes de sécurité. Les méthodes de paiement contiennent uniquement des étiquettes et des références facultatives à quatre derniers chiffres."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio は支払いを処理せず、完全なカード番号、銀行資格情報、またはセキュリティ コードを尋ねることはありません。支払い方法には、ラベルとオプションの下 4 桁の参照のみが含まれます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio는 결제를 처리하지 않으며 전체 카드 번호, 은행 자격 증명 또는 보안 코드를 요구하지 않습니다. 결제 방법에는 라벨과 선택적인 마지막 4자리 참조만 포함됩니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio 不处理付款，也不会要求提供完整的卡号、银行凭证或安全代码。付款方式仅包含标签和可选的最后四位数字参考。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio 不處理付款，也不會要求完整的卡號、銀行憑證或安全代碼。付款方式僅包含標籤和可選的最後四位數字參考。"
+          }
+        }
+      }
+    },
+    "Billio requests current and historical reference rates from Frankfurter. Requests contain currency codes and dates, not your bill names or payment details." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio fordert aktuelle und historische Referenzzinssätze von Frankfurter an. Anfragen enthalten Währungscodes und Daten, nicht Ihre Rechnungsnamen oder Zahlungsdetails."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio solicita tasas de referencia actuales e históricas a Frankfurter. Las solicitudes contienen códigos de moneda y fechas, no los nombres de sus facturas ni los detalles de pago."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio demande à Frankfurter les taux de référence actuels et historiques. Les demandes contiennent des codes de devise et des dates, mais pas les noms de vos factures ou les détails de paiement."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio は、フランクフルターから現在および過去の参照レートをリクエストします。リクエストには通貨コードと日付が含まれますが、請求書名や支払いの詳細は含まれません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio는 프랑크푸르트(Frankfurter)에 현재 및 과거 기준 금리를 요청합니다. 요청에는 청구서 이름이나 결제 세부정보가 아닌 통화 코드와 날짜가 포함됩니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio 向法兰克福请求当前和历史参考汇率。请求包含货币代码和日期，而不是您的帐单名称或付款详细信息。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio 向法蘭克福請求當前和歷史參考匯率。請求包含貨幣代碼和日期，而不是您的帳單名稱或付款詳細資訊。"
+          }
+        }
+      }
     },
     "Billio will record a confirmed payment. You can undo the change immediately afterward." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio erfasst eine bestätigte Zahlung. Sie können die Änderung direkt im Anschluss rückgängig machen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio registrará un pago confirmado. Puede deshacer el cambio inmediatamente después."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio enregistrera un paiement confirmé. Vous pouvez annuler la modification immédiatement après."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio は確認された支払いを記録します。変更は直後に元に戻すことができます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio는 확인된 지불을 기록할 것입니다. 변경 후에는 즉시 취소할 수 있습니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio 将记录确认的付款。您可以随后立即撤消更改。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio 將記錄確認的付款。您可以隨後立即撤銷變更。"
+          }
+        }
+      }
     },
     "Billio will stop including it in upcoming totals and reminders." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio wird es nicht mehr in künftige Gesamtbeträge und Erinnerungen einbeziehen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio dejará de incluirlo en los próximos totales y recordatorios."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio cessera de l'inclure dans les totaux et rappels à venir."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio は今後の合計とリマインダーにこれを含めることを停止します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio는 향후 합계 및 알림에 해당 항목을 더 이상 포함하지 않습니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio 将停止将其包含在即将到来的总计和提醒中。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio 將停止將其納入即將到來的總和和提醒中。"
+          }
+        }
+      }
     },
     "Billio will watch for price changes, trial endings, duplicate services, and payment issues." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio wird auf Preisänderungen, Testabschlüsse, doppelte Dienste und Zahlungsprobleme achten."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio estará atento a cambios de precios, finalización de pruebas, servicios duplicados y problemas de pago."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio surveillera les changements de prix, les fins d'essai, les services en double et les problèmes de paiement."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio は、価格の変更、トライアルの終了、重複したサービス、支払いの問題を監視します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio는 가격 변동, 체험판 종료, 서비스 중복, 결제 문제 등을 지켜볼 것입니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio 将关注价格变化、试用结束、重复服务和付款问题。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio 將專注於價格變化、試用結束、重複服務和付款問題。"
+          }
+        }
+      }
     },
     "Bills" : {
       "extractionState" : "manual",
@@ -1019,10 +2281,142 @@
       }
     },
     "Bills and payment history use your private CloudKit database. Sync happens automatically when iCloud is available." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechnungen und Zahlungsverlauf nutzen Ihre private CloudKit-Datenbank. Die Synchronisierung erfolgt automatisch, wenn iCloud verfügbar ist."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las facturas y el historial de pagos utilizan su base de datos privada de CloudKit. La sincronización ocurre automáticamente cuando iCloud está disponible."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les factures et l'historique des paiements utilisent votre base de données CloudKit privée. La synchronisation s'effectue automatiquement lorsque iCloud est disponible."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請求書と支払い履歴にはプライベート CloudKit データベースが使用されます。 iCloud が利用可能な場合、同期は自動的に行われます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "청구서 및 지불 내역은 개인 CloudKit 데이터베이스를 사용합니다. iCloud를 사용할 수 있으면 동기화가 자동으로 수행됩니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "账单和付款历史记录使用您的私有 CloudKit 数据库。当 iCloud 可用时，同步会自动进行。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "帳單和付款記錄使用您的私人 CloudKit 資料庫。當 iCloud 可用時，同步會自動進行。"
+          }
+        }
+      }
     },
     "Bills using this reference will be changed to no payment method." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechnungen mit dieser Referenz werden auf keine Zahlungsmethode umgestellt."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las facturas que utilicen esta referencia se cambiarán a ningún método de pago."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les factures utilisant cette référence seront remplacées par aucun mode de paiement."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この参照を使用した請求書は、支払方法なしに変更されます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 참조를 사용하는 청구서는 결제 수단 없음으로 변경됩니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用此参考的账单将更改为无付款方式。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用此參考的帳單將更改為無付款方式。"
+          }
+        }
+      }
+    },
+    "Bills, payment confirmations, and payment-method references are stored with SwiftData. When iCloud is available, these records sync through your private CloudKit database." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechnungen, Zahlungsbestätigungen und Zahlungsmethodenreferenzen werden bei SwiftData gespeichert. Wenn iCloud verfügbar ist, werden diese Datensätze über Ihre private CloudKit-Datenbank synchronisiert."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las facturas, las confirmaciones de pago y las referencias de métodos de pago se almacenan en SwiftData. Cuando iCloud está disponible, estos registros se sincronizan a través de su base de datos privada de CloudKit."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les factures, les confirmations de paiement et les références des méthodes de paiement sont stockées avec SwiftData. Lorsque iCloud est disponible, ces enregistrements sont synchronisés via votre base de données CloudKit privée."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請求書、支払い確認、支払い方法の参照は SwiftData に保存されます。 iCloud が利用可能な場合、これらのレコードはプライベート CloudKit データベースを通じて同期されます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "청구서, 결제 확인 및 결제 방법 참조는 SwiftData에 저장됩니다. iCloud를 사용할 수 있는 경우 이러한 기록은 개인 CloudKit 데이터베이스를 통해 동기화됩니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "账单、付款确认和付款方式参考均存储在 SwiftData 中。当 iCloud 可用时，这些记录将通过您的私有 CloudKit 数据库同步。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "帳單、付款確認和付款方式參考均儲存在 SwiftData 中。當 iCloud 可用時，這些記錄將透過您的私有 CloudKit 資料庫同步。"
+          }
+        }
+      }
     },
     "British Pound" : {
       "extractionState" : "manual",
@@ -1072,7 +2466,50 @@
       }
     },
     "British Pound (GBP)" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Britisches Pfund (GBP)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Libra británica (GBP)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Livre sterling (GBP)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "英国ポンド (GBP)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "영국 파운드(GBP)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "英镑 (GBP)"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "英鎊 (GBP)"
+          }
+        }
+      }
     },
     "Busy renewal week" : {
       "extractionState" : "manual",
@@ -1263,7 +2700,50 @@
       }
     },
     "Canadian Dollar (CAD)" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kanadischer Dollar (CAD)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dólar canadiense (CAD)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dollar canadien (CAD)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カナダドル (CAD)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "캐나다 달러(CAD)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加元 (CAD)"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加元 (CAD)"
+          }
+        }
+      }
     },
     "Cancel" : {
       "extractionState" : "manual",
@@ -1313,16 +2793,188 @@
       }
     },
     "Cancel Bill" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechnung stornieren"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar factura"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuler la facture"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請求書をキャンセルする"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "청구 취소"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消账单"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消帳單"
+          }
+        }
+      }
     },
     "Cancel this bill?" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese Rechnung stornieren?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Cancelar esta factura?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuler cette facture ?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この請求書をキャンセルしますか?"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 청구서를 취소하시겠습니까?"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消这个账单吗？"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消這個帳單嗎？"
+          }
+        }
+      }
     },
     "Cancellation URL" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stornierungs-URL"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL de cancelación"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL d'annulation"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キャンセルURL"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "취소 URL"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消网址"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消網址"
+          }
+        }
+      }
     },
     "Cancellation URL (optional)" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stornierungs-URL (optional)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL de cancelación (opcional)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL d'annulation (facultatif)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キャンセルURL（任意）"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "취소 URL(선택사항)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消 URL（可选）"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消 URL（可選）"
+          }
+        }
+      }
     },
     "Cancelled" : {
       "extractionState" : "manual",
@@ -1701,7 +3353,50 @@
       }
     },
     "Chinese Yuan (CNY)" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chinesischer Yuan (CNY)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yuan chino (CNY)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yuan chinois (CNY)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中国人民元 (CNY)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "중국 위안(CNY)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "人民币 (CNY)"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "人民幣 (CNY)"
+          }
+        }
+      }
     },
     "Confirm Payment" : {
       "extractionState" : "manual",
@@ -1751,7 +3446,50 @@
       }
     },
     "Confirm payment?" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zahlung bestätigen?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Confirmar pago?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confirmer le paiement ?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支払いを確認しますか?"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "결제를 확인하시겠습니까?"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "确认付款？"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "確認付款？"
+          }
+        }
+      }
     },
     "Confirmed manually" : {
       "extractionState" : "manual",
@@ -1895,10 +3633,142 @@
       }
     },
     "Converted using each payment date's reference rate" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Umgerechnet unter Verwendung des Referenzzinssatzes jedes Zahlungsdatums"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Convertido utilizando la tasa de referencia de cada fecha de pago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Converti en utilisant le taux de référence de chaque date de paiement"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "各支払日の基準レートで換算"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지급일별 기준환율로 환산"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用每个付款日期的参考汇率进行转换"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用每個付款日期的參考匯率進行轉換"
+          }
+        }
+      }
     },
     "Converts on %@" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konvertiert auf %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Convierte en %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Convertit sur %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ で変換"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@에서 변환"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在 %@ 上转换"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在 %@ 上轉換"
+          }
+        }
+      }
+    },
+    "CSV exports are created only when you request them and are sent to the location you choose." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CSV-Exporte werden nur erstellt, wenn Sie sie anfordern, und an den von Ihnen gewählten Speicherort gesendet."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las exportaciones CSV se crean solo cuando las solicita y se envían a la ubicación que elija."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les exportations CSV sont créées uniquement lorsque vous les demandez et sont envoyées à l'emplacement que vous choisissez."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CSV エクスポートは、リクエストした場合にのみ作成され、選択した場所に送信されます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CSV 내보내기는 요청한 경우에만 생성되며 선택한 위치로 전송됩니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仅当您请求时才会创建 CSV 导出并将其发送到您选择的位置。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "僅當您請求時才會建立 CSV 匯出並將其傳送到您選擇的位置。"
+          }
+        }
+      }
     },
     "Currency" : {
       "extractionState" : "manual",
@@ -1995,22 +3865,280 @@
       }
     },
     "Data" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daten"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Données"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "データ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "데이터"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "数据"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "數據"
+          }
+        }
+      }
     },
     "Default" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standard"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Por defecto"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Défaut"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デフォルト"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기본"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "默认"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "預設"
+          }
+        }
+      }
     },
     "Default method" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standardmethode"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Método predeterminado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Méthode par défaut"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デフォルトのメソッド"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기본 방법"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "默认方法"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "預設方法"
+          }
+        }
+      }
     },
     "Delete" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Löschen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Borrar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "消去"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "삭제"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刪除"
+          }
+        }
+      }
     },
     "Delete %@?" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ löschen?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Eliminar %@?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer %@ ?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@を削除しますか?"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@를 삭제하시겠습니까?"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除 %@？"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刪除 %@？"
+          }
+        }
+      }
     },
     "Delete Payment Method" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zahlungsmethode löschen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eliminar método de pago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer le mode de paiement"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支払い方法の削除"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "결제 수단 삭제"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除付款方式"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刪除付款方式"
+          }
+        }
+      }
     },
     "Digital wallet" : {
       "extractionState" : "manual",
@@ -2107,19 +4235,234 @@
       }
     },
     "Discard Changes" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Änderungen verwerfen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Descartar cambios"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ignorer les modifications"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "変更の破棄"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "변경사항 취소"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放弃更改"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放棄更改"
+          }
+        }
+      }
     },
     "Discard payment changes?" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zahlungsänderungen verwerfen?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Descartar cambios de pago?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuler les modifications de paiement ?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支払い変更を破棄しますか?"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "결제 변경사항을 삭제하시겠습니까?"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放弃付款更改？"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放棄付款更改？"
+          }
+        }
+      }
     },
     "Discard this new bill?" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese neue Rechnung verwerfen?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Descartar este nuevo billete?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer cette nouvelle facture ?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この新しい請求書を破棄しますか?"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 새 법안을 폐기하시겠습니까?"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放弃这个新法案？"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放棄這個新法案？"
+          }
+        }
+      }
     },
     "Discard this payment method?" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese Zahlungsmethode verwerfen?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Descartar este método de pago?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer ce mode de paiement ?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この支払い方法を破棄しますか?"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 결제 수단을 삭제하시겠습니까?"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放弃这种付款方式？"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放棄這種付款方式？"
+          }
+        }
+      }
     },
     "Discard your changes?" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ihre Änderungen verwerfen?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Descartar tus cambios?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer vos modifications ?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "変更を破棄しますか?"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "변경사항을 삭제하시겠습니까?"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放弃您的更改吗？"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放棄您的更改嗎？"
+          }
+        }
+      }
     },
     "Display currency" : {
       "extractionState" : "manual",
@@ -2451,7 +4794,50 @@
       }
     },
     "Each active bill uses its own reminder lead time. iOS may adjust delivery timing based on system settings." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jede aktive Rechnung verwendet ihre eigene Mahnvorlaufzeit. iOS kann den Lieferzeitpunkt basierend auf den Systemeinstellungen anpassen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cada factura activa utiliza su propio tiempo de entrega de recordatorio. iOS puede ajustar el tiempo de entrega según la configuración del sistema."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chaque facture active utilise son propre délai de rappel. iOS peut ajuster le délai de livraison en fonction des paramètres du système."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "有効な各請求書は、独自のリマインダー リード タイムを使用します。 iOS はシステム設定に基づいて配信タイミングを調整する場合があります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "각 활성 청구서는 자체 알림 리드 타임을 사용합니다. iOS는 시스템 설정에 따라 배송 시기를 조정할 수 있습니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每个有效账单都使用自己的提醒提前时间。 iOS 可能会根据系统设置调整传送时间。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每個有效帳單都使用自己的提醒提前時間。 iOS 可能會根據系統設定調整傳送時間。"
+          }
+        }
+      }
     },
     "Edit" : {
       "extractionState" : "manual",
@@ -2501,7 +4887,50 @@
       }
     },
     "Edit %@ payment" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bearbeiten Sie die %@-Zahlung"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Editar pago %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifier le paiement %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 支払いの編集"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 결제 수정"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "编辑 %@ 付款"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "編輯 %@ 付款"
+          }
+        }
+      }
     },
     "Edit Bill" : {
       "extractionState" : "manual",
@@ -2551,10 +4980,96 @@
       }
     },
     "Edit Payment" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zahlung bearbeiten"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Editar pago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifier le paiement"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支払いの編集"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "결제 수정"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "编辑付款方式"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "編輯付款方式"
+          }
+        }
+      }
     },
     "Effective date" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datum des Inkrafttretens"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fecha de vigencia"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Date d'entrée en vigueur"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "発効日"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "발효일"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "生效日期"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "生效日期"
+          }
+        }
+      }
     },
     "Enabled" : {
       "extractionState" : "manual",
@@ -2604,7 +5119,50 @@
       }
     },
     "Entertainment" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unterhaltung"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entretenimiento"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Divertissement"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エンターテインメント"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오락"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "娱乐"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "娛樂"
+          }
+        }
+      }
     },
     "Euro" : {
       "extractionState" : "manual",
@@ -2654,7 +5212,50 @@
       }
     },
     "Euro (EUR)" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euro (EUR)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euro (EUR)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "euros (EUR)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ユーロ (EUR)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "유로(EUR)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "欧元 (EUR)"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "歐元 (EUR)"
+          }
+        }
+      }
     },
     "Every 3 months" : {
       "extractionState" : "manual",
@@ -2892,7 +5493,96 @@
       }
     },
     "Exchange rates" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wechselkurse"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tipos de cambio"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taux de change"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "為替レート"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "환율"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "汇率"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "匯率"
+          }
+        }
+      }
+    },
+    "Export" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Export"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exportar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exporter"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "輸出"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "내보내다"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "出口"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "出口"
+          }
+        }
+      }
     },
     "Export bills as CSV" : {
       "extractionState" : "manual",
@@ -3177,10 +5867,96 @@
       }
     },
     "Has bills due" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es sind Rechnungen fällig"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiene facturas vencidas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A des factures à payer"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請求書の支払い期限がある"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "청구서 지불 기한이 있음"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "有账单到期"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "有帳單到期"
+          }
+        }
+      }
     },
     "Historical rates are unavailable for these payments." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Für diese Zahlungen sind keine historischen Kurse verfügbar."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las tasas históricas no están disponibles para estos pagos."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les taux historiques ne sont pas disponibles pour ces paiements."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "これらの支払いでは過去のレートは利用できません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 결제에는 과거 환율을 사용할 수 없습니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这些付款的历史汇率不可用。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這些付款的歷史匯率不可用。"
+          }
+        }
+      }
     },
     "Historical rates unavailable" : {
       "extractionState" : "manual",
@@ -3324,7 +6100,50 @@
       }
     },
     "Hong Kong Dollar (HKD)" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hongkong-Dollar (HKD)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dólar de Hong Kong (HKD)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dollar de Hong Kong (HKD)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "香港ドル (HKD)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "홍콩 달러(HKD)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "港元 (HKD)"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "港幣 (HKD)"
+          }
+        }
+      }
     },
     "iCloud" : {
       "extractionState" : "manual",
@@ -3468,7 +6287,50 @@
       }
     },
     "iCloud is temporarily unavailable" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud ist vorübergehend nicht verfügbar"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud no está disponible temporalmente"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud est temporairement indisponible"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloudが一時的に利用できなくなっています"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud를 일시적으로 사용할 수 없습니다"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud 暂时不可用"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud 暫時無法使用"
+          }
+        }
+      }
     },
     "iCloud status unavailable" : {
       "extractionState" : "manual",
@@ -3612,10 +6474,96 @@
       }
     },
     "In %@" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dans %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@で"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@에서"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在 %@ 中"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在 %@ 中"
+          }
+        }
+      }
     },
     "Issuer (optional)" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Emittent (optional)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Emisor (opcional)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Émetteur (facultatif)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "発行者 (オプション)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "발급자(선택사항)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "发行人（可选）"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "發行人（可選）"
+          }
+        }
+      }
     },
     "Japanese Yen" : {
       "extractionState" : "manual",
@@ -3665,10 +6613,96 @@
       }
     },
     "Japanese Yen (JPY)" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Japanischer Yen (JPY)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yen japonés (JPY)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yen japonais (JPY)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日本円(JPY)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "일본 엔(JPY)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日元 (JPY)"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日元 (JPY)"
+          }
+        }
+      }
     },
     "Keep Editing" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bearbeiten Sie weiter"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seguir editando"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuer à modifier"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "編集を続ける"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "계속 편집하세요"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "继续编辑"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "繼續編輯"
+          }
+        }
+      }
     },
     "Language" : {
       "extractionState" : "manual",
@@ -3718,13 +6752,142 @@
       }
     },
     "Last four digits (optional)" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Letzte vier Ziffern (optional)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Últimos cuatro dígitos (opcional)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quatre derniers chiffres (facultatif)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下 4 桁 (オプション)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "마지막 4자리(선택사항)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最后四位数字（可选）"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最後四位數字（可選）"
+          }
+        }
+      }
     },
     "Last successful sync" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Letzte erfolgreiche Synchronisierung"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Última sincronización exitosa"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dernière synchronisation réussie"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最後に成功した同期"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "마지막으로 성공한 동기화"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上次成功同步"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上次成功同步"
+          }
+        }
+      }
     },
     "Last updated: August 11, 2026" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Letzte Aktualisierung: 11. August 2026"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Última actualización: 11 de agosto de 2026"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dernière mise à jour : 11 août 2026"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最終更新日: 2026 年 8 月 11 日"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최종 업데이트 날짜: 2026년 8월 11일"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最后更新时间：2026 年 8 月 11 日"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最後更新時間：2026 年 8 月 11 日"
+          }
+        }
+      }
     },
     "Light" : {
       "extractionState" : "manual",
@@ -3820,14 +6983,189 @@
         }
       }
     },
+    "Local-only fallback: %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nur lokaler Fallback: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Respaldo solo local: %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solution de secours locale uniquement : %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ローカルのみのフォールバック: %@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "로컬 전용 대체: %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仅本地回退：%@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "僅本地回退：%@"
+          }
+        }
+      }
+    },
     "Make Default" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als Standard festlegen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Establecer como predeterminado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Par défaut"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デフォルトにする"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기본값으로 설정"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设为默认"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設為預設"
+          }
+        }
+      }
     },
     "Mark %@ as paid?" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ als bezahlt markieren?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Marcar %@ como pagado?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marquer %@ comme payé ?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ を支払い済みとしてマークしますか?"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@를 유료로 표시하시겠습니까?"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将 %@ 标记为已付款？"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "將 %@ 標記為已付款？"
+          }
+        }
+      }
     },
     "Mark ${bill} as paid" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Markieren Sie ${bill} als bezahlt"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marcar ${bill} como pagado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marquer ${bill} comme payé"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "${bill} を支払い済みとしてマークする"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "${bill}을(를) 결제 완료로 표시"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将 ${bill} 标记为已付款"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "將 ${bill} 標記為已付款"
+          }
+        }
+      }
     },
     "Mark as Paid" : {
       "extractionState" : "manual",
@@ -3924,7 +7262,50 @@
       }
     },
     "Mark Paid" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mark bezahlt"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marcar pagado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marquer comme payé"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支払い済みとしてマークする"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "유료로 표시"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "马克·佩德"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "馬克·佩德"
+          }
+        }
+      }
     },
     "Marked %@ as paid. The next due date is %@." : {
       "localizations" : {
@@ -3933,14 +7314,142 @@
             "state" : "new",
             "value" : "Marked %1$@ as paid. The next due date is %2$@."
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ als bezahlt markiert. Der nächste Fälligkeitstermin ist %@."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marcado %@ como pagado. La próxima fecha de vencimiento es %@."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marqué %@ comme payé. La prochaine date d’échéance est %@."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ を支払い済みとしてマークしました。次の期日は %@ です。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@를 유료로 표시했습니다. 다음 만기일은 %@입니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将 %@ 标记为已付款。下一个到期日是 %@。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "將 %@ 標記為已付款。下一個到期日是 %@。"
+          }
         }
       }
     },
     "Month" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monat"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mes"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mois"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "월"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月"
+          }
+        }
+      }
     },
     "Monthly" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monatlich"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mensual"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mensuel"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "毎月"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "월간 간행물"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每月"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每月"
+          }
+        }
+      }
     },
     "Monthly amount" : {
       "extractionState" : "manual",
@@ -4131,7 +7640,50 @@
       }
     },
     "Monthly recurring total by category" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monatlich wiederkehrende Summe nach Kategorie"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Total recurrente mensual por categoría"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Total récurrent mensuel par catégorie"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カテゴリ別の月次合計"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "카테고리별 월간 반복 합계"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "按类别划分的每月经常性总计"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "按類別劃分的每月經常性總計"
+          }
+        }
+      }
     },
     "Monthly spending" : {
       "extractionState" : "manual",
@@ -4275,7 +7827,50 @@
       }
     },
     "Name, e.g. Personal Visa" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name, z.B. Persönliches Visum"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nombre, p.e. Visa personal"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nom, par ex. Visa personnel"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名前、例:個人ビザ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이름(예: 개인 비자"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名称，例如个人签证"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名稱，例如個人簽證"
+          }
+        }
+      }
     },
     "Never miss a bill." : {
       "extractionState" : "manual",
@@ -4372,7 +7967,50 @@
       }
     },
     "Next 7 days · %@" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nächste 7 Tage · %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Próximos 7 días · %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7 prochains jours · %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "次の 7 日間 · %@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다음 7일 · %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "接下来 7 天 · %@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "接下來 7 天 · %@"
+          }
+        }
+      }
     },
     "Next due date" : {
       "extractionState" : "manual",
@@ -4422,10 +8060,96 @@
       }
     },
     "Next Due Date" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nächstes Fälligkeitsdatum"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Próxima fecha de vencimiento"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prochaine date d'échéance"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "次回の期日"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다음 기한"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下一个截止日期"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下一個截止日期"
+          }
+        }
+      }
     },
     "Next month" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nächsten Monat"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mes próximo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mois prochain"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "来月"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다음 달"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下个月"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下個月"
+          }
+        }
+      }
     },
     "Next payment" : {
       "extractionState" : "manual",
@@ -4569,7 +8293,50 @@
       }
     },
     "No bills due %@" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Rechnungen fällig %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No hay facturas adeudadas %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucune facture à payer %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未払いの請求書はありません %@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 청구서 없음"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有到期账单 %@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沒有到期帳單 %@"
+          }
+        }
+      }
     },
     "No bills found" : {
       "extractionState" : "manual",
@@ -4666,7 +8433,50 @@
       }
     },
     "No payment methods" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Zahlungsmethoden"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sin métodos de pago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun moyen de paiement"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支払い方法がありません"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "결제 수단 없음"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有付款方式"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沒有付款方式"
+          }
+        }
+      }
     },
     "No payments" : {
       "extractionState" : "manual",
@@ -4716,7 +8526,50 @@
       }
     },
     "No payments recorded yet" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es sind noch keine Zahlungen erfasst"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aún no se han registrado pagos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun paiement enregistré pour l'instant"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "まだ支払いは記録されていません"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아직 결제 기록이 없습니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚未记录任何付款"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚未記錄任何付款"
+          }
+        }
+      }
     },
     "No subscription updates" : {
       "extractionState" : "manual",
@@ -5001,7 +8854,50 @@
       }
     },
     "Note" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notiz"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nota"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Note"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "注記"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메모"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "笔记"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "筆記"
+          }
+        }
+      }
     },
     "Notes" : {
       "extractionState" : "manual",
@@ -5098,7 +8994,50 @@
       }
     },
     "Notification filter" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benachrichtigungsfilter"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtro de notificaciones"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtre de notifications"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通知フィルター"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "알림 필터"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通知过滤器"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通知過濾器"
+          }
+        }
+      }
     },
     "Notifications" : {
       "extractionState" : "manual",
@@ -5148,7 +9087,50 @@
       }
     },
     "Notifications, %lld items" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benachrichtigungen, %lld-Elemente"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notificaciones, elementos %lld"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notifications, éléments %lld"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通知、%lld アイテム"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "알림, %lld 항목"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通知、%lld 项目"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通知、%lld 項目"
+          }
+        }
+      }
     },
     "OK" : {
       "extractionState" : "manual",
@@ -5198,7 +9180,50 @@
       }
     },
     "Only a display name, issuer, and up to four digits are saved. Never enter a full card or bank account number." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es werden nur ein Anzeigename, ein Aussteller und bis zu vier Ziffern gespeichert. Geben Sie niemals eine vollständige Karten- oder Bankkontonummer ein."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solo se guardan un nombre para mostrar, un emisor y hasta cuatro dígitos. Nunca ingrese un número completo de tarjeta o cuenta bancaria."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seuls le nom d'affichage, l'émetteur et jusqu'à quatre chiffres sont enregistrés. Ne saisissez jamais un numéro de carte ou de compte bancaire complet."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "表示名、発行者、および最大 4 桁の数字のみが保存されます。カード番号や銀行口座番号を完全に入力しないでください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "표시 이름, 발급자 및 최대 4자리 숫자만 저장됩니다. 전체 카드 번호나 은행 계좌 번호를 입력하지 마십시오."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仅保存显示名称、颁发者和最多四位数字。切勿输入完整的卡号或银行帐号。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "僅儲存顯示名稱、發行者和最多四位數字。切勿輸入完整的卡號或銀行帳號。"
+          }
+        }
+      }
     },
     "Only payments marked paid are included" : {
       "extractionState" : "manual",
@@ -5577,7 +9602,50 @@
       }
     },
     "Pause ${bill}" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "${bill} pausieren"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pausar ${bill}"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suspendre ${bill}"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "${bill} を一時停止します"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "${bill} 일시중지"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暂停 ${bill}"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暫停 ${bill}"
+          }
+        }
+      }
     },
     "Pause Bill" : {
       "extractionState" : "manual",
@@ -5674,13 +9742,142 @@
       }
     },
     "Paused %@." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ angehalten."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ en pausa."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ en pause."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ を一時停止しました。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@를 일시중지했습니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已暂停 %@。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已暫停 %@。"
+          }
+        }
+      }
     },
     "Pauses an active recurring bill in Billio." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pausiert eine aktive wiederkehrende Rechnung in Billio."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detiene una factura recurrente activa en Billio."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Met en pause une facture récurrente active dans Billio."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio でアクティブな定期請求を一時停止します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio에서 활성 반복 청구서를 일시 중지합니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暂停 Billio 中的活动定期账单。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暫停 Billio 中的活動定期帳單。"
+          }
+        }
+      }
     },
     "Payment" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zahlung"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paiement"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支払い"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지불"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支付"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支付"
+          }
+        }
+      }
     },
     "Payment added" : {
       "extractionState" : "manual",
@@ -5772,6 +9969,52 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "付款日期"
+          }
+        }
+      }
+    },
+    "Payment information" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zahlungsinformationen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Información de pago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informations de paiement"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "お支払い情報"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "결제정보"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "付款信息"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "付款資訊"
           }
         }
       }
@@ -5918,7 +10161,50 @@
       }
     },
     "Payment Methods" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zahlungsmethoden"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Métodos de pago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Méthodes de paiement"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支払い方法"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "결제 방법"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "付款方式"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "付款方式"
+          }
+        }
+      }
     },
     "Payment needs attention" : {
       "extractionState" : "manual",
@@ -6062,7 +10348,50 @@
       }
     },
     "Permission" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erlaubnis"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Permiso"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autorisation"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "許可"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "허가"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "允许"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "允許"
+          }
+        }
+      }
     },
     "Photography Plan" : {
       "extractionState" : "manual",
@@ -6112,7 +10441,50 @@
       }
     },
     "Plan management" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Planverwaltung"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gestión de planos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gestion des régimes"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "計画管理"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "계획 관리"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "计划管理"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "計劃管理"
+          }
+        }
+      }
     },
     "Plus Subscription" : {
       "extractionState" : "manual",
@@ -6350,10 +10722,96 @@
       }
     },
     "Previous month" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vorheriger Monat"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mes anterior"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mois précédent"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "前月"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지난달"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上个月"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上個月"
+          }
+        }
+      }
     },
     "Privacy" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privatsphäre"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacidad"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confidentialité"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プライバシー"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "은둔"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隐私"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隱私"
+          }
+        }
+      }
     },
     "Productivity" : {
       "extractionState" : "manual",
@@ -6497,13 +10955,142 @@
       }
     },
     "Recorded date" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aufnahmedatum"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "fecha grabada"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Date enregistrée"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "録音日"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "녹음 날짜"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "记录日期"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "記錄日期"
+          }
+        }
+      }
     },
     "Records a confirmed payment and advances the bill's next due date." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erfasst eine bestätigte Zahlung und verschiebt das nächste Fälligkeitsdatum der Rechnung."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registra un pago confirmado y adelanta la próxima fecha de vencimiento de la factura."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enregistre un paiement confirmé et avance la prochaine date d'échéance de la facture."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "確認された支払いを記録し、請求書の次回期日を早めます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "확인된 지불을 기록하고 청구서의 다음 기한을 앞당깁니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "记录已确认的付款并将帐单的下一个到期日提前。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "記錄已確認的付款並將帳單的下一個到期日提前。"
+          }
+        }
+      }
     },
     "Reference" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Referenz"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Referencia"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Référence"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "参照"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "참조"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "参考"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "參考"
+          }
+        }
+      }
     },
     "Reference amount" : {
       "extractionState" : "manual",
@@ -6553,7 +11140,50 @@
       }
     },
     "Reference rates are used only for statistics. Each bill keeps its original amount and currency." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Referenzkurse werden nur für Statistiken verwendet. Jede Rechnung behält ihren ursprünglichen Betrag und ihre ursprüngliche Währung."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las tasas de referencia se utilizan únicamente para estadísticas. Cada billete mantiene su importe y moneda originales."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les taux de référence sont utilisés uniquement à des fins statistiques. Chaque facture conserve son montant et sa devise d'origine."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "参考レートは統計のためにのみ使用されます。各紙幣は元の金額と通貨を保持します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "참조율은 통계용으로만 사용됩니다. 각 청구서는 원래 금액과 통화를 유지합니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "参考汇率仅用于统计。每张钞票都保留其原始金额和货币。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "參考匯率僅用於統計。每張鈔票都保留其原始金額和貨幣。"
+          }
+        }
+      }
     },
     "Refresh exchange rates" : {
       "extractionState" : "manual",
@@ -6603,7 +11233,50 @@
       }
     },
     "Refresh rates to compare categories across currencies." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktualisieren Sie die Kurse, um Kategorien währungsübergreifend zu vergleichen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Actualizar tasas para comparar categorías entre monedas."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Actualisez les taux pour comparer les catégories dans toutes les devises."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通貨間でカテゴリを比較するための更新レート。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "통화별로 카테고리를 비교하는 새로고침 빈도입니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刷新率以比较不同货币的类别。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刷新率以比較不同貨幣的類別。"
+          }
+        }
+      }
     },
     "Refunded" : {
       "extractionState" : "manual",
@@ -6700,7 +11373,50 @@
       }
     },
     "Reminder" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erinnerung"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recordatorio"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rappel"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リマインダー"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "알림"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提醒"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "提醒"
+          }
+        }
+      }
     },
     "Reminder Settings" : {
       "extractionState" : "manual",
@@ -6797,7 +11513,50 @@
       }
     },
     "Restore Subscription" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abonnement wiederherstellen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurar suscripción"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurer l'abonnement"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サブスクリプションを復元する"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "구독 복원"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢复订阅"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢復訂閱"
+          }
+        }
+      }
     },
     "Resume" : {
       "extractionState" : "manual",
@@ -6894,7 +11653,50 @@
       }
     },
     "Scheduled" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geplant"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Programado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Programmé"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "予定されている"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "예정됨"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "预定"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "預定"
+          }
+        }
+      }
     },
     "Search bills" : {
       "extractionState" : "manual",
@@ -6991,10 +11793,96 @@
       }
     },
     "Selected amount" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ausgewählter Betrag"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monto seleccionado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Montant sélectionné"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選択した金額"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선택한 금액"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选定金额"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選定金額"
+          }
+        }
+      }
     },
     "Selected month" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ausgewählter Monat"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mes seleccionado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mois sélectionné"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選択した月"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선택한 달"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "所选月份"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選月份"
+          }
+        }
+      }
     },
     "Settings" : {
       "extractionState" : "manual",
@@ -7044,7 +11932,50 @@
       }
     },
     "Show all upcoming" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle kommenden anzeigen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar todos los próximos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afficher tout à venir"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今後のすべてを表示"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "예정된 모든 항목 표시"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示所有即将推出的"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示所有即將推出的"
+          }
+        }
+      }
     },
     "Shown by original currency" : {
       "extractionState" : "manual",
@@ -7094,7 +12025,50 @@
       }
     },
     "Shows the total of confirmed payments recorded this month." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeigt die Gesamtsumme der in diesem Monat erfassten bestätigten Zahlungen an."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muestra el total de pagos confirmados registrados este mes."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Affiche le total des paiements confirmés enregistrés ce mois-ci."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今月記録された確認済みの支払いの合計を表示します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이번 달에 기록된 확인된 결제 총액을 표시합니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示本月记录的已确认付款总额。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示本月記錄的已確認付款總額。"
+          }
+        }
+      }
     },
     "Sign in to iCloud" : {
       "extractionState" : "manual",
@@ -7191,10 +12165,96 @@
       }
     },
     "Singapore Dollar (SGD)" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Singapur-Dollar (SGD)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dólar de Singapur (SGD)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dollar de Singapour (SGD)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "シンガポール ドル (SGD)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "싱가포르 달러(SGD)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新加坡元 (SGD)"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新加坡元 (SGD)"
+          }
+        }
+      }
     },
     "Smart insights" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intelligente Erkenntnisse"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Información inteligente"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informations intelligentes"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スマートな洞察"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스마트 인사이트"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "智能洞察"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "智慧洞察"
+          }
+        }
+      }
     },
     "Smart Insights" : {
       "extractionState" : "manual",
@@ -7244,10 +12304,96 @@
       }
     },
     "Some payments were excluded because a historical rate was unavailable." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einige Zahlungen wurden ausgeschlossen, da kein historischer Kurs verfügbar war."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Algunos pagos se excluyeron porque no estaba disponible una tasa histórica."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Certains paiements ont été exclus parce qu’un taux historique n’était pas disponible."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "過去のレートが入手できないため、一部の支払いが除外されました。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "과거 환율을 사용할 수 없어 일부 결제가 제외되었습니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "由于无法获得历史汇率，一些付款被排除在外。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "由於無法獲得歷史匯率，一些付款被排除在外。"
+          }
+        }
+      }
     },
     "Source" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quelle"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fuente"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Source"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ソース"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "원천"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "来源"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "來源"
+          }
+        }
+      }
     },
     "Standard Plan" : {
       "extractionState" : "manual",
@@ -7391,10 +12537,96 @@
       }
     },
     "Store a safe reference such as card issuer and last four digits. Billio never stores full card numbers or credentials." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speichern Sie eine sichere Referenz, z. B. den Kartenaussteller und die letzten vier Ziffern. Billio speichert niemals vollständige Kartennummern oder Zugangsdaten."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Almacene una referencia segura como el emisor de la tarjeta y los últimos cuatro dígitos. Billio nunca almacena números de tarjetas completos ni credenciales."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conservez une référence sûre telle que l’émetteur de la carte et les quatre derniers chiffres. Billio ne stocke jamais les numéros de carte complets ou les informations d'identification."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カード発行会社や最後の 4 桁などの安全な参照情報を保存します。 Billio は完全なカード番号や認証情報を保存することはありません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "카드발급사와 마지막 4자리 등 안전한 참조번호를 저장하세요. Billio는 전체 카드 번호나 자격 증명을 저장하지 않습니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "存储安全参考信息，例如发卡机构和最后四位数字。 Billio 从不存储完整的卡号或凭据。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "儲存安全參考訊息，例如發卡機構和最後四位數字。 Billio 從不儲存完整的卡號或憑證。"
+          }
+        }
+      }
     },
     "Swipe across the chart to inspect each month" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wischen Sie über das Diagramm, um jeden Monat zu überprüfen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desliza el dedo por el gráfico para inspeccionarlo cada mes"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Faites glisser votre doigt sur le graphique pour inspecter chaque mois"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チャートをスワイプして毎月確認します"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차트를 스와이프하여 매달 살펴보세요."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "滑动图表查看每个月"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "滑動圖表查看每個月"
+          }
+        }
+      }
     },
     "Swiss Franc" : {
       "extractionState" : "manual",
@@ -7444,7 +12676,50 @@
       }
     },
     "Swiss Franc (CHF)" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schweizer Franken (CHF)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Franco suizo (CHF)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Franc suisse (CHF)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スイス フラン (CHF)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스위스 프랑(CHF)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "瑞士法郎 (CHF)"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "瑞士法郎 (CHF)"
+          }
+        }
+      }
     },
     "Syncing with iCloud" : {
       "extractionState" : "manual",
@@ -7541,7 +12816,50 @@
       }
     },
     "The information you entered will be lost." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die von Ihnen eingegebenen Informationen gehen verloren."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La información que ingresó se perderá."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les informations que vous avez saisies seront perdues."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "入力した情報は失われます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "입력한 정보는 손실됩니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您输入的信息将会丢失。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您輸入的資訊將會遺失。"
+          }
+        }
+      }
     },
     "The trial converts to a paid plan today." : {
       "extractionState" : "manual",
@@ -7591,7 +12909,50 @@
       }
     },
     "This bill will remain unchanged." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dieser Gesetzentwurf bleibt unverändert."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este proyecto de ley permanecerá sin cambios."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ce projet de loi restera inchangé."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この法案は変更されません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 법안은 변경되지 않습니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "该法案将保持不变。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "該法案將保持不變。"
+          }
+        }
+      }
     },
     "This device does not allow iCloud access" : {
       "extractionState" : "manual",
@@ -7688,7 +13049,50 @@
       }
     },
     "This records a confirmed payment and updates the next due date." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dadurch wird eine bestätigte Zahlung erfasst und das nächste Fälligkeitsdatum aktualisiert."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esto registra un pago confirmado y actualiza la próxima fecha de vencimiento."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cela enregistre un paiement confirmé et met à jour la prochaine date d'échéance."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "これにより、確認された支払いが記録され、次の期日が更新されます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "확인된 결제가 기록되고 다음 기한이 업데이트됩니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这会记录已确认的付款并更新下一个到期日。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這會記錄已確認的付款並更新下一個到期日。"
+          }
+        }
+      }
     },
     "Today" : {
       "extractionState" : "manual",
@@ -7785,7 +13189,50 @@
       }
     },
     "Top upcoming categories: %@" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top kommende Kategorien: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Principales categorías próximas: %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Principales catégories à venir : %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今後のトップカテゴリー: %@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다가오는 상위 카테고리: %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "即将推出的热门类别：%@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "即將推出的熱門類別：%@"
+          }
+        }
+      }
     },
     "Total" : {
       "extractionState" : "manual",
@@ -7976,10 +13423,96 @@
       }
     },
     "Try another filter or add a new bill." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Probieren Sie einen anderen Filter aus oder fügen Sie eine neue Rechnung hinzu."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pruebe con otro filtro o agregue una nueva factura."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Essayez un autre filtre ou ajoutez une nouvelle facture."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "別のフィルターを試すか、新しい請求書を追加してください。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다른 필터를 사용해 보거나 새 청구서를 추가하세요."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尝试其他过滤器或添加新帐单。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "嘗試其他篩選器或新增帳單。"
+          }
+        }
+      }
     },
     "Type" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Typ"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tipo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taper"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "タイプ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "유형"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "类型"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "類型"
+          }
+        }
+      }
     },
     "Undo" : {
       "extractionState" : "manual",
@@ -8123,7 +13656,50 @@
       }
     },
     "Upcoming bills by category" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kommende Rechnungen nach Kategorie"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Próximas facturas por categoría"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Factures à venir par catégorie"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カテゴリ別の今後の請求書"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "카테고리별 향후 청구서"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "即将到期的账单（按类别）"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "即將到期的帳單（按類別）"
+          }
+        }
+      }
     },
     "Updated manually" : {
       "extractionState" : "manual",
@@ -8267,7 +13843,50 @@
       }
     },
     "Updating…" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktualisierung…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Actualizando…"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mise à jour…"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更新中…"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "업데이트 중…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在更新…"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在更新…"
+          }
+        }
+      }
     },
     "Uploading changes" : {
       "extractionState" : "manual",
@@ -8364,13 +13983,142 @@
       }
     },
     "US Dollar (USD)" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "US-Dollar (USD)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dólar estadounidense (USD)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dollar américain (USD)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "米ドル (USD)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "미국 달러(USD)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "美元 (USD)"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "美元 (USD)"
+          }
+        }
+      }
     },
     "Use verified %@ cancellation page" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwenden Sie die verifizierte %@-Stornierungsseite"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utilice la página de cancelación verificada de %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utiliser la page d'annulation vérifiée %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "確認済みの %@ キャンセル ページを使用する"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "검증된 %@ 취소 페이지 사용"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用经过验证的 %@ 取消页面"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用經過驗證的 %@ 取消頁面"
+          }
+        }
+      }
     },
     "User-provided link · verify before signing in" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vom Benutzer bereitgestellter Link · Überprüfen Sie ihn, bevor Sie sich anmelden"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enlace proporcionado por el usuario · verificar antes de iniciar sesión"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lien fourni par l'utilisateur · vérifier avant de vous connecter"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ユーザー提供のリンク · サインインする前に確認してください"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사용자 제공 링크 · 로그인 전 확인"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用户提供的链接·登录前验证"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用戶提供的連結·登入前驗證"
+          }
+        }
+      }
     },
     "Using original amounts · rates unavailable" : {
       "extractionState" : "manual",
@@ -8467,22 +14215,326 @@
       }
     },
     "Verified merchant domain" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verifizierte Händlerdomäne"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dominio comercial verificado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Domaine marchand vérifié"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "検証済みの販売者ドメイン"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "확인된 판매자 도메인"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已验证的商户域名"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已驗證的商戶域名"
+          }
+        }
+      }
     },
     "Version" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versión"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バージョン"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "버전"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "版本"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "版本"
+          }
+        }
+      }
     },
     "View all" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle anzeigen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver todo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voir tout"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "すべて見る"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모두 보기"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看全部"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "看全部"
+          }
+        }
+      }
     },
     "Weekly" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wöchentlich"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Semanalmente"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hebdomadaire"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "毎週"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "주간"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每周"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每週"
+          }
+        }
+      }
     },
     "Yearly" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jährlich"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anual"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuel"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "毎年"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "매년"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每年"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每年"
+          }
+        }
+      }
     },
     "Your confirmed Billio spending this month is %@." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ihre bestätigten Billio-Ausgaben in diesem Monat belaufen sich auf %@."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Su gasto Billio confirmado este mes es %@."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vos dépenses Billio confirmées ce mois-ci sont %@."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今月確認された Billio の支出は %@ です。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이번 달 확인된 Billio 지출은 %@입니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您本月确认的 Billio 支出为 %@。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您本月確認的 Billio 支出為 %@。"
+          }
+        }
+      }
+    },
+    "Your data" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ihre Daten"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tus datos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vos données"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "あなたのデータ"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "귀하의 데이터"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您的数据"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您的數據"
+          }
+        }
+      }
     },
     "Your data remains available on this device" : {
       "extractionState" : "manual",
@@ -8529,6 +14581,198 @@
             "value" : "你的資料仍保存在此裝置上"
           }
         }
+      }
+    },
+    "Rates from %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "汇率截至 %@" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "匯率截至 %@" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "%@ 時点のレート" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "%@ 기준 환율" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Taux au %@" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Kurse vom %@" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Tipos del %@" } }
+      }
+    },
+    "Last successful sync %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "上次成功同步 %@" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "上次成功同步 %@" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "最終同期 %@" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "마지막 동기화 %@" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Dernière synchronisation %@" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Letzte erfolgreiche Synchronisierung %@" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Última sincronización correcta %@" } }
+      }
+    },
+    "In %lld days" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "还有 %lld 天" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "還有 %lld 天" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "あと %lld 日" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "%lld일 후" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Dans %lld jours" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "In %lld Tagen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "En %lld días" } }
+      }
+    },
+    "today" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "今天" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "今天" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "今日" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "오늘" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "aujourd’hui" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "heute" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "hoy" } }
+      }
+    },
+    "tomorrow" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "明天" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "明天" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "明日" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "내일" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "demain" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "morgen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "mañana" } }
+      }
+    },
+    "in %lld days" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "%lld 天后" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "%lld 天後" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "%lld 日後" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "%lld일 후" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "dans %lld jours" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "in %lld Tagen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "en %lld días" } }
+      }
+    },
+    "%@ is due %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "%@ 将于 %@ 到期" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "%@ 將於 %@ 到期" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "%@ の支払期限は %@" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "%@ 결제일은 %@" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "%@ est dû %@" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "%@ ist %@ fällig" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "%@ vence %@" } }
+      }
+    },
+    "%@ appear to bill the same service." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "%@ 似乎为同一服务重复扣款。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "%@ 似乎為同一服務重複扣款。" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "%@ は同じサービスを重複請求している可能性があります。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "%@에서 같은 서비스가 중복 청구되는 것 같습니다." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "%@ semblent facturer le même service." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "%@ scheinen denselben Dienst abzurechnen." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "%@ parecen cobrar por el mismo servicio." } }
+      }
+    },
+    " and " : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : " 和 " } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : " 和 " } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : " と " } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : " 및 " } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : " et " } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : " und " } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : " y " } }
+      }
+    },
+    "%@ price increased" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "%@ 价格上涨" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "%@ 價格上漲" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "%@ の料金が値上げされました" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "%@ 가격 인상" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Le prix de %@ a augmenté" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Preis von %@ gestiegen" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "El precio de %@ aumentó" } }
+      }
+    },
+    "Up %@ from %@ to %@." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "上涨 %@，从 %@ 变为 %@。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "上漲 %@，從 %@ 變為 %@。" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "%@ 上昇（%@ から %@）。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "%@ 인상: %@에서 %@로 변경되었습니다." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "En hausse de %@, de %@ à %@." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Um %@ gestiegen, von %@ auf %@." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Subió %@, de %@ a %@." } }
+      }
+    },
+    "%@ trial ends soon" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "%@ 试用期即将结束" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "%@ 試用期即將結束" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "%@ のトライアルがまもなく終了します" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "%@ 평가판이 곧 종료됩니다" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "L’essai de %@ se termine bientôt" } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Testversion von %@ endet bald" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "La prueba de %@ termina pronto" } }
+      }
+    },
+    "The trial converts to %@ in %lld days." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "试用期将在 %lld 天后转为 %@ 付费计划。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "試用期將在 %lld 天後轉為 %@ 付費方案。" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "トライアルは %lld 日後に %@ の有料プランへ移行します。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "평가판은 %lld일 후 %@ 유료 플랜으로 전환됩니다." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "L’essai devient payant dans %lld jours à %@." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Die Testversion wird in %lld Tagen zu %@ kostenpflichtig." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "La prueba se convierte en un plan de pago de %@ en %lld días." } }
+      }
+    },
+    "The latest %@ payment failed." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "%@ 最近一次付款失败。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "%@ 最近一次付款失敗。" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "%@ の最新の支払いに失敗しました。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "%@ 최근 결제가 실패했습니다." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Le dernier paiement de %@ a échoué." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Die letzte Zahlung für %@ ist fehlgeschlagen." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "El último pago de %@ falló." } }
+      }
+    },
+    "Payment marked %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Zahlung als %@ markiert" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Pago marcado como %@" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Paiement marqué comme %@" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "支払いを%@としてマークしました" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "결제를 %@으로 표시함" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "已将付款标记为 %@" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "已將付款標記為 %@" } }
+      }
+    },
+    "%lld bills renew in the next 7 days." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "未来 7 天有 %lld 笔账单续费。" } },
+        "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "未來 7 天有 %lld 筆帳單續費。" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "今後 7 日間に %lld 件の請求が更新されます。" } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "앞으로 7일 동안 %lld건의 청구서가 갱신됩니다." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "%lld factures se renouvellent dans les 7 prochains jours." } },
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "In den nächsten 7 Tagen werden %lld Rechnungen verlängert." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "%lld facturas se renuevan en los próximos 7 días." } }
       }
     }
   },

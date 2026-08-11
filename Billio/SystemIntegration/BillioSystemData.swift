@@ -58,7 +58,9 @@ struct BillioSystemTotal: Sendable {
         if let amount {
             return amount.formatted(.currency(code: currencyCode))
         }
-        if originalCurrencyBreakdown.isEmpty { return "No payments" }
+        if originalCurrencyBreakdown.isEmpty {
+            return String(localized: "No payments", locale: BillioSharedStore.appLocale)
+        }
         return originalCurrencyBreakdown
             .keys
             .sorted()

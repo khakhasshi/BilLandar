@@ -111,8 +111,23 @@ struct NotificationsView: View {
 
     private func notificationText(for bill: Bill) -> String {
         let days = Calendar.billio.dateComponents([.day], from: .now.startOfDay, to: bill.nextDueDate.startOfDay).day ?? 0
-        let due = days <= 0 ? "today" : days == 1 ? "tomorrow" : "in \(days) days"
-        return "\(bill.amount.formatted(.currency(code: bill.currencyCode))) is due \(due)"
+        let due: String
+        if days <= 0 {
+            due = String(localized: "today", locale: BillioSharedStore.appLocale)
+        } else if days == 1 {
+            due = String(localized: "tomorrow", locale: BillioSharedStore.appLocale)
+        } else {
+            due = String(
+                format: String(localized: "in %lld days", locale: BillioSharedStore.appLocale),
+                days
+            )
+        }
+        let amount = bill.amount.formatted(.currency(code: bill.currencyCode).locale(BillioSharedStore.appLocale))
+        return String(
+            format: String(localized: "%@ is due %@", locale: BillioSharedStore.appLocale),
+            amount,
+            due
+        )
     }
 
     private func reminderDate(for bill: Bill) -> Date {

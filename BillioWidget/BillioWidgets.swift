@@ -76,7 +76,10 @@ private struct NextPaymentWidgetView: View {
                     VStack(alignment: .leading, spacing: 4) {
                         widgetHeader("Next payment", symbol: "calendar.badge.clock")
                         Text(bill.name).font(.headline).lineLimit(1)
-                        Text(bill.subtitle).font(.caption).foregroundStyle(.secondary).lineLimit(1)
+                        Text(String(localized: String.LocalizationValue(bill.subtitle), locale: BillioSharedStore.appLocale))
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                            .lineLimit(1)
                         Text(dueText(for: bill.nextDueDate)).font(.caption.weight(.medium)).foregroundStyle(WidgetPalette.danger)
                     }
                     Spacer(minLength: 4)
@@ -200,7 +203,12 @@ private func paymentButton(for bill: BillioSystemBill, compact: Bool) -> some Vi
             Image(systemName: "checkmark.circle.fill")
                 .font(.title3)
                 .foregroundStyle(WidgetPalette.accent)
-                .accessibilityLabel("Mark \(bill.name) paid")
+                .accessibilityLabel(
+                    String(
+                        format: String(localized: "Mark %@ paid", locale: BillioSharedStore.appLocale),
+                        bill.name
+                    )
+                )
         } else {
             Label("Paid", systemImage: "checkmark.circle.fill")
                 .font(.caption.weight(.semibold))

@@ -73,7 +73,10 @@ enum PaymentWorkflowService {
             payment: payment,
             bill: bill,
             insertedPayment: false,
-            message: "Payment marked \(status.title.lowercased())"
+            message: String(
+                format: String(localized: "Payment marked %@", locale: BillioSharedStore.appLocale),
+                status.title.lowercased()
+            )
         )
         payment.status = status
         if status == .paid { payment.paidAt = now }

@@ -2,7 +2,50 @@
   "sourceLanguage" : "en",
   "strings" : {
     "%@" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
     },
     "%@ · %@" : {
       "localizations" : {
@@ -10,6 +53,48 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "%1$@ · %2$@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · %@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · %@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · %@"
           }
         }
       }
@@ -60,9 +145,6 @@
           }
         }
       }
-    },
-    "A compact renewal queue with direct payment confirmation." : {
-
     },
     "Active" : {
       "extractionState" : "manual",
@@ -159,7 +241,50 @@
       }
     },
     "Add ${name} for ${amount} ${currency} due ${nextDueDate}" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fügen Sie ${name} für ${amount} ${currency} fällig ${nextDueDate} hinzu"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agregue ${name} para ${amount} ${currency} adeudado en ${nextDueDate}"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajoutez ${name} pour ${amount} ${currency} dû ${nextDueDate}"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "${name} を ${amount} ${currency} に追加して ${nextDueDate} に支払います"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "${nextDueDate}에 ${amount} ${currency}에 ${name} 추가"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加 ${name}，金额为 ${amount} ${currency}，到期日期为 ${nextDueDate}"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加 ${name}，金額為 ${amount} ${currency}，到期日為 ${nextDueDate}"
+          }
+        }
+      }
     },
     "Add bill" : {
       "extractionState" : "manual",
@@ -256,10 +381,96 @@
       }
     },
     "Added %@ to Billio." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ zu Billio hinzugefügt."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se agregó %@ a Billio."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajout de %@ à Billio."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio に %@ を追加しました。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio에 %@를 추가했습니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将 %@ 添加到 Billio。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "將 %@ 加入 Billio。"
+          }
+        }
+      }
     },
     "Adds a recurring bill to Billio." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fügt Billio eine wiederkehrende Rechnung hinzu."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agrega una factura recurrente a Billio."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajoute une facture récurrente à Billio."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio に定期的な請求を追加します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio에 반복 청구서를 추가합니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "向 Billio 添加定期账单。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "向 Billio 添加定期帳單。"
+          }
+        }
+      }
     },
     "All" : {
       "extractionState" : "manual",
@@ -591,7 +802,50 @@
       }
     },
     "Australian Dollar (AUD)" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Australischer Dollar (AUD)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dólar australiano (AUD)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dollar australien (AUD)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オーストラリアドル (AUD)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "호주 달러(AUD)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "澳元 (AUD)"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "澳幣 (AUD)"
+          }
+        }
+      }
     },
     "Bank account" : {
       "extractionState" : "manual",
@@ -735,7 +989,50 @@
       }
     },
     "Billing Cycle" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrechnungszyklus"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ciclo de facturación"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cycle de facturation"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請求サイクル"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "청구주기"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "计费周期"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "計費週期"
+          }
+        }
+      }
     },
     "Bills" : {
       "extractionState" : "manual",
@@ -832,7 +1129,50 @@
       }
     },
     "British Pound (GBP)" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Britisches Pfund (GBP)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Libra británica (GBP)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Livre sterling (GBP)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "英国ポンド (GBP)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "영국 파운드(GBP)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "英镑 (GBP)"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "英鎊 (GBP)"
+          }
+        }
+      }
     },
     "By category" : {
       "extractionState" : "manual",
@@ -976,7 +1316,50 @@
       }
     },
     "Canadian Dollar (CAD)" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kanadischer Dollar (CAD)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dólar canadiense (CAD)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dollar canadien (CAD)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カナダドル (CAD)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "캐나다 달러(CAD)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加元 (CAD)"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加元 (CAD)"
+          }
+        }
+      }
     },
     "Cancel" : {
       "extractionState" : "manual",
@@ -1308,7 +1691,50 @@
       }
     },
     "Chinese Yuan (CNY)" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chinesischer Yuan (CNY)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yuan chino (CNY)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yuan chinois (CNY)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "中国人民元 (CNY)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "중국 위안(CNY)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "人民币 (CNY)"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "人民幣 (CNY)"
+          }
+        }
+      }
     },
     "Confirm Payment" : {
       "extractionState" : "manual",
@@ -1781,7 +2207,50 @@
       }
     },
     "Entertainment" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unterhaltung"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entretenimiento"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Divertissement"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エンターテインメント"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오락"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "娱乐"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "娛樂"
+          }
+        }
+      }
     },
     "Euro" : {
       "extractionState" : "manual",
@@ -1831,7 +2300,50 @@
       }
     },
     "Euro (EUR)" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euro (EUR)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Euro (EUR)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "euros (EUR)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ユーロ (EUR)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "유로(EUR)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "欧元 (EUR)"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "歐元 (EUR)"
+          }
+        }
+      }
     },
     "This month" : {
           "extractionState": "manual",
@@ -1923,100 +2435,6 @@
               "stringUnit": {
                 "state": "translated",
                 "value": "No hay facturas próximas"
-              }
-            }
-          }
-        },
-    "Shown by original currency" : {
-          "extractionState": "manual",
-          "localizations": {
-            "zh-Hans": {
-              "stringUnit": {
-                "state": "translated",
-                "value": "按原始币种显示"
-              }
-            },
-            "zh-Hant": {
-              "stringUnit": {
-                "state": "translated",
-                "value": "按原始幣別顯示"
-              }
-            },
-            "ja": {
-              "stringUnit": {
-                "state": "translated",
-                "value": "元の通貨で表示"
-              }
-            },
-            "ko": {
-              "stringUnit": {
-                "state": "translated",
-                "value": "원래 통화로 표시"
-              }
-            },
-            "fr": {
-              "stringUnit": {
-                "state": "translated",
-                "value": "Affiché dans la devise d’origine"
-              }
-            },
-            "de": {
-              "stringUnit": {
-                "state": "translated",
-                "value": "In Originalwährung angezeigt"
-              }
-            },
-            "es": {
-              "stringUnit": {
-                "state": "translated",
-                "value": "Mostrado en la moneda original"
-              }
-            }
-          }
-        },
-    "Only payments marked paid are included" : {
-          "extractionState": "manual",
-          "localizations": {
-            "zh-Hans": {
-              "stringUnit": {
-                "state": "translated",
-                "value": "仅包含标记为已付款的记录"
-              }
-            },
-            "zh-Hant": {
-              "stringUnit": {
-                "state": "translated",
-                "value": "僅包含標記為已付款的記錄"
-              }
-            },
-            "ja": {
-              "stringUnit": {
-                "state": "translated",
-                "value": "支払済みの記録のみを含みます"
-              }
-            },
-            "ko": {
-              "stringUnit": {
-                "state": "translated",
-                "value": "결제 완료로 표시된 항목만 포함"
-              }
-            },
-            "fr": {
-              "stringUnit": {
-                "state": "translated",
-                "value": "Seuls les paiements marqués comme payés sont inclus"
-              }
-            },
-            "de": {
-              "stringUnit": {
-                "state": "translated",
-                "value": "Nur als bezahlt markierte Zahlungen enthalten"
-              }
-            },
-            "es": {
-              "stringUnit": {
-                "state": "translated",
-                "value": "Solo se incluyen pagos marcados como pagados"
               }
             }
           }
@@ -2209,241 +2627,6 @@
             }
           }
         },
-    "Next Payment" : {
-      "extractionState": "manual",
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "下一笔付款"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "下一筆付款"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "次回の支払い"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "다음 결제"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Prochain paiement"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nächste Zahlung"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Próximo pago"
-          }
-        }
-      }
-    },
-    "Monthly Spending" : {
-      "extractionState": "manual",
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "本月支出"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "本月支出"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "今月の支出"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "이번 달 지출"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dépenses du mois"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Monatsausgaben"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gastos del mes"
-          }
-        }
-      }
-    },
-    "Upcoming Bills" : {
-      "extractionState": "manual",
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "即将到期的账单"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "即將到期的帳單"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "近日の請求"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "곧 결제할 청구서"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Factures à venir"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Anstehende Rechnungen"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Próximas facturas"
-          }
-        }
-      }
-    },
-    "See your next renewal and mark it as paid without opening Billio." : {
-      "extractionState": "manual",
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "查看下一笔续费，无需打开 Billio 即可标记为已付款。"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "查看下一筆續費，無需開啟 Billio 即可標記為已付款。"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "次回の更新を確認し、Billioを開かずに支払済みにできます。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "다음 갱신을 확인하고 Billio를 열지 않고 결제 완료로 표시하세요."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Consultez votre prochain renouvellement et marquez-le comme payé sans ouvrir Billio."
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sehen Sie Ihre nächste Verlängerung und markieren Sie sie bezahlt, ohne Billio zu öffnen."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Consulta tu próxima renovación y márcala como pagada sin abrir Billio."
-          }
-        }
-      }
-    },
-    "Track confirmed subscription payments recorded this month." : {
-      "extractionState": "manual",
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "跟踪本月记录的已确认订阅付款。"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "追蹤本月記錄的已確認訂閱付款。"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "今月に記録された確定済みサブスクリプション支払いを確認します。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "이번 달에 기록된 확정 구독 결제를 추적하세요."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Suivez les paiements d’abonnement confirmés ce mois-ci."
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Verfolgen Sie die bestätigten Abonnementzahlungen dieses Monats."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Controla los pagos de suscripciones confirmados este mes."
-          }
-        }
-      }
-    },
     "A compact renewal queue with direct payment confirmation." : {
       "extractionState": "manual",
       "localizations": {
@@ -5077,7 +5260,50 @@
       }
     },
     "Hong Kong Dollar (HKD)" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hongkong-Dollar (HKD)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dólar de Hong Kong (HKD)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dollar de Hong Kong (HKD)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "香港ドル (HKD)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "홍콩 달러(HKD)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "港元 (HKD)"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "港幣 (HKD)"
+          }
+        }
+      }
     },
     "iCloud" : {
       "extractionState" : "manual",
@@ -5174,7 +5400,50 @@
       }
     },
     "Japanese Yen (JPY)" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Japanischer Yen (JPY)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yen japonés (JPY)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yen japonais (JPY)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日本円(JPY)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "일본 엔(JPY)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日元 (JPY)"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日元 (JPY)"
+          }
+        }
+      }
     },
     "Light" : {
       "extractionState" : "manual",
@@ -5224,10 +5493,96 @@
       }
     },
     "Mark %@ paid" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mark %@ bezahlt"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marca %@ pagado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marque %@ payé"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "マーク %@ 支払い済み"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@가 유료로 표시됨"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "标记 %@ 已付款"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "標記 %@ 已付款"
+          }
+        }
+      }
     },
     "Mark ${bill} as paid" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Markieren Sie ${bill} als bezahlt"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marcar ${bill} como pagado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marquer ${bill} comme payé"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "${bill} を支払い済みとしてマークする"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "${bill}을(를) 결제 완료로 표시"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将 ${bill} 标记为已付款"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "將 ${bill} 標記為已付款"
+          }
+        }
+      }
     },
     "Mark as Paid" : {
       "extractionState" : "manual",
@@ -5330,11 +5685,96 @@
             "state" : "new",
             "value" : "Marked %1$@ as paid. The next due date is %2$@."
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ als bezahlt markiert. Der nächste Fälligkeitstermin ist %@."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marcado %@ como pagado. La próxima fecha de vencimiento es %@."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marqué %@ comme payé. La prochaine date d’échéance est %@."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ を支払い済みとしてマークしました。次の期日は %@ です。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@를 유료로 표시했습니다. 다음 만기일은 %@입니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将 %@ 标记为已付款。下一个到期日是 %@。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "將 %@ 標記為已付款。下一個到期日是 %@。"
+          }
         }
       }
     },
     "Monthly" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monatlich"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mensual"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mensuel"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "毎月"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "월간 간행물"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每月"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每月"
+          }
+        }
+      }
     },
     "Monthly amount" : {
       "extractionState" : "manual",
@@ -5572,7 +6012,50 @@
       }
     },
     "Monthly Spending" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monatliche Ausgaben"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gasto mensual"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dépenses mensuelles"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "毎月の支出"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "월별 지출"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每月支出"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每月支出"
+          }
+        }
+      }
     },
     "Name" : {
       "extractionState" : "manual",
@@ -5763,7 +6246,50 @@
       }
     },
     "Next Due Date" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nächstes Fälligkeitsdatum"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Próxima fecha de vencimiento"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prochaine date d'échéance"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "次回の期日"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다음 기한"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下一个截止日期"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下一個截止日期"
+          }
+        }
+      }
     },
     "Next payment" : {
       "extractionState" : "manual",
@@ -5813,7 +6339,50 @@
       }
     },
     "Next Payment" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nächste Zahlung"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Próximo pago"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prochain paiement"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "次回のお支払い"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다음 결제"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下次付款"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下次付款"
+          }
+        }
+      }
     },
     "No bills due" : {
       "extractionState" : "manual",
@@ -6192,7 +6761,50 @@
       }
     },
     "Only payments marked paid are included" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es werden nur Zahlungen berücksichtigt, die als bezahlt gekennzeichnet sind"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solo se incluyen los pagos marcados como pagados."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seuls les paiements marqués payés sont inclus"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支払い済みとマークされた支払いのみが含まれます"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "결제 완료로 표시된 결제만 포함됩니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仅包含标记为已付款的付款"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "僅包含標記為已付款的付款"
+          }
+        }
+      }
     },
     "Open cancellation page" : {
       "extractionState" : "manual",
@@ -6477,7 +7089,50 @@
       }
     },
     "Pause ${bill}" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "${bill} pausieren"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pausar ${bill}"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suspendre ${bill}"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "${bill} を一時停止します"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "${bill} 일시중지"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暂停 ${bill}"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暫停 ${bill}"
+          }
+        }
+      }
     },
     "Pause Bill" : {
       "extractionState" : "manual",
@@ -6574,10 +7229,96 @@
       }
     },
     "Paused %@." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ angehalten."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ en pausa."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ en pause."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ を一時停止しました。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@를 일시중지했습니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已暂停 %@。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已暫停 %@。"
+          }
+        }
+      }
     },
     "Pauses an active recurring bill in Billio." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pausiert eine aktive wiederkehrende Rechnung in Billio."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detiene una factura recurrente activa en Billio."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Met en pause une facture récurrente active dans Billio."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio でアクティブな定期請求を一時停止します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio에서 활성 반복 청구서를 일시 중지합니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暂停 Billio 中的活动定期账单。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暫停 Billio 中的活動定期帳單。"
+          }
+        }
+      }
     },
     "Payment date" : {
       "extractionState" : "manual",
@@ -7003,7 +7744,50 @@
       }
     },
     "Records a confirmed payment and advances the bill's next due date." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erfasst eine bestätigte Zahlung und verschiebt das nächste Fälligkeitsdatum der Rechnung."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registra un pago confirmado y adelanta la próxima fecha de vencimiento de la factura."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enregistre un paiement confirmé et avance la prochaine date d'échéance de la facture."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "確認された支払いを記録し、請求書の次回期日を早めます。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "확인된 지불을 기록하고 청구서의 다음 기한을 앞당깁니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "记录已确认的付款并将帐单的下一个到期日提前。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "記錄已確認的付款並將帳單的下一個到期日提前。"
+          }
+        }
+      }
     },
     "Reference amount" : {
       "extractionState" : "manual",
@@ -7429,7 +8213,50 @@
       }
     },
     "See your next renewal and mark it as paid without opening Billio." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sehen Sie sich Ihre nächste Verlängerung an und markieren Sie sie als bezahlt, ohne Billio zu öffnen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vea su próxima renovación y márquela como pagada sin abrir Billio."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Consultez votre prochain renouvellement et marquez-le comme payé sans ouvrir Billio."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Billio を開かずに次回の更新を確認し、支払い済みとしてマークします。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다음 갱신을 확인하고 Billio를 열지 않고도 결제 완료로 표시하세요."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看您的下一次续订并将其标记为已付款，无需打开 Billio。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看您的下一次續訂並將其標記為已付款，無需打開 Billio。"
+          }
+        }
+      }
     },
     "Settings" : {
       "extractionState" : "manual",
@@ -7479,10 +8306,96 @@
       }
     },
     "Shown by original currency" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wird nach Originalwährung angezeigt"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrado por moneda original"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Affiché par devise d'origine"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "元の通貨で表示"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "원래 통화로 표시"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "按原币种显示"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "按原幣種顯示"
+          }
+        }
+      }
     },
     "Shows the total of confirmed payments recorded this month." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeigt die Gesamtsumme der in diesem Monat erfassten bestätigten Zahlungen an."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muestra el total de pagos confirmados registrados este mes."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Affiche le total des paiements confirmés enregistrés ce mois-ci."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今月記録された確認済みの支払いの合計を表示します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이번 달에 기록된 확인된 결제 총액을 표시합니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示本月记录的已确认付款总额。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示本月記錄的已確認付款總額。"
+          }
+        }
+      }
     },
     "Singapore Dollar" : {
       "extractionState" : "manual",
@@ -7532,7 +8445,50 @@
       }
     },
     "Singapore Dollar (SGD)" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Singapur-Dollar (SGD)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dólar de Singapur (SGD)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dollar de Singapour (SGD)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "シンガポール ドル (SGD)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "싱가포르 달러(SGD)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新加坡元 (SGD)"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新加坡元 (SGD)"
+          }
+        }
+      }
     },
     "Smart Insights" : {
       "extractionState" : "manual",
@@ -7770,7 +8726,50 @@
       }
     },
     "Swiss Franc (CHF)" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schweizer Franken (CHF)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Franco suizo (CHF)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Franc suisse (CHF)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スイス フラン (CHF)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스위스 프랑(CHF)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "瑞士法郎 (CHF)"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "瑞士法郎 (CHF)"
+          }
+        }
+      }
     },
     "System" : {
       "extractionState" : "manual",
@@ -7867,7 +8866,50 @@
       }
     },
     "Track confirmed subscription payments recorded this month." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verfolgen Sie die in diesem Monat erfassten bestätigten Abonnementzahlungen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Realice un seguimiento de los pagos de suscripción confirmados registrados este mes."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suivez les paiements d'abonnement confirmés enregistrés ce mois-ci."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今月記録された確認済みのサブスクリプション支払いを追跡します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이번 달에 기록된 확인된 구독 결제를 추적하세요."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "跟踪本月记录的确认订阅付款。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "追蹤本月記錄的確認訂閱付款。"
+          }
+        }
+      }
     },
     "Trial ends" : {
       "extractionState" : "manual",
@@ -8011,7 +9053,50 @@
       }
     },
     "Upcoming Bills" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kommende Rechnungen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Próximas facturas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Factures à venir"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今後の請求書"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다가오는 청구서"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "即将到来的账单"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "即將到來的賬單"
+          }
+        }
+      }
     },
     "Updates" : {
       "extractionState" : "manual",
@@ -8108,7 +9193,50 @@
       }
     },
     "US Dollar (USD)" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "US-Dollar (USD)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dólar estadounidense (USD)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dollar américain (USD)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "米ドル (USD)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "미국 달러(USD)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "美元 (USD)"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "美元 (USD)"
+          }
+        }
+      }
     },
     "Utilities" : {
       "extractionState" : "manual",
@@ -8158,13 +9286,142 @@
       }
     },
     "Weekly" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wöchentlich"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Semanalmente"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hebdomadaire"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "毎週"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "주간"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每周"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每週"
+          }
+        }
+      }
     },
     "Yearly" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jährlich"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anual"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuel"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "毎年"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "매년"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每年"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每年"
+          }
+        }
+      }
     },
     "Your confirmed Billio spending this month is %@." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ihre bestätigten Billio-Ausgaben in diesem Monat belaufen sich auf %@."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Su gasto Billio confirmado este mes es %@."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vos dépenses Billio confirmées ce mois-ci sont %@."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今月確認された Billio の支出は %@ です。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이번 달 확인된 Billio 지출은 %@입니다."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您本月确认的 Billio 支出为 %@。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您本月確認的 Billio 支出為 %@。"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

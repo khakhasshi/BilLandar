@@ -90,6 +90,14 @@ final class Bill {
         }
     }
 
+    /// Sample data and imported records store the source subtitle so it remains
+    /// stable across devices. Resolve known catalog entries at render time while
+    /// leaving user-entered subtitles untouched.
+    var localizedSubtitle: String {
+        guard !subtitle.isEmpty else { return subtitle }
+        return String(localized: String.LocalizationValue(subtitle), locale: BillioSharedStore.appLocale)
+    }
+
     var isTrial: Bool {
         guard let trialEndDate else { return false }
         return trialEndDate >= Date.now.startOfDay

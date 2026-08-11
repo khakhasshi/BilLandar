@@ -75,7 +75,10 @@ enum InsightEngine {
                 kind: .duplicate,
                 severity: .critical,
                 title: String(localized: "Possible duplicate subscription", locale: BillioSharedStore.appLocale),
-                message: "\(duplicates.map(\.name).joined(separator: " and ")) appear to bill the same service.",
+                message: String(
+                    format: String(localized: "%@ appear to bill the same service.", locale: BillioSharedStore.appLocale),
+                    duplicates.map(\.name).joined(separator: String(localized: " and ", locale: BillioSharedStore.appLocale))
+                ),
                 billIDs: duplicates.map(\.id)
             )
         }
@@ -98,8 +101,16 @@ enum InsightEngine {
                 id: "price-\(bill.id.uuidString)",
                 kind: .priceIncrease,
                 severity: change >= 0.1 ? .critical : .warning,
-                title: "\(bill.name) price increased",
-                message: "Up \(change.formatted(.percent.precision(.fractionLength(0)))) from \(previous.formatted(.currency(code: bill.currencyCode))) to \(recent.amount.formatted(.currency(code: bill.currencyCode))).",
+                title: String(
+                    format: String(localized: "%@ price increased", locale: BillioSharedStore.appLocale),
+                    bill.name
+                ),
+                message: String(
+                    format: String(localized: "Up %@ from %@ to %@.", locale: BillioSharedStore.appLocale),
+                    change.formatted(.percent.precision(.fractionLength(0)).locale(BillioSharedStore.appLocale)),
+                    previous.formatted(.currency(code: bill.currencyCode).locale(BillioSharedStore.appLocale)),
+                    recent.amount.formatted(.currency(code: bill.currencyCode).locale(BillioSharedStore.appLocale))
+                ),
                 billIDs: [bill.id]
             )
         }
@@ -119,10 +130,17 @@ enum InsightEngine {
                 id: "trial-\(bill.id.uuidString)",
                 kind: .trialEnding,
                 severity: days <= 2 ? .critical : .warning,
-                title: "\(bill.name) trial ends soon",
+                title: String(
+                    format: String(localized: "%@ trial ends soon", locale: BillioSharedStore.appLocale),
+                    bill.name
+                ),
                 message: days == 0
                     ? String(localized: "The trial converts to a paid plan today.", locale: BillioSharedStore.appLocale)
-                    : "The trial converts to \(bill.amount.formatted(.currency(code: bill.currencyCode))) in \(days) days.",
+                    : String(
+                        format: String(localized: "The trial converts to %@ in %lld days.", locale: BillioSharedStore.appLocale),
+                        bill.amount.formatted(.currency(code: bill.currencyCode).locale(BillioSharedStore.appLocale)),
+                        days
+                    ),
                 billIDs: [bill.id]
             )
         }
@@ -140,7 +158,10 @@ enum InsightEngine {
                 kind: .paymentIssue,
                 severity: .critical,
                 title: String(localized: "Payment needs attention", locale: BillioSharedStore.appLocale),
-                message: "The latest \(bill.name) payment failed.",
+                message: String(
+                    format: String(localized: "The latest %@ payment failed.", locale: BillioSharedStore.appLocale),
+                    bill.name
+                ),
                 billIDs: [bill.id]
             )
         }
@@ -160,7 +181,10 @@ enum InsightEngine {
             kind: .renewalCluster,
             severity: .info,
             title: String(localized: "Busy renewal week", locale: BillioSharedStore.appLocale),
-            message: "\(upcoming.count) bills renew in the next 7 days.",
+            message: String(
+                format: String(localized: "%lld bills renew in the next 7 days.", locale: BillioSharedStore.appLocale),
+                upcoming.count
+            ),
             billIDs: upcoming.map(\.id)
         )
     }

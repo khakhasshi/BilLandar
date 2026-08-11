@@ -44,7 +44,13 @@ final class ExchangeRateStore {
         if isLoading { return String(localized: "Updating rates…", locale: BillioSharedStore.appLocale) }
         if let errorMessage { return errorMessage }
         guard let snapshot else { return String(localized: "Rates not loaded", locale: BillioSharedStore.appLocale) }
-        return "Rates from \(snapshot.effectiveDate.formatted(.dateTime.month(.abbreviated).day().year()))"
+        let date = snapshot.effectiveDate.formatted(
+            .dateTime.locale(BillioSharedStore.appLocale).month(.abbreviated).day().year()
+        )
+        return String(
+            format: String(localized: "Rates from %@", locale: BillioSharedStore.appLocale),
+            date
+        )
     }
 
     var hasUsableRates: Bool {

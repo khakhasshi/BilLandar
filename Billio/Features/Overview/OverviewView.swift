@@ -334,9 +334,15 @@ struct OverviewView: View {
     }
 
     private func groupTitle(for date: Date) -> String {
-        if Calendar.billio.isDateInToday(date) { return "Today" }
-        if Calendar.billio.isDateInTomorrow(date) { return "Tomorrow" }
-        return date.formatted(.dateTime.weekday(.wide).month(.abbreviated).day())
+        if Calendar.billio.isDateInToday(date) {
+            return String(localized: "Today", locale: BillioSharedStore.appLocale)
+        }
+        if Calendar.billio.isDateInTomorrow(date) {
+            return String(localized: "Tomorrow", locale: BillioSharedStore.appLocale)
+        }
+        return date.formatted(
+            .dateTime.locale(BillioSharedStore.appLocale).weekday(.wide).month(.abbreviated).day()
+        )
     }
 }
 

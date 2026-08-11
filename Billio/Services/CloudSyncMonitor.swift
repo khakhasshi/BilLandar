@@ -98,7 +98,13 @@ final class CloudSyncMonitor {
         if let activeEventTitle { return activeEventTitle }
         if let lastSyncError { return lastSyncError }
         if let lastSuccessfulSyncAt {
-            return "Last successful sync \(lastSuccessfulSyncAt.formatted(.relative(presentation: .named)))"
+            let relativeDate = lastSuccessfulSyncAt.formatted(
+                .relative(presentation: .named).locale(BillioSharedStore.appLocale)
+            )
+            return String(
+                format: String(localized: "Last successful sync %@", locale: BillioSharedStore.appLocale),
+                relativeDate
+            )
         }
         return state.detail
     }

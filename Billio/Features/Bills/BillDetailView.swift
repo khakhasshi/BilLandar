@@ -34,7 +34,7 @@ struct BillDetailView: View {
                     BillIcon(bill: bill, size: 72)
                     Text(bill.name)
                         .font(.title2.bold())
-                    Text(bill.subtitle)
+                    Text(bill.localizedSubtitle)
                         .font(.subheadline)
                         .foregroundStyle(AppTheme.textSecondary)
                 }

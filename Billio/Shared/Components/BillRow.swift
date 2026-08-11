@@ -34,7 +34,7 @@ struct BillRow: View {
                 Text(bill.name)
                     .font(.subheadline.weight(.semibold))
                     .foregroundStyle(AppTheme.textPrimary)
-                Text(bill.subtitle)
+                Text(bill.localizedSubtitle)
                     .font(.caption)
                     .foregroundStyle(AppTheme.textSecondary)
                     .lineLimit(1)
@@ -64,7 +64,17 @@ struct BillRow: View {
             from: Date.now.startOfDay,
             to: bill.nextDueDate.startOfDay
         ).day ?? 0
-        let title = days <= 0 ? "Due today" : days == 1 ? "Due tomorrow" : "In \(days) days"
+        let title: String
+        if days <= 0 {
+            title = String(localized: "Due today", locale: BillioSharedStore.appLocale)
+        } else if days == 1 {
+            title = String(localized: "Due tomorrow", locale: BillioSharedStore.appLocale)
+        } else {
+            title = String(
+                format: String(localized: "In %lld days", locale: BillioSharedStore.appLocale),
+                days
+            )
+        }
 
         return Text(title)
             .font(.caption2.weight(.medium))
