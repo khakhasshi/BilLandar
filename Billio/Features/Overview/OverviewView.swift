@@ -11,6 +11,7 @@ struct OverviewView: View {
     @Environment(AppFeedbackCenter.self) private var feedbackCenter
     @State private var showingAddBill = false
     @State private var selectedWeekDate: Date?
+    @State private var insightSnapshot: [BillInsight] = []
 
     private var activeBills: [Bill] { bills.filter { $0.status == .active } }
 
@@ -35,7 +36,16 @@ struct OverviewView: View {
     }
 
     private var insights: [BillInsight] {
-        InsightEngine.generate(bills: bills, payments: payments)
+        insightSnapshot
+    }
+
+    private var insightsRevision: String {
+        let latestBill = bills.map(\.updatedAt).max()?.timeIntervalSinceReferenceDate ?? 0
+        let latestPayment = payments.map(\.paidAt).max()?.timeIntervalSinceReferenceDate ?? 0
+        let paymentStatuses = payments.reduce(into: 0) { result, payment in
+            result = result &* 31 &+ payment.statusRawValue.hashValue
+        }
+        return "\(bills.count)|\(latestBill)|\(payments.count)|\(latestPayment)|\(paymentStatuses)"
     }
 
     var body: some View {
@@ -88,16 +98,19 @@ struct OverviewView: View {
                         ZStack(alignment: .topTrailing) {
                             Image(systemName: "bell")
                                 .font(.system(size: 17))
-                                .billioTouchTarget()
+                                .frame(width: 44, height: 44)
                             if notificationBadgeCount > 0 {
                                 Text(notificationBadgeCount > 9 ? "9+" : "\(notificationBadgeCount)")
                                     .font(.system(size: 9, weight: .bold, design: .rounded))
                                     .foregroundStyle(.white)
-                                    .frame(minWidth: 16, minHeight: 16)
+                                    .frame(minWidth: 18, minHeight: 18)
+                                    .padding(.horizontal, 1)
                                     .background(AppTheme.danger, in: Capsule())
-                                    .offset(x: 4, y: -1)
+                                    .fixedSize(horizontal: true, vertical: true)
+                                    .offset(x: -1, y: 2)
                             }
                         }
+                        .frame(width: 44, height: 44)
                     }
                     .accessibilityLabel("Notifications, \(notificationBadgeCount) items")
                 }
@@ -120,6 +133,9 @@ struct OverviewView: View {
             }
             .task {
                 await exchangeRates.refreshIfNeeded()
+            }
+            .task(id: insightsRevision) {
+                insightSnapshot = InsightEngine.generate(bills: bills, payments: payments)
             }
         }
     }

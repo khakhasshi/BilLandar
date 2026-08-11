@@ -206,14 +206,14 @@ struct BillDetailView: View {
         .billioCanvas()
         .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
-        .confirmationDialog("Cancel this bill?", isPresented: $showingDeleteConfirmation, titleVisibility: .visible) {
+        .alert("Cancel this bill?", isPresented: $showingDeleteConfirmation) {
             Button("Cancel Bill", role: .destructive) {
                 setStatus(.cancelled, dismissAfterSave: true)
             }
         } message: {
             Text("Billio will stop including it in upcoming totals and reminders.")
         }
-        .confirmationDialog("Confirm payment?", isPresented: $showingMarkPaidConfirmation, titleVisibility: .visible) {
+        .alert("Confirm payment?", isPresented: $showingMarkPaidConfirmation) {
             Button("Mark as Paid", action: markAsPaid)
             Button("Not Now", role: .cancel) {}
         } message: {

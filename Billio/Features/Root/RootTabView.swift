@@ -67,20 +67,17 @@ struct RootTabView: View {
     }
 
     private var widgetDataRevision: String {
-        let billRevision = bills
-            .sorted { $0.id.uuidString < $1.id.uuidString }
-            .map {
-                "\($0.id.uuidString)|\($0.updatedAt.timeIntervalSinceReferenceDate)|\($0.statusRawValue)|\($0.nextDueDate.timeIntervalSinceReferenceDate)"
-            }
-            .joined(separator: ";")
-        let paymentRevision = payments
-            .sorted { $0.id.uuidString < $1.id.uuidString }
-            .map {
-                "\($0.id.uuidString)|\($0.statusRawValue)|\($0.amount)|\($0.paidAt.timeIntervalSinceReferenceDate)"
-            }
-            .joined(separator: ";")
+        let latestBill = bills.map(\.updatedAt).max()?.timeIntervalSinceReferenceDate ?? 0
+        let latestDueDate = bills.map(\.nextDueDate).max()?.timeIntervalSinceReferenceDate ?? 0
+        let billStatusFingerprint = bills.reduce(into: 0) { result, bill in
+            result = result &* 31 &+ bill.statusRawValue.hashValue
+        }
+        let latestPayment = payments.map(\.paidAt).max()?.timeIntervalSinceReferenceDate ?? 0
+        let paymentStatusFingerprint = payments.reduce(into: 0) { result, payment in
+            result = result &* 31 &+ payment.statusRawValue.hashValue
+        }
         let rateRevision = exchangeRates.snapshot?.fetchedAt.timeIntervalSinceReferenceDate ?? 0
-        return "\(billRevision)#\(paymentRevision)#\(exchangeRates.displayCurrency)#\(rateRevision)"
+        return "\(bills.count)|\(latestBill)|\(latestDueDate)|\(billStatusFingerprint)#\(payments.count)|\(latestPayment)|\(paymentStatusFingerprint)#\(exchangeRates.displayCurrency)#\(rateRevision)"
     }
 
     private func reconcileBills() {

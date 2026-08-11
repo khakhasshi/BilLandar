@@ -74,9 +74,11 @@ struct PaymentRecordEditView: View {
                 }
             }
             .interactiveDismissDisabled(hasUnsavedChanges)
-            .confirmationDialog("Discard payment changes?", isPresented: $showingDiscardConfirmation, titleVisibility: .visible) {
+            .alert("Discard payment changes?", isPresented: $showingDiscardConfirmation) {
                 Button("Discard Changes", role: .destructive) { dismiss() }
                 Button("Keep Editing", role: .cancel) {}
+            } message: {
+                Text("The payment information you entered will be lost.")
             }
         }
     }

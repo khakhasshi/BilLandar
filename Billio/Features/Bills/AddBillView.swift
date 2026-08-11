@@ -151,7 +151,7 @@ struct AddBillView: View {
                 hasInitializedCurrency = true
             }
             .interactiveDismissDisabled(hasUnsavedChanges)
-            .confirmationDialog("Discard this new bill?", isPresented: $showingDiscardConfirmation, titleVisibility: .visible) {
+            .alert("Discard this new bill?", isPresented: $showingDiscardConfirmation) {
                 Button("Discard Changes", role: .destructive) { dismiss() }
                 Button("Keep Editing", role: .cancel) {}
             } message: {

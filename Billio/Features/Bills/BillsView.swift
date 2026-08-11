@@ -120,13 +120,12 @@ struct BillsView: View {
             }
             .sheet(isPresented: $showingAddBill) { AddBillView() }
             .sheet(item: $editingBill) { EditBillView(bill: $0) }
-            .confirmationDialog(
+            .alert(
                 "Mark \(billToMarkPaid?.name ?? "bill") as paid?",
                 isPresented: Binding(
                     get: { billToMarkPaid != nil },
                     set: { if !$0 { billToMarkPaid = nil } }
-                ),
-                titleVisibility: .visible
+                )
             ) {
                 Button("Confirm Payment") {
                     if let billToMarkPaid { markPaid(billToMarkPaid) }

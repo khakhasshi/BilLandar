@@ -63,13 +63,12 @@ struct PaymentMethodsView: View {
         .sheet(isPresented: $showingAddMethod) {
             AddPaymentMethodView(hasExistingDefault: methods.contains(where: \.isDefault))
         }
-        .confirmationDialog(
+        .alert(
             "Delete \(methodToDelete?.displayName ?? "payment method")?",
             isPresented: Binding(
                 get: { methodToDelete != nil },
                 set: { if !$0 { methodToDelete = nil } }
-            ),
-            titleVisibility: .visible
+            )
         ) {
             Button("Delete Payment Method", role: .destructive) {
                 if let methodToDelete { delete(methodToDelete) }
@@ -173,9 +172,11 @@ private struct AddPaymentMethodView: View {
                 initialDefault = isDefault
             }
             .interactiveDismissDisabled(hasUnsavedChanges)
-            .confirmationDialog("Discard this payment method?", isPresented: $showingDiscardConfirmation, titleVisibility: .visible) {
+            .alert("Discard this payment method?", isPresented: $showingDiscardConfirmation) {
                 Button("Discard Changes", role: .destructive) { dismiss() }
                 Button("Keep Editing", role: .cancel) {}
+            } message: {
+                Text("The payment method information you entered will be lost.")
             }
         }
     }

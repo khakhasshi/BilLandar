@@ -128,7 +128,7 @@ struct EditBillView: View {
                 }
             }
             .interactiveDismissDisabled(hasUnsavedChanges)
-            .confirmationDialog("Discard your changes?", isPresented: $showingDiscardConfirmation, titleVisibility: .visible) {
+            .alert("Discard your changes?", isPresented: $showingDiscardConfirmation) {
                 Button("Discard Changes", role: .destructive) { dismiss() }
                 Button("Keep Editing", role: .cancel) {}
             } message: {

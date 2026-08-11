@@ -59,6 +59,8 @@ The bill-detail screen also provides a permanent edit path for historical record
 
 `AppTheme` uses semantic system colors and adaptive accent colors, so cards, labels, separators, and statuses remain legible in light mode, dark mode, and increased-contrast mode. Reusable modifiers define a 44-point minimum touch target, tab-bar clearance, adaptive card depth, and reduced-motion-aware transitions.
 
+The iPad calendar uses an adaptive seven-column grid with a centered content width instead of a fixed-width horizontal canvas. Calendar markers are built from one per-render day index, and Overview insights are refreshed from a lightweight data revision rather than regenerated during every body evaluation. Widget reload fingerprints use counts, timestamps, and status hashes instead of sorting and serializing every record.
+
 Bill rows change layout at accessibility Dynamic Type sizes instead of compressing merchant identity and amount into one line. Charts expose spoken values and selectable details, calendar days and week-strip dates are buttons with explicit accessibility labels, and loading summaries use a reduced-motion-aware skeleton rather than replacing content with an unexplained blank state.
 
 ## Product navigation

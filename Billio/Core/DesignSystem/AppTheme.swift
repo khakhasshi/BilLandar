@@ -110,8 +110,8 @@ private struct BillioCardModifier: ViewModifier {
             }
             .shadow(
                 color: Color.black.opacity(colorScheme == .dark ? 0.18 : 0.045),
-                radius: colorScheme == .dark ? 5 : 12,
-                y: colorScheme == .dark ? 2 : 4
+                radius: colorScheme == .dark ? 3 : 7,
+                y: colorScheme == .dark ? 1 : 3
             )
     }
 }

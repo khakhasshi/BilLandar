@@ -4,6 +4,7 @@ import SwiftUI
 struct CalendarView: View {
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     @Query(sort: \Bill.nextDueDate) private var bills: [Bill]
     @Environment(ExchangeRateStore.self) private var exchangeRates
     @Environment(AppFeedbackCenter.self) private var feedbackCenter
@@ -12,12 +13,18 @@ struct CalendarView: View {
 
     private let weekdaySymbols = Calendar.billio.veryShortWeekdaySymbols
     private var calendarCellSize: CGFloat { dynamicTypeSize.isAccessibilitySize ? 58 : AppTheme.minimumTouchSize }
+    private var calendarColumnSpacing: CGFloat { horizontalSizeClass == .regular ? 10 : 3 }
+    private var calendarRowSpacing: CGFloat { horizontalSizeClass == .regular ? 16 : 12 }
     private var columns: [GridItem] {
-        Array(repeating: GridItem(.fixed(calendarCellSize), spacing: 3), count: 7)
+        Array(repeating: GridItem(.flexible(minimum: calendarCellSize), spacing: calendarColumnSpacing), count: 7)
     }
 
     private var selectedBills: [Bill] {
         bills.filter { $0.nextDueDate.isSameDay(as: selectedDate) && $0.status == .active }
+    }
+
+    private var activeBillsByDay: [Date: [Bill]] {
+        Dictionary(grouping: bills.filter { $0.status == .active }) { $0.nextDueDate.startOfDay }
     }
 
     var body: some View {
@@ -31,6 +38,8 @@ struct CalendarView: View {
                 .padding(.horizontal, AppTheme.horizontalPadding)
                 .padding(.bottom, 24)
                 .billioTabBarClearance()
+                .frame(maxWidth: 1_100)
+                .frame(maxWidth: .infinity)
             }
             .billioCanvas()
             .billioNavigationTitle("Calendar")
@@ -62,13 +71,15 @@ struct CalendarView: View {
         .padding(.horizontal, 8)
     }
 
+    @ViewBuilder
     private var calendarGrid: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            LazyVGrid(columns: columns, spacing: 12) {
+        let billsByDay = activeBillsByDay
+        LazyVGrid(columns: columns, spacing: calendarRowSpacing) {
                 ForEach(weekdaySymbols, id: \.self) { symbol in
                     Text(symbol)
                         .font(.caption2.weight(.semibold))
                         .foregroundStyle(AppTheme.textSecondary)
+                        .frame(maxWidth: .infinity)
                 }
 
                 ForEach(Array(monthCells.enumerated()), id: \.offset) { _, date in
@@ -86,7 +97,7 @@ struct CalendarView: View {
                                     )
                                     .background(date.isSameDay(as: selectedDate) ? AppTheme.accent : .clear, in: Circle())
                                 HStack(spacing: 2) {
-                                    ForEach(Array(dueBills(on: date).prefix(3).enumerated()), id: \.offset) { index, _ in
+                                    ForEach(Array((billsByDay[date.startOfDay] ?? []).prefix(3).enumerated()), id: \.offset) { index, _ in
                                         Circle()
                                             .fill([AppTheme.warning, AppTheme.danger, AppTheme.success][index])
                                             .frame(width: 4, height: 4)
@@ -95,18 +106,17 @@ struct CalendarView: View {
                                 .frame(height: 4)
                             }
                         }
+                        .frame(maxWidth: .infinity, minHeight: calendarCellSize)
                         .buttonStyle(.plain)
                         .billioTouchTarget()
                         .accessibilityLabel(date.formatted(.dateTime.weekday(.wide).month(.wide).day()))
-                        .accessibilityValue(dueBills(on: date).isEmpty ? "No bills due" : "\(dueBills(on: date).count) bills due")
+                        .accessibilityValue((billsByDay[date.startOfDay] ?? []).isEmpty ? "No bills due" : "\((billsByDay[date.startOfDay] ?? []).count) bills due")
                     } else {
-                        Color.clear.frame(height: AppTheme.minimumTouchSize)
+                        Color.clear.frame(maxWidth: .infinity, minHeight: calendarCellSize)
                     }
                 }
             }
-            .frame(width: 7 * calendarCellSize + 18)
-        }
-        .billioCard(padding: 14)
+        .billioCard(padding: horizontalSizeClass == .regular ? 22 : 14)
         .simultaneousGesture(
             DragGesture(minimumDistance: 28)
                 .onEnded { value in
@@ -181,10 +191,6 @@ struct CalendarView: View {
             calendar.date(byAdding: .day, value: day - 1, to: monthInterval.start)
         }
         return Array(repeating: nil, count: normalizedBlanks) + dates.map(Optional.some)
-    }
-
-    private func dueBills(on date: Date) -> [Bill] {
-        bills.filter { $0.nextDueDate.isSameDay(as: date) && $0.status == .active }
     }
 
     private func moveMonth(by value: Int) {
