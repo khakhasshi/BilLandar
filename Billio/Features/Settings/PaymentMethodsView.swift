@@ -176,7 +176,7 @@ private struct AddPaymentMethodView: View {
                 Button("Discard Changes", role: .destructive) { dismiss() }
                 Button("Keep Editing", role: .cancel) {}
             } message: {
-                Text("The payment method information you entered will be lost.")
+                Text("The information you entered will be lost.")
             }
         }
     }

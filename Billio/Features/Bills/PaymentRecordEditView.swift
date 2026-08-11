@@ -78,7 +78,7 @@ struct PaymentRecordEditView: View {
                 Button("Discard Changes", role: .destructive) { dismiss() }
                 Button("Keep Editing", role: .cancel) {}
             } message: {
-                Text("The payment information you entered will be lost.")
+                Text("The information you entered will be lost.")
             }
         }
     }
