@@ -222,7 +222,7 @@ struct SettingsView: View {
 }
 
 private struct SettingsLabel: View {
-    let title: String
+    let title: LocalizedStringKey
     let symbol: String
     let color: Color
 

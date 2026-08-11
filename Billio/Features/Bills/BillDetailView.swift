@@ -353,7 +353,7 @@ struct BillDetailView: View {
 }
 
 private struct PaymentStatusButton: View {
-    let title: String
+    let title: LocalizedStringKey
     let color: Color
     let action: () -> Void
 
@@ -368,7 +368,7 @@ private struct PaymentStatusButton: View {
 }
 
 private struct InfoTile: View {
-    let title: String
+    let title: LocalizedStringKey
     let value: String
     var valueColor = AppTheme.textPrimary
 

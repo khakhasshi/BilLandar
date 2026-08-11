@@ -146,8 +146,8 @@ struct BillsView: View {
                     selectedStatus = nil
                 }
                 ForEach(BillStatus.allCases) { status in
-                    FilterChip(
-                        title: status.title,
+                FilterChip(
+                        title: LocalizedStringKey(status.title),
                         count: bills.filter { $0.status == status }.count,
                         selected: selectedStatus == status
                     ) {
@@ -164,7 +164,7 @@ struct BillsView: View {
 private struct FilterChip: View {
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @Environment(AppFeedbackCenter.self) private var feedbackCenter
-    let title: String
+    let title: LocalizedStringKey
     let count: Int
     let selected: Bool
     let action: () -> Void
@@ -188,7 +188,8 @@ private struct FilterChip: View {
         .buttonStyle(.plain)
         .frame(minHeight: AppTheme.minimumTouchSize)
         .contentShape(Capsule())
-        .accessibilityLabel("\(title), \(count) bills")
+        .accessibilityLabel(Text(title))
+        .accessibilityValue(Text("\(count)"))
         .accessibilityAddTraits(selected ? .isSelected : [])
         .animation(reduceMotion ? nil : .easeOut(duration: 0.18), value: selected)
     }

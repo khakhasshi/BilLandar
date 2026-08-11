@@ -86,7 +86,7 @@ private struct NextPaymentWidgetView: View {
                 }
             }
         } else {
-            widgetEmptyState(message: entry.loadError ?? "No upcoming bills")
+            widgetEmptyState(message: entry.loadError ?? String(localized: "No upcoming bills"))
         }
     }
 }
@@ -132,7 +132,7 @@ private struct UpcomingBillsWidgetView: View {
             widgetHeader("Upcoming bills", symbol: "list.bullet.clipboard.fill")
             if visibleBills.isEmpty {
                 Spacer()
-                widgetEmptyState(message: entry.loadError ?? "Nothing due soon")
+                widgetEmptyState(message: entry.loadError ?? String(localized: "Nothing due soon"))
                 Spacer()
             } else {
                 ForEach(visibleBills) { bill in
@@ -157,7 +157,7 @@ private struct UpcomingBillsWidgetView: View {
 }
 
 @ViewBuilder
-private func widgetHeader(_ title: String, symbol: String) -> some View {
+private func widgetHeader(_ title: LocalizedStringKey, symbol: String) -> some View {
     HStack(spacing: 6) {
         Image(systemName: symbol).foregroundStyle(WidgetPalette.accent)
         Text(title).font(.caption.weight(.semibold)).foregroundStyle(.secondary)
@@ -209,9 +209,9 @@ private func widgetEmptyState(message: String) -> some View {
 }
 
 private func dueText(for date: Date) -> String {
-    if Calendar.billio.isDateInToday(date) { return "Due today" }
-    if Calendar.billio.isDateInTomorrow(date) { return "Due tomorrow" }
-    return "Due \(date.formatted(.dateTime.month(.abbreviated).day()))"
+    if Calendar.billio.isDateInToday(date) { return String(localized: "Due today") }
+    if Calendar.billio.isDateInTomorrow(date) { return String(localized: "Due tomorrow") }
+    return String(localized: "Due") + " " + date.formatted(.dateTime.month(.abbreviated).day())
 }
 
 private extension Color {

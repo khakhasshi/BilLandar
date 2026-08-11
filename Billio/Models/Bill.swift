@@ -138,12 +138,12 @@ enum BillCategory: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .entertainment: "Entertainment"
-        case .productivity: "Productivity"
-        case .storage: "Storage"
-        case .finance: "Finance"
-        case .utilities: "Utilities"
-        case .other: "Other"
+        case .entertainment: String(localized: "Entertainment")
+        case .productivity: String(localized: "Productivity")
+        case .storage: String(localized: "Storage")
+        case .finance: String(localized: "Finance")
+        case .utilities: String(localized: "Utilities")
+        case .other: String(localized: "Other")
         }
     }
 
@@ -169,10 +169,10 @@ enum BillingCycle: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .weekly: "Every week"
-        case .monthly: "Every month"
-        case .quarterly: "Every 3 months"
-        case .yearly: "Every year"
+        case .weekly: String(localized: "Every week")
+        case .monthly: String(localized: "Every month")
+        case .quarterly: String(localized: "Every 3 months")
+        case .yearly: String(localized: "Every year")
         }
     }
 }
@@ -183,5 +183,11 @@ enum BillStatus: String, CaseIterable, Identifiable {
     case cancelled
 
     var id: Self { self }
-    var title: String { rawValue.capitalized }
+    var title: String {
+        switch self {
+        case .active: String(localized: "Active")
+        case .paused: String(localized: "Paused")
+        case .cancelled: String(localized: "Cancelled")
+        }
+    }
 }

@@ -67,6 +67,10 @@ The main app has five tabs: Overview, Calendar, Bills, Analytics, and Settings. 
 
 Settings exposes System, Light, and Dark appearance modes. The selected mode is applied at the app scene boundary and persisted in the shared defaults suite; System continues following the device appearance.
 
+## Localization
+
+`Localizable.xcstrings` is the single source of truth for user-visible strings. English is the development language; the app and widget extension ship Simplified Chinese (`zh-Hans`), Traditional Chinese (`zh-Hant`), Japanese (`ja`), Korean (`ko`), French (`fr`), German (`de`), and Spanish (`es`). The system language determines the active localization, including App Intents parameter labels and widget copy. Domain enum titles use `String(localized:)` so categories, billing cycles, payment states, and appearance choices follow the same locale as SwiftUI labels.
+
 ## Widgets and system actions
 
 The `BillioWidget` extension provides Next Payment, Monthly Spending, and Upcoming Bills widgets. Timeline reads use the shared SwiftData container and cached exchange rates, refresh at least every 30 minutes, and are explicitly reloaded when bills, payments, display currency, or rates change in the app.

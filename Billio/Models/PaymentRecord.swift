@@ -55,5 +55,12 @@ enum PaymentStatus: String, CaseIterable, Identifiable {
     case refunded
 
     var id: Self { self }
-    var title: String { rawValue.capitalized }
+    var title: String {
+        switch self {
+        case .paid: String(localized: "Paid")
+        case .pending: String(localized: "Pending")
+        case .failed: String(localized: "Failed")
+        case .refunded: String(localized: "Refunded")
+        }
+    }
 }
