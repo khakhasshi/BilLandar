@@ -34,8 +34,8 @@ Connect.
 
 ## App Store Connect
 
-- [ ] Add the final privacy policy URL and support URL in App Store Connect after
-  replacing the draft publisher identity/contact details.
+- [ ] Add the final privacy policy URL and support URL in App Store Connect and
+  confirm the publisher identity and contact mailbox.
 - [ ] Complete App Privacy answers for SwiftData, private CloudKit sync, local
   notifications, exchange-rate requests, and user-initiated CSV exports.
 - [ ] Set age rating, category, pricing, availability, and review contact data.

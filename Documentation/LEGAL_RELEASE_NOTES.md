@@ -5,11 +5,9 @@ This repository contains a public draft of the Billio legal and support pages in
 private CloudKit sync, local notifications, Widget/App Intents, CSV export, and
 Frankfurter reference exchange rates.
 
-Before App Store submission, replace the generic publisher wording with the
-actual legal entity, jurisdiction, and monitored privacy/support contact. The
-public GitHub issue tracker is suitable for a draft project, but should not be
-the only production privacy contact unless it is actively monitored and the
-publisher has a private follow-up process.
+Publisher contact: JIANGJINGZHE, contact@jiangjingzhe.com. Confirm that this is
+the legal publisher identity required for the territories where Billio will be
+distributed, and keep this mailbox monitored for privacy and support requests.
 
 Apple App Store Connect still requires the final public Privacy Policy URL and
 accurate App Privacy answers. The legal pages do not replace legal review for the

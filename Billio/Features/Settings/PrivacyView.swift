@@ -38,6 +38,9 @@ struct PrivacyView: View {
                     Link(destination: legalBaseURL.appendingPathComponent("support.html")) {
                         Label("Support & Data Requests", systemImage: "questionmark.circle.fill")
                     }
+                    Link(destination: URL(string: "mailto:contact@jiangjingzhe.com")!) {
+                        Label("contact@jiangjingzhe.com", systemImage: "envelope.fill")
+                    }
                 }
                 .billioCard()
                 Text("Last updated: August 12, 2026")
