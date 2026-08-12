@@ -1,6 +1,6 @@
-# Billio architecture
+# Billow architecture
 
-Billio targets iOS 17 and uses SwiftUI, SwiftData, and Swift Charts without third-party dependencies.
+Billow targets iOS 17 and uses SwiftUI, SwiftData, and Swift Charts without third-party dependencies.
 
 ## Layers
 
@@ -17,7 +17,7 @@ Views read and mutate `Bill`, `PaymentRecord`, and `PaymentMethod` through Swift
 
 ## Persistence and iCloud
 
-`DataStoreFactory` creates a single versioned schema containing `Bill`, `PaymentRecord`, and `PaymentMethod`. `BillioSchemaV1` and `BillioMigrationPlan` make future model changes explicit before they reach production. Production uses the user's private CloudKit database in `iCloud.JIANGJINGZHE.Billio`; if the CloudKit-backed container cannot be created, the app falls back to a local SwiftData store and exposes that state in Settings. Unit tests deliberately use an isolated local store.
+`DataStoreFactory` creates a single versioned schema containing `Bill`, `PaymentRecord`, and `PaymentMethod`. `BillowSchemaV1` and `BillowMigrationPlan` make future model changes explicit before they reach production. Production uses the user's private CloudKit database in `iCloud.JIANGJINGZHE.Billow`; if the CloudKit-backed container cannot be created, the app falls back to a local SwiftData store and exposes that state in Settings. Unit tests deliberately use an isolated local store.
 
 The models avoid SwiftData unique constraints and required relationships so the schema remains CloudKit-compatible. Payment history and payment methods use stable identifiers and value snapshots rather than required relationships. Payment-method records contain only descriptive metadata and an optional last four digits.
 
@@ -25,13 +25,13 @@ The models avoid SwiftData unique constraints and required relationships so the 
 
 Debug simulator builds seed ten multi-currency subscriptions and realistic payment history. Device and Release builds never seed demo content.
 
-The app and the `BillioWidget` extension share the same SwiftData store through the `group.JIANGJINGZHE.Billio` App Group. The shared configuration keeps CloudKit as the production backing database and records whether a local fallback is active so extensions open the same configuration. Display-currency, exchange-rate cache, and appearance preferences also use the App Group defaults suite. Widgets never combine unrelated original currencies when the required rate snapshot is unavailable.
+The app and the `BillowWidget` extension share the same SwiftData store through the `group.JIANGJINGZHE.Billow` App Group. The shared configuration keeps CloudKit as the production backing database and records whether a local fallback is active so extensions open the same configuration. Display-currency, exchange-rate cache, and appearance preferences also use the App Group defaults suite. Widgets never combine unrelated original currencies when the required rate snapshot is unavailable.
 
 ## Currency and exchange rates
 
 Each `Bill` stores its original amount and ISO 4217 currency code. `ExchangeRateStore` owns the user's display currency, cached current snapshots, historical snapshots, refresh state, and conversions. `ExchangeRateProviding` keeps the remote API replaceable; the current implementation reads current and date-ranged reference rates from Frankfurter v2 and caches the current snapshot per base currency for 12 hours.
 
-Converted totals are never persisted back into a bill. If a required rate is unavailable, Billio keeps showing original amounts and withholds the combined total instead of silently mixing currencies.
+Converted totals are never persisted back into a bill. If a required rate is unavailable, Billow keeps showing original amounts and withholds the combined total instead of silently mixing currencies.
 
 ## Lifecycle, product intelligence, and reminders
 
@@ -39,7 +39,7 @@ Converted totals are never persisted back into a bill. If a required rate is una
 
 `InsightEngine` is deterministic and independently tested. It detects duplicate merchants, historical price increases, trials ending within seven days, latest-payment failures, and renewal clusters.
 
-`NotificationManager` owns permission state and schedules future local reminders for active recurring bills over an 18-month horizon, within the operating system's pending-request limit. Reminder display and scheduling use the same 09:00 calculation. Delivered identifiers are not immediately re-created, and disabling reminders removes only Billio-owned requests.
+`NotificationManager` owns permission state and schedules future local reminders for active recurring bills over an 18-month horizon, within the operating system's pending-request limit. Reminder display and scheduling use the same 09:00 calculation. Delivered identifiers are not immediately re-created, and disabling reminders removes only Billow-owned requests.
 
 The notifications screen implements three real views: all upcoming items, scheduled bill reminders, and product insights presented as updates. Authorization state and scheduling failures remain visible to the user.
 
@@ -77,12 +77,12 @@ The app and widget targets each include `PrivacyInfo.xcprivacy` for their UserDe
 
 ## Widgets and system actions
 
-The `BillioWidget` extension provides Next Payment, Monthly Spending, and Upcoming Bills widgets. Timeline reads use the shared SwiftData container and cached exchange rates, refresh at least every 30 minutes, and are explicitly reloaded when bills, payments, display currency, or rates change in the app.
+The `BillowWidget` extension provides Next Payment, Monthly Spending, and Upcoming Bills widgets. Timeline reads use the shared SwiftData container and cached exchange rates, refresh at least every 30 minutes, and are explicitly reloaded when bills, payments, display currency, or rates change in the app.
 
 Interactive widget buttons call `MarkBillPaidIntent`, which resolves the bill by stable UUID and delegates to `PaymentWorkflowService`. The transaction therefore records or confirms a payment and advances the due date using the same rules as the main app.
 
-App Intents also expose confirmed monthly spending, bill creation, bill pausing, and payment confirmation to Siri, Spotlight, and Shortcuts. `BillEntity` supplies selectable active bills, while `BillioAppShortcuts` publishes four preconfigured shortcuts. Xcode extracts and validates the App Intents metadata during every app and widget build.
+App Intents also expose confirmed monthly spending, bill creation, bill pausing, and payment confirmation to Siri, Spotlight, and Shortcuts. `BillEntity` supplies selectable active bills, while `BillowAppShortcuts` publishes four preconfigured shortcuts. Xcode extracts and validates the App Intents metadata during every app and widget build.
 
 ## Test boundaries
 
-The `BillioTests` target covers billing-cycle advancement, reminder fire dates, overdue lifecycle idempotency, merchant normalization and cancellation-domain verification, safe payment-method normalization, current and historical exchange-rate conversion/failure behavior, insight generation, payment confirmation/undo for both new and pending records, widget multi-currency safety, appearance-mode definitions, system-action add/pause/pay mutations, and idempotent sample-data generation with an in-memory SwiftData container.
+The `BillowTests` target covers billing-cycle advancement, reminder fire dates, overdue lifecycle idempotency, merchant normalization and cancellation-domain verification, safe payment-method normalization, current and historical exchange-rate conversion/failure behavior, insight generation, payment confirmation/undo for both new and pending records, widget multi-currency safety, appearance-mode definitions, system-action add/pause/pay mutations, and idempotent sample-data generation with an in-memory SwiftData container.

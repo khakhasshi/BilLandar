@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Billio's eight-language string catalogs.
+"""Validate Billow's eight-language string catalogs.
 
 This is intentionally dependency-free so it can run in CI and before an
 archive. It checks both the app and widget catalogs, duplicate JSON keys,
@@ -65,7 +65,7 @@ def validate(path: Path) -> list[str]:
 
 def main() -> int:
     errors: list[str] = []
-    for relative in ("Billio/Localizable.xcstrings", "BillioWidget/Localizable.xcstrings"):
+    for relative in ("Billow/Localizable.xcstrings", "BillowWidget/Localizable.xcstrings"):
         errors.extend(validate(ROOT / relative))
     if errors:
         print("Localization validation failed:")
