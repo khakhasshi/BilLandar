@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct PrivacyView: View {
+    private let legalBaseURL = URL(string: "https://khakhasshi.github.io/Billio/")!
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 18) {
@@ -24,7 +26,24 @@ struct PrivacyView: View {
                     "Export",
                     "CSV exports are created only when you request them and are sent to the location you choose."
                 )
-                Text("Last updated: August 11, 2026")
+                VStack(alignment: .leading, spacing: 12) {
+                    Text("Legal & support")
+                        .font(.headline)
+                    Link(destination: legalBaseURL.appendingPathComponent("privacy.html")) {
+                        Label("Privacy Policy", systemImage: "hand.raised.fill")
+                    }
+                    Link(destination: legalBaseURL.appendingPathComponent("terms.html")) {
+                        Label("Terms of Use", systemImage: "doc.text.fill")
+                    }
+                    Link(destination: legalBaseURL.appendingPathComponent("support.html")) {
+                        Label("Support & Data Requests", systemImage: "questionmark.circle.fill")
+                    }
+                    Link(destination: URL(string: "mailto:contact@jiangjingzhe.com")!) {
+                        Label("contact@jiangjingzhe.com", systemImage: "envelope.fill")
+                    }
+                }
+                .billioCard()
+                Text("Last updated: August 12, 2026")
                     .font(.caption)
                     .foregroundStyle(AppTheme.textSecondary)
             }
