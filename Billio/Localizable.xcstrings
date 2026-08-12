@@ -398,25 +398,25 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Facturas de %lld vencidas"
+            "value" : "%lld facturas por pagar"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Factures %lld dues"
+            "value" : "%lld factures à payer"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%lld 請求書の期限が切れています"
+            "value" : "%lld 件の請求が支払期限です"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%lld 청구서 지불 기한"
+            "value" : "%lld건의 청구서가 결제 예정입니다"
           }
         },
         "zh-Hans" : {
@@ -536,7 +536,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "1 dia antes"
+            "value" : "1 día antes"
           }
         },
         "fr" : {
@@ -676,37 +676,37 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Una lista compacta de renovaciones con confirmación directa."
+            "value" : "Una lista compacta de renovaciones con confirmación directa del pago."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Une file compacte de renouvellements avec confirmation directe."
+            "value" : "Une liste compacte des renouvellements avec confirmation directe du paiement."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "更新予定を一覧し、直接支払いを確認できます。"
+            "value" : "更新予定を一覧表示し、支払いを直接確認できます。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "갱신 목록에서 바로 결제를 확인하세요."
+            "value" : "갱신 예정 목록에서 바로 결제를 확인할 수 있습니다."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "紧凑的续费队列，支持直接确认付款。"
+            "value" : "紧凑的续费列表，可直接确认付款。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "精簡的續費佇列，支援直接確認付款。"
+            "value" : "精簡的續費清單，可直接確認付款。"
           }
         }
       }
@@ -741,7 +741,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "概要"
+            "value" : "Billioについて"
           }
         },
         "ko" : {
@@ -909,43 +909,43 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fügen Sie ${name} für ${amount} ${currency} fällig ${nextDueDate} hinzu"
+            "value" : "Füge ${name} für ${amount} ${currency}, fällig am ${nextDueDate}, hinzu"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Agregue ${name} para ${amount} ${currency} adeudado en ${nextDueDate}"
+            "value" : "Añade ${name} por ${amount} ${currency}, con vencimiento el ${nextDueDate}"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ajoutez ${name} pour ${amount} ${currency} dû ${nextDueDate}"
+            "value" : "Ajoutez ${name} pour ${amount} ${currency}, avec échéance le ${nextDueDate}"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "${name} を ${amount} ${currency} に追加して ${nextDueDate} に支払います"
+            "value" : "${name} を ${amount} ${currency}、支払期日 ${nextDueDate} で追加"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "${nextDueDate}에 ${amount} ${currency}에 ${name} 추가"
+            "value" : "결제일이 ${nextDueDate}인 ${name} 추가: ${amount} ${currency}"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "添加 ${name}，金额为 ${amount} ${currency}，到期日期为 ${nextDueDate}"
+            "value" : "添加 ${name}，金额为 ${amount} ${currency}，到期日为 ${nextDueDate}"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "加 ${name}，金額為 ${amount} ${currency}，到期日為 ${nextDueDate}"
+            "value" : "新增 ${name}，金額為 ${amount} ${currency}，到期日為 ${nextDueDate}"
           }
         }
       }
@@ -1185,13 +1185,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "向 Billio 添加定期账单。"
+            "value" : "向 Billio 添加周期性账单。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "向 Billio 添加定期帳單。"
+            "value" : "向 Billio 新增週期性帳單。"
           }
         }
       }
@@ -1743,19 +1743,19 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Facture bientôt due"
+            "value" : "Facture bientôt à échéance"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "請求期限が近づいています"
+            "value" : "請求の支払期日が近づいています"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "청구서 결제 예정"
+            "value" : "청구서 결제일이 임박했습니다"
           }
         },
         "zh-Hans" : {
@@ -1829,7 +1829,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Los recordatorios de facturas se programan localmente en su dispositivo. Puedes desactivarlos en cualquier momento en Billio o en la configuración de iOS."
+            "value" : "Los recordatorios de facturas se programan localmente en tu dispositivo. Puedes desactivarlos cuando quieras en Billio o en los Ajustes de iOS."
           }
         },
         "fr" : {
@@ -1841,25 +1841,25 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "請求書のリマインダーはデバイス上でローカルにスケジュールされます。 Billio または iOS の設定でいつでも無効にできます。"
+            "value" : "請求書のリマインダーはデバイス上でローカルに設定されます。Billio または iOS の設定からいつでも無効にできます。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "청구서 알림은 귀하의 장치에 로컬로 예약됩니다. Billio 또는 iOS 설정에서 언제든지 비활성화할 수 있습니다."
+            "value" : "청구서 알림은 기기에 로컬로 예약됩니다. Billio 또는 iOS 설정에서 언제든지 끌 수 있습니다."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "帐单提醒是在您的设备上本地安排的。您可以随时在 Bi​​llio 或 iOS 设置中禁用它们。"
+            "value" : "账单提醒会在设备本地安排。你可以随时在 Billio 或 iOS 设置中关闭。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "帳單提醒是在您的裝置上本地安排的。您可以隨時在 Billio 或 iOS 設定中停用它們。"
+            "value" : "帳單提醒會在裝置本機排程。你可以隨時在 Billio 或 iOS 設定中停用。"
           }
         }
       }
@@ -1968,7 +1968,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "billio"
+            "value" : "Billio"
           }
         },
         "fr" : {
@@ -2008,7 +2008,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio verarbeitet keine Zahlungen und fragt niemals nach vollständigen Kartennummern, Bankdaten oder Sicherheitscodes. Zahlungsmethoden enthalten nur Bezeichnungen und optionale Referenzen der letzten vier Ziffern."
+            "value" : "Billio verarbeitet keine Zahlungen und fragt niemals nach vollständigen Kartennummern, Bankzugangsdaten oder Sicherheitscodes. Zahlungsmethoden enthalten nur ein Label und optional die letzten vier Ziffern."
           }
         },
         "es" : {
@@ -2020,31 +2020,31 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio ne traite pas les paiements et ne demande jamais les numéros de carte complets, les identifiants bancaires ou les codes de sécurité. Les méthodes de paiement contiennent uniquement des étiquettes et des références facultatives à quatre derniers chiffres."
+            "value" : "Billio ne traite pas les paiements et ne demande jamais les numéros de carte complets, les identifiants bancaires ou les codes de sécurité. Les moyens de paiement contiennent uniquement un libellé et, éventuellement, les quatre derniers chiffres."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio は支払いを処理せず、完全なカード番号、銀行資格情報、またはセキュリティ コードを尋ねることはありません。支払い方法には、ラベルとオプションの下 4 桁の参照のみが含まれます。"
+            "value" : "Billio は支払いを処理せず、カード番号全体や銀行の認証情報、セキュリティコードを尋ねることもありません。支払い方法にはラベルと、任意でカード番号の下4桁だけを保存します。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio는 결제를 처리하지 않으며 전체 카드 번호, 은행 자격 증명 또는 보안 코드를 요구하지 않습니다. 결제 방법에는 라벨과 선택적인 마지막 4자리 참조만 포함됩니다."
+            "value" : "Billio는 결제를 처리하지 않으며 전체 카드 번호, 은행 로그인 정보 또는 보안 코드를 요구하지 않습니다. 결제 수단에는 라벨과 선택적인 카드 끝 4자리만 저장됩니다."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio 不处理付款，也不会要求提供完整的卡号、银行凭证或安全代码。付款方式仅包含标签和可选的最后四位数字参考。"
+            "value" : "Billio 不处理付款，也不会要求完整的卡号、银行凭据或安全码。付款方式仅保存标签和可选的卡号末四位。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio 不處理付款，也不會要求完整的卡號、銀行憑證或安全代碼。付款方式僅包含標籤和可選的最後四位數字參考。"
+            "value" : "Billio 不處理付款，也不會要求完整的卡號、銀行登入資訊或安全碼。付款方式只會儲存標籤，以及可選的卡號末四碼。"
           }
         }
       }
@@ -2054,43 +2054,43 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio fordert aktuelle und historische Referenzzinssätze von Frankfurter an. Anfragen enthalten Währungscodes und Daten, nicht Ihre Rechnungsnamen oder Zahlungsdetails."
+            "value" : "Billio ruft aktuelle und historische Referenzkurse von Frankfurter ab. Die Anfragen enthalten nur Währungscodes und Daten, keine Rechnungsnamen oder Zahlungsdaten."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio solicita tasas de referencia actuales e históricas a Frankfurter. Las solicitudes contienen códigos de moneda y fechas, no los nombres de sus facturas ni los detalles de pago."
+            "value" : "Billio obtiene de Frankfurter los tipos de cambio de referencia actuales e históricos. Las solicitudes solo contienen códigos de moneda y fechas, no los nombres de tus facturas ni tus datos de pago."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio demande à Frankfurter les taux de référence actuels et historiques. Les demandes contiennent des codes de devise et des dates, mais pas les noms de vos factures ou les détails de paiement."
+            "value" : "Billio obtient auprès de Frankfurter les taux de change de référence actuels et historiques. Les requêtes contiennent uniquement des codes de devise et des dates, jamais les noms de vos factures ni vos informations de paiement."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio は、フランクフルターから現在および過去の参照レートをリクエストします。リクエストには通貨コードと日付が含まれますが、請求書名や支払いの詳細は含まれません。"
+            "value" : "Billio は Frankfurter から現在と過去の基準レートを取得します。リクエストに含まれるのは通貨コードと日付だけで、請求名や支払い情報は含まれません。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio는 프랑크푸르트(Frankfurter)에 현재 및 과거 기준 금리를 요청합니다. 요청에는 청구서 이름이나 결제 세부정보가 아닌 통화 코드와 날짜가 포함됩니다."
+            "value" : "Billio는 Frankfurter에서 현재 및 과거 기준 환율을 가져옵니다. 요청에는 통화 코드와 날짜만 포함되며 청구서 이름이나 결제 정보는 포함되지 않습니다."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio 向法兰克福请求当前和历史参考汇率。请求包含货币代码和日期，而不是您的帐单名称或付款详细信息。"
+            "value" : "Billio 从 Frankfurter 获取当前和历史参考汇率。请求仅包含货币代码和日期，不会包含你的账单名称或付款信息。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio 向法蘭克福請求當前和歷史參考匯率。請求包含貨幣代碼和日期，而不是您的帳單名稱或付款詳細資訊。"
+            "value" : "Billio 從 Frankfurter 取得目前和歷史參考匯率。請求只包含貨幣代碼和日期，不會包含你的帳單名稱或付款資訊。"
           }
         }
       }
@@ -2100,43 +2100,43 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio erfasst eine bestätigte Zahlung. Sie können die Änderung direkt im Anschluss rückgängig machen."
+            "value" : "Billio erfasst eine bestätigte Zahlung. Sie können diese Änderung direkt im Anschluss rückgängig machen."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio registrará un pago confirmado. Puede deshacer el cambio inmediatamente después."
+            "value" : "Billio registrará un pago confirmado. Puedes deshacer el cambio inmediatamente después."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio enregistrera un paiement confirmé. Vous pouvez annuler la modification immédiatement après."
+            "value" : "Billio enregistrera un paiement confirmé. Vous pourrez annuler cette modification immédiatement après."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio は確認された支払いを記録します。変更は直後に元に戻すことができます。"
+            "value" : "Billio は確認済みの支払いを記録します。直後に変更を取り消せます。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio는 확인된 지불을 기록할 것입니다. 변경 후에는 즉시 취소할 수 있습니다."
+            "value" : "Billio가 확인된 결제를 기록합니다. 이후 즉시 변경을 되돌릴 수 있습니다."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio 将记录确认的付款。您可以随后立即撤消更改。"
+            "value" : "Billio 将记录一笔已确认的付款。之后可以立即撤销这项更改。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio 將記錄確認的付款。您可以隨後立即撤銷變更。"
+            "value" : "Billio 將記錄一筆已確認的付款。之後可以立即復原這項變更。"
           }
         }
       }
@@ -2146,43 +2146,43 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio wird es nicht mehr in künftige Gesamtbeträge und Erinnerungen einbeziehen."
+            "value" : "Billio nimmt es künftig nicht mehr in Summen und Erinnerungen auf."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio dejará de incluirlo en los próximos totales y recordatorios."
+            "value" : "Billio dejará de incluirlo en los totales y recordatorios futuros."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio cessera de l'inclure dans les totaux et rappels à venir."
+            "value" : "Billio cessera de l’inclure dans les totaux et rappels à venir."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio は今後の合計とリマインダーにこれを含めることを停止します。"
+            "value" : "Billio は今後の合計やリマインダーに含めなくなります。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio는 향후 합계 및 알림에 해당 항목을 더 이상 포함하지 않습니다."
+            "value" : "Billio는 향후 합계와 알림에 해당 항목을 더 이상 포함하지 않습니다."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio 将停止将其包含在即将到来的总计和提醒中。"
+            "value" : "Billio 将不再把它计入后续总额和提醒。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Billio 將停止將其納入即將到來的總和和提醒中。"
+            "value" : "Billio 將不再把它計入後續總額和提醒。"
           }
         }
       }
@@ -2309,7 +2309,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "청구서 및 지불 내역은 개인 CloudKit 데이터베이스를 사용합니다. iCloud를 사용할 수 있으면 동기화가 자동으로 수행됩니다."
+            "value" : "청구서와 결제 내역은 개인 CloudKit 데이터베이스에 저장됩니다. iCloud를 사용할 수 있으면 자동으로 동기화됩니다."
           }
         },
         "zh-Hans" : {
@@ -2331,25 +2331,25 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Rechnungen mit dieser Referenz werden auf keine Zahlungsmethode umgestellt."
+            "value" : "Rechnungen mit dieser Referenz werden auf „Keine Zahlungsmethode“ gesetzt."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Las facturas que utilicen esta referencia se cambiarán a ningún método de pago."
+            "value" : "Las facturas que usen esta referencia pasarán a no tener método de pago."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Les factures utilisant cette référence seront remplacées par aucun mode de paiement."
+            "value" : "Les factures utilisant cette référence n’auront plus de moyen de paiement."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "この参照を使用した請求書は、支払方法なしに変更されます。"
+            "value" : "この参照を使用している請求書は、支払い方法なしに変更されます。"
           }
         },
         "ko" : {
@@ -2361,13 +2361,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "使用此参考的账单将更改为无付款方式。"
+            "value" : "使用此参考的账单将改为不使用付款方式。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "使用此參考的帳單將更改為無付款方式。"
+            "value" : "使用此參考的帳單將改為不指定付款方式。"
           }
         }
       }
@@ -2395,7 +2395,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "請求書、支払い確認、支払い方法の参照は SwiftData に保存されます。 iCloud が利用可能な場合、これらのレコードはプライベート CloudKit データベースを通じて同期されます。"
+            "value" : "請求書、支払い確認、支払い方法の参照は SwiftData に保存されます。iCloud が利用可能な場合、これらのデータはプライベート CloudKit データベースを通じて同期されます。"
           }
         },
         "ko" : {
@@ -3422,7 +3422,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "支払いを確認"
+            "value" : "支払いを確定"
           }
         },
         "ko" : {
@@ -3468,7 +3468,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "支払いを確認しますか?"
+            "value" : "支払いを確定しますか？"
           }
         },
         "ko" : {
@@ -3747,7 +3747,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "CSV エクスポートは、リクエストした場合にのみ作成され、選択した場所に送信されます。"
+            "value" : "CSV エクスポートは、リクエストした場合にのみ作成され、選択した場所に保存されます。"
           }
         },
         "ko" : {
@@ -3759,13 +3759,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "仅当您请求时才会创建 CSV 导出并将其发送到您选择的位置。"
+            "value" : "CSV 仅会在你请求时导出，并保存到你选择的位置。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "僅當您請求時才會建立 CSV 匯出並將其傳送到您選擇的位置。"
+            "value" : "CSV 匯出只會在你要求時建立，並儲存到你選擇的位置。"
           }
         }
       }
@@ -4429,7 +4429,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "¿Descartar tus cambios?"
+            "value" : "¿Descartar los cambios?"
           }
         },
         "fr" : {
@@ -4441,7 +4441,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "変更を破棄しますか?"
+            "value" : "変更を破棄しますか？"
           }
         },
         "ko" : {
@@ -4453,13 +4453,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "放弃您的更改吗？"
+            "value" : "要放弃更改吗？"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "放棄您的更改嗎？"
+            "value" : "要放棄變更嗎？"
           }
         }
       }
@@ -5895,7 +5895,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "청구서 지불 기한이 있음"
+            "value" : "결제 예정 청구서 있음"
           }
         },
         "zh-Hans" : {
@@ -6972,7 +6972,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "仅本地存储"
+            "value" : "仅存储在本机"
           }
         },
         "zh-Hant" : {
@@ -7018,7 +7018,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "仅本地回退：%@"
+            "value" : "仅使用本地存储：%@"
           }
         },
         "zh-Hant" : {
@@ -7104,7 +7104,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@를 유료로 표시하시겠습니까?"
+            "value" : "%@를 결제 완료로 표시하시겠습니까？"
           }
         },
         "zh-Hans" : {
@@ -7290,7 +7290,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "유료로 표시"
+            "value" : "결제 완료로 표시"
           }
         },
         "zh-Hans" : {
@@ -7324,37 +7324,37 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Marcado %@ como pagado. La próxima fecha de vencimiento es %@."
+            "value" : "Se marcó %@ como pagado. La próxima fecha de vencimiento es %@."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Marqué %@ comme payé. La prochaine date d’échéance est %@."
+            "value" : "%@ marqué comme payé. La prochaine échéance est %@."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ を支払い済みとしてマークしました。次の期日は %@ です。"
+            "value" : "%@ を支払い済みにしました。次回の支払期日は %@ です。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@를 유료로 표시했습니다. 다음 만기일은 %@입니다."
+            "value" : "%@를 결제 완료로 표시했습니다. 다음 결제일은 %@입니다."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "将 %@ 标记为已付款。下一个到期日是 %@。"
+            "value" : "已将 %@ 标记为已付款。下一个到期日是 %@。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "將 %@ 標記為已付款。下一個到期日是 %@。"
+            "value" : "已將 %@ 標記為已付款。下一個到期日是 %@。"
           }
         }
       }
@@ -7434,7 +7434,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "월간 간행물"
+            "value" : "월간"
           }
         },
         "zh-Hans" : {
@@ -7475,7 +7475,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "月額"
+            "value" : "毎月"
           }
         },
         "ko" : {
@@ -8082,25 +8082,25 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "次回の期日"
+            "value" : "次回支払日"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "다음 기한"
+            "value" : "다음 결제일"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "下一个截止日期"
+            "value" : "下次到期日"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "下一個截止日期"
+            "value" : "下次到期日"
           }
         }
       }
@@ -9231,31 +9231,31 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nur als bezahlt markierte Zahlungen enthalten"
+            "value" : "Es werden nur als bezahlt markierte Zahlungen berücksichtigt."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Solo se incluyen pagos marcados como pagados"
+            "value" : "Solo se incluyen los pagos marcados como pagados."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Seuls les paiements marqués comme payés sont inclus"
+            "value" : "Seuls les paiements marqués comme payés sont inclus."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "支払済みの記録のみを含みます"
+            "value" : "支払い済みとマークされた支払いのみが含まれます。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "결제 완료로 표시된 항목만 포함"
+            "value" : "결제 완료로 표시된 결제만 포함됩니다."
           }
         },
         "zh-Hans" : {
@@ -9355,13 +9355,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "打开取消页面"
+            "value" : "打开解约页面"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "開啟取消頁面"
+            "value" : "開啟解約頁面"
           }
         }
       }
@@ -9484,7 +9484,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "概要"
+            "value" : "Billioについて"
           }
         },
         "ko" : {
@@ -9519,7 +9519,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pagada"
+            "value" : "Pagado"
           }
         },
         "fr" : {
@@ -9706,7 +9706,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pausadas"
+            "value" : "En pausa"
           }
         },
         "fr" : {
@@ -9752,7 +9752,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ en pausa."
+            "value" : "%@ está en pausa."
           }
         },
         "fr" : {
@@ -9862,7 +9862,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "지불"
+            "value" : "결제"
           }
         },
         "zh-Hans" : {
@@ -11005,43 +11005,43 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Erfasst eine bestätigte Zahlung und verschiebt das nächste Fälligkeitsdatum der Rechnung."
+            "value" : "Erfasst eine bestätigte Zahlung und aktualisiert das nächste Fälligkeitsdatum der Rechnung."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Registra un pago confirmado y adelanta la próxima fecha de vencimiento de la factura."
+            "value" : "Registra un pago confirmado y actualiza la próxima fecha de vencimiento de la factura."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Enregistre un paiement confirmé et avance la prochaine date d'échéance de la facture."
+            "value" : "Enregistre un paiement confirmé et met à jour la prochaine échéance de la facture."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "確認された支払いを記録し、請求書の次回期日を早めます。"
+            "value" : "確認済みの支払いを記録し、請求書の次回支払日を更新します。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "확인된 지불을 기록하고 청구서의 다음 기한을 앞당깁니다."
+            "value" : "확인된 결제를 기록하고 청구서의 다음 결제일을 업데이트합니다."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "记录已确认的付款并将帐单的下一个到期日提前。"
+            "value" : "记录已确认的付款，并更新账单的下一个到期日。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "記錄已確認的付款並將帳單的下一個到期日提前。"
+            "value" : "記錄已確認的付款，並更新帳單的下一個到期日。"
           }
         }
       }
@@ -11343,19 +11343,19 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Me rappeler"
+            "value" : "Me le rappeler"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "リマインダー"
+            "value" : "リマインダーを設定"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "알림"
+            "value" : "알림 받기"
           }
         },
         "zh-Hans" : {
@@ -12153,13 +12153,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "新加坡元"
+            "value" : "新加坡幣"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "新加坡元"
+            "value" : "新加坡幣"
           }
         }
       }
@@ -12199,13 +12199,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "新加坡元 (SGD)"
+            "value" : "新加坡幣 (SGD)"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "新加坡元 (SGD)"
+            "value" : "新加坡幣 (SGD)"
           }
         }
       }
@@ -12850,7 +12850,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "您输入的信息将会丢失。"
+            "value" : "你输入的信息将会丢失。"
           }
         },
         "zh-Hant" : {
@@ -13305,7 +13305,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "今月に記録された確定済みサブスクリプション支払いを確認します。"
+            "value" : "今月記録された確認済みのサブスクリプション支払いを確認できます。"
           }
         },
         "ko" : {
@@ -13526,7 +13526,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "R deshacer"
+            "value" : "Deshacer"
           }
         },
         "fr" : {
@@ -13585,13 +13585,13 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "近日の請求"
+            "value" : "近日中の請求"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "곧 결제할 청구서"
+            "value" : "다가오는 청구서"
           }
         },
         "zh-Hans" : {
@@ -13632,7 +13632,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "近日の請求"
+            "value" : "近日中の請求"
           }
         },
         "ko" : {
@@ -14039,19 +14039,19 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Utilice la página de cancelación verificada de %@"
+            "value" : "Usa la página de cancelación verificada de %@"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Utiliser la page d'annulation vérifiée %@"
+            "value" : "Utiliser la page de résiliation vérifiée de %@"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "確認済みの %@ キャンセル ページを使用する"
+            "value" : "確認済みの %@ 解約ページを使用する"
           }
         },
         "ko" : {
@@ -14063,13 +14063,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "使用经过验证的 %@ 取消页面"
+            "value" : "使用已验证的 %@ 解约页面"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "使用經過驗證的 %@ 取消頁面"
+            "value" : "使用已驗證的 %@ 解約頁面"
           }
         }
       }
@@ -14144,7 +14144,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "元の金額を使用 · レート unavailable"
+            "value" : "元の金額を使用 · レートを利用できません"
           }
         },
         "ko" : {
@@ -14162,7 +14162,7 @@
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "使用原始金額 · 匯率不可用"
+            "value" : "使用原始金額 · 匯率無法取得"
           }
         }
       }
@@ -14455,7 +14455,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Su gasto Billio confirmado este mes es %@."
+            "value" : "Tu gasto confirmado en Billio este mes es %@."
           }
         },
         "fr" : {
@@ -14479,13 +14479,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "您本月确认的 Billio 支出为 %@。"
+            "value" : "本月已确认的 Billio 支出为 %@。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "您本月確認的 Billio 支出為 %@。"
+            "value" : "本月已確認的 Billio 支出為 %@。"
           }
         }
       }
@@ -14531,7 +14531,7 @@
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "您的數據"
+            "value" : "你的資料"
           }
         }
       }
@@ -14572,13 +14572,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "你的数据仍保存在此设备上"
+            "value" : "你的数据仍可在此设备上使用"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "你的資料仍保存在此裝置上"
+            "value" : "你的資料仍可在此裝置上使用"
           }
         }
       }
@@ -14733,7 +14733,7 @@
         "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "试用期将在 %lld 天后转为 %@ 付费计划。" } },
         "zh-Hant" : { "stringUnit" : { "state" : "translated", "value" : "試用期將在 %lld 天後轉為 %@ 付費方案。" } },
         "ja" : { "stringUnit" : { "state" : "translated", "value" : "トライアルは %lld 日後に %@ の有料プランへ移行します。" } },
-        "ko" : { "stringUnit" : { "state" : "translated", "value" : "평가판은 %lld일 후 %@ 유료 플랜으로 전환됩니다." } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "체험판은 %lld일 후 %@ 유료 요금제로 전환됩니다." } },
         "fr" : { "stringUnit" : { "state" : "translated", "value" : "L’essai devient payant dans %lld jours à %@." } },
         "de" : { "stringUnit" : { "state" : "translated", "value" : "Die Testversion wird in %lld Tagen zu %@ kostenpflichtig." } },
         "es" : { "stringUnit" : { "state" : "translated", "value" : "La prueba se convierte en un plan de pago de %@ en %lld días." } }

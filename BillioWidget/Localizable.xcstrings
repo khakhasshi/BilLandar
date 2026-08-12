@@ -245,43 +245,43 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fügen Sie ${name} für ${amount} ${currency} fällig ${nextDueDate} hinzu"
+            "value" : "Füge ${name} für ${amount} ${currency}, fällig am ${nextDueDate}, hinzu"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Agregue ${name} para ${amount} ${currency} adeudado en ${nextDueDate}"
+            "value" : "Añade ${name} por ${amount} ${currency}, con vencimiento el ${nextDueDate}"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ajoutez ${name} pour ${amount} ${currency} dû ${nextDueDate}"
+            "value" : "Ajoutez ${name} pour ${amount} ${currency}, avec échéance le ${nextDueDate}"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "${name} を ${amount} ${currency} に追加して ${nextDueDate} に支払います"
+            "value" : "${name} を ${amount} ${currency}、支払期日 ${nextDueDate} で追加"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "${nextDueDate}에 ${amount} ${currency}에 ${name} 추가"
+            "value" : "결제일이 ${nextDueDate}인 ${name} 추가: ${amount} ${currency}"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "添加 ${name}，金额为 ${amount} ${currency}，到期日期为 ${nextDueDate}"
+            "value" : "添加 ${name}，金额为 ${amount} ${currency}，到期日为 ${nextDueDate}"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "加 ${name}，金額為 ${amount} ${currency}，到期日為 ${nextDueDate}"
+            "value" : "新增 ${name}，金額為 ${amount} ${currency}，到期日為 ${nextDueDate}"
           }
         }
       }
@@ -461,13 +461,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "向 Billio 添加定期账单。"
+            "value" : "向 Billio 添加周期性账单。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "向 Billio 添加定期帳單。"
+            "value" : "向 Billio 新增週期性帳單。"
           }
         }
       }
@@ -1760,7 +1760,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "支払いを確認"
+            "value" : "支払いを確定"
           }
         },
         "ko" : {
@@ -5497,31 +5497,31 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mark %@ bezahlt"
+            "value" : "%@ als bezahlt markieren"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Marca %@ pagado"
+            "value" : "Marcar %@ como pagado"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Marque %@ payé"
+            "value" : "Marquer %@ comme payé"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "マーク %@ 支払い済み"
+            "value" : "%@ を支払い済みにする"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@가 유료로 표시됨"
+            "value" : "%@ 결제 완료로 표시"
           }
         },
         "zh-Hans" : {
@@ -5695,37 +5695,37 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Marcado %@ como pagado. La próxima fecha de vencimiento es %@."
+            "value" : "Se marcó %@ como pagado. La próxima fecha de vencimiento es %@."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Marqué %@ comme payé. La prochaine date d’échéance est %@."
+            "value" : "%@ marqué comme payé. La prochaine échéance est %@."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ を支払い済みとしてマークしました。次の期日は %@ です。"
+            "value" : "%@ を支払い済みにしました。次回の支払期日は %@ です。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@를 유료로 표시했습니다. 다음 만기일은 %@입니다."
+            "value" : "%@를 결제 완료로 표시했습니다. 다음 결제일은 %@입니다."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "将 %@ 标记为已付款。下一个到期日是 %@。"
+            "value" : "已将 %@ 标记为已付款。下一个到期日是 %@。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "將 %@ 標記為已付款。下一個到期日是 %@。"
+            "value" : "已將 %@ 標記為已付款。下一個到期日是 %@。"
           }
         }
       }
@@ -5759,7 +5759,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "월간 간행물"
+            "value" : "월간"
           }
         },
         "zh-Hans" : {
@@ -5800,7 +5800,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "月額"
+            "value" : "毎月"
           }
         },
         "ko" : {
@@ -6268,25 +6268,25 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "次回の期日"
+            "value" : "次回支払日"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "다음 기한"
+            "value" : "다음 결제일"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "下一个截止日期"
+            "value" : "下次到期日"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "下一個截止日期"
+            "value" : "下次到期日"
           }
         }
       }
@@ -6765,7 +6765,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Es werden nur Zahlungen berücksichtigt, die als bezahlt gekennzeichnet sind"
+            "value" : "Es werden nur als bezahlt markierte Zahlungen berücksichtigt."
           }
         },
         "es" : {
@@ -6777,13 +6777,13 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Seuls les paiements marqués payés sont inclus"
+            "value" : "Seuls les paiements marqués comme payés sont inclus."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "支払い済みとマークされた支払いのみが含まれます"
+            "value" : "支払い済みとマークされた支払いのみが含まれます。"
           }
         },
         "ko" : {
@@ -6795,13 +6795,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "仅包含标记为已付款的付款"
+            "value" : "仅包含标记为已付款的记录"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "僅包含標記為已付款的付款"
+            "value" : "僅包含標記為已付款的記錄"
           }
         }
       }
@@ -6842,13 +6842,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "打开取消页面"
+            "value" : "打开解约页面"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "開啟取消頁面"
+            "value" : "開啟解約頁面"
           }
         }
       }
@@ -6971,7 +6971,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "概要"
+            "value" : "Billioについて"
           }
         },
         "ko" : {
@@ -7006,7 +7006,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pagada"
+            "value" : "Pagado"
           }
         },
         "fr" : {
@@ -7193,7 +7193,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pausadas"
+            "value" : "En pausa"
           }
         },
         "fr" : {
@@ -7239,7 +7239,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ en pausa."
+            "value" : "%@ está en pausa."
           }
         },
         "fr" : {
@@ -7748,43 +7748,43 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Erfasst eine bestätigte Zahlung und verschiebt das nächste Fälligkeitsdatum der Rechnung."
+            "value" : "Erfasst eine bestätigte Zahlung und aktualisiert das nächste Fälligkeitsdatum der Rechnung."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Registra un pago confirmado y adelanta la próxima fecha de vencimiento de la factura."
+            "value" : "Registra un pago confirmado y actualiza la próxima fecha de vencimiento de la factura."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Enregistre un paiement confirmé et avance la prochaine date d'échéance de la facture."
+            "value" : "Enregistre un paiement confirmé et met à jour la prochaine échéance de la facture."
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "確認された支払いを記録し、請求書の次回期日を早めます。"
+            "value" : "確認済みの支払いを記録し、請求書の次回支払日を更新します。"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "확인된 지불을 기록하고 청구서의 다음 기한을 앞당깁니다."
+            "value" : "확인된 결제를 기록하고 청구서의 다음 결제일을 업데이트합니다."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "记录已确认的付款并将帐单的下一个到期日提前。"
+            "value" : "记录已确认的付款，并更新账单的下一个到期日。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "記錄已確認的付款並將帳單的下一個到期日提前。"
+            "value" : "記錄已確認的付款，並更新帳單的下一個到期日。"
           }
         }
       }
@@ -7948,19 +7948,19 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Me rappeler"
+            "value" : "Me le rappeler"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "リマインダー"
+            "value" : "リマインダーを設定"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "알림"
+            "value" : "알림 받기"
           }
         },
         "zh-Hans" : {
@@ -8247,13 +8247,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "查看您的下一次续订并将其标记为已付款，无需打开 Billio。"
+            "value" : "查看下一次续订并标记为已付款，无需打开 Billio。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "查看您的下一次續訂並將其標記為已付款，無需打開 Billio。"
+            "value" : "查看下一次續訂並標記為已付款，不需開啟 Billio。"
           }
         }
       }
@@ -8433,13 +8433,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "新加坡元"
+            "value" : "新加坡幣"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "新加坡元"
+            "value" : "新加坡幣"
           }
         }
       }
@@ -8479,13 +8479,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "新加坡元 (SGD)"
+            "value" : "新加坡幣 (SGD)"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "新加坡元 (SGD)"
+            "value" : "新加坡幣 (SGD)"
           }
         }
       }
@@ -8888,7 +8888,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "今月記録された確認済みのサブスクリプション支払いを追跡します。"
+            "value" : "今月記録された確認済みのサブスクリプション支払いを確認できます。"
           }
         },
         "ko" : {
@@ -8900,13 +8900,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "跟踪本月记录的确认订阅付款。"
+            "value" : "查看本月记录的已确认订阅付款。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "追蹤本月記錄的確認訂閱付款。"
+            "value" : "查看本月記錄的已確認訂閱付款。"
           }
         }
       }
@@ -8970,7 +8970,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "R deshacer"
+            "value" : "Deshacer"
           }
         },
         "fr" : {
@@ -9029,7 +9029,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "近日の請求"
+            "value" : "近日中の請求"
           }
         },
         "ko" : {
@@ -9075,7 +9075,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "今後の請求書"
+            "value" : "近日中の請求"
           }
         },
         "ko" : {
@@ -9087,13 +9087,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "即将到来的账单"
+            "value" : "即将到期的账单"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "即將到來的賬單"
+            "value" : "即將到期的帳單"
           }
         }
       }
@@ -9388,7 +9388,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Su gasto Billio confirmado este mes es %@."
+            "value" : "Tu gasto confirmado en Billio este mes es %@."
           }
         },
         "fr" : {
@@ -9412,13 +9412,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "您本月确认的 Billio 支出为 %@。"
+            "value" : "本月已确认的 Billio 支出为 %@。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "您本月確認的 Billio 支出為 %@。"
+            "value" : "本月已確認的 Billio 支出為 %@。"
           }
         }
       }
