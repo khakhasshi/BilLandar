@@ -22,6 +22,7 @@ struct BillioApp: App {
         )
         #if DEBUG && targetEnvironment(simulator)
         do {
+            try SampleData.migrateLegacySimulatorDataIfNeeded(in: modelContainer.mainContext)
             try SampleData.seedIfNeeded(in: modelContainer.mainContext)
         } catch {
             assertionFailure("Unable to seed Billio simulator data: \(error)")

@@ -13,7 +13,7 @@ struct BillioWidgetEntry: TimelineEntry {
         nextBills: [
             BillioSystemBill(
                 id: UUID(),
-                name: "Netflix",
+                name: "Streamly",
                 subtitle: "Monthly Plan",
                 amount: 15.49,
                 currencyCode: "USD",
@@ -24,7 +24,7 @@ struct BillioWidgetEntry: TimelineEntry {
             ),
             BillioSystemBill(
                 id: UUID(),
-                name: "iCloud+",
+                name: "CloudNest+",
                 subtitle: "200 GB Storage",
                 amount: 2.99,
                 currencyCode: "USD",

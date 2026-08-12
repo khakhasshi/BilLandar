@@ -29,6 +29,8 @@ final class SampleDataTests: XCTestCase {
         XCTAssertTrue(bills.contains { $0.trialEndDate != nil })
         XCTAssertTrue(bills.contains { $0.status == .paused })
         XCTAssertTrue(payments.contains { $0.status == .failed })
+        let realBrandNames = ["Netflix", "Spotify", "iCloud+", "ChatGPT Plus", "YouTube Premium", "Disney+", "Amazon Prime"]
+        XCTAssertTrue(Set(bills.map(\.name).filter { realBrandNames.contains($0) }).isEmpty)
 
         let insightKinds = Set(InsightEngine.generate(bills: bills, payments: payments).map(\.kind))
         XCTAssertTrue(insightKinds.contains(.duplicate))

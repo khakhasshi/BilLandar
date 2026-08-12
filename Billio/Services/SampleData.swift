@@ -3,6 +3,82 @@ import SwiftData
 
 @MainActor
 enum SampleData {
+    private static let legacySimulatorNameMap: [String: String] = [
+        "Netflix": "Streamly",
+        "Netflix Family": "Streamly Family",
+        "Spotify": "EchoBeat",
+        "iCloud+": "CloudNest+",
+        "ChatGPT Plus": "Nova AI",
+        "Notion AI": "NoteForge AI",
+        "YouTube Premium": "CinemaFlow Premium",
+        "Disney+": "Starry+",
+        "Amazon Prime": "ParcelPass",
+        "Adobe Creative Cloud": "PixelForge Suite"
+    ]
+
+    /// Replaces only the complete legacy seed set in an existing simulator store.
+    /// User-created records are left untouched when the store contains anything
+    /// outside that exact set.
+    static func migrateLegacySimulatorDataIfNeeded(in context: ModelContext) throws {
+        let bills = try context.fetch(FetchDescriptor<Bill>())
+        guard bills.count == legacySimulatorNameMap.count,
+              Set(bills.map(\.name)) == Set(legacySimulatorNameMap.keys) else { return }
+
+        let replacements = Dictionary(uniqueKeysWithValues: sampleBills.map { ($0.name, $0) })
+        var replacementNamesByID: [UUID: String] = [:]
+
+        for bill in bills {
+            guard let replacementName = legacySimulatorNameMap[bill.name],
+                  let replacement = replacements[replacementName] else { continue }
+            replacementNamesByID[bill.id] = replacement.name
+            bill.name = replacement.name
+            bill.subtitle = replacement.subtitle
+            bill.amount = replacement.amount
+            bill.currencyCode = replacement.currencyCode
+            bill.categoryRawValue = replacement.categoryRawValue
+            bill.cycleRawValue = replacement.cycleRawValue
+            bill.notes = replacement.notes
+            bill.symbolName = replacement.symbolName
+            bill.brandColorHex = replacement.brandColorHex
+            bill.merchantIdentifier = replacement.merchantIdentifier
+            bill.trialEndDate = replacement.trialEndDate
+            bill.paymentMethodLabel = replacement.paymentMethodLabel
+            bill.cancellationURLString = nil
+            bill.cancellationURLVerified = false
+            bill.updatedAt = .now
+        }
+
+        for payment in try context.fetch(FetchDescriptor<PaymentRecord>()) {
+            if let replacementName = replacementNamesByID[payment.billID] {
+                payment.billName = replacementName
+            }
+        }
+
+        let legacyPaymentMethods = try context.fetch(FetchDescriptor<PaymentMethod>())
+        if legacyPaymentMethods.count == 3,
+           Set(legacyPaymentMethods.map(\.name)) == ["Personal Visa", "Travel Mastercard", "Apple Pay"] {
+            for method in legacyPaymentMethods {
+                switch method.name {
+                case "Personal Visa":
+                    method.name = "Personal Card"
+                    method.issuer = "Card Network"
+                case "Travel Mastercard":
+                    method.name = "Travel Card"
+                    method.issuer = "Card Network"
+                case "Apple Pay":
+                    method.name = "Digital Wallet"
+                    method.type = .wallet
+                    method.issuer = ""
+                default:
+                    break
+                }
+                method.updatedAt = .now
+            }
+        }
+
+        try context.save()
+    }
+
     static func seedIfNeeded(in context: ModelContext) throws {
         let billDescriptor = FetchDescriptor<Bill>(sortBy: [SortDescriptor(\Bill.nextDueDate)])
         var bills = try context.fetch(billDescriptor)
@@ -25,9 +101,9 @@ enum SampleData {
         var methods = try context.fetch(methodDescriptor)
         if methods.isEmpty {
             methods = [
-                PaymentMethod(name: "Personal Visa", type: .card, issuer: "Visa", lastFour: "4242", isDefault: true),
-                PaymentMethod(name: "Travel Mastercard", type: .card, issuer: "Mastercard", lastFour: "8088"),
-                PaymentMethod(name: "Apple Pay", type: .applePay)
+                PaymentMethod(name: "Personal Card", type: .card, issuer: "Card Network", lastFour: "4242", isDefault: true),
+                PaymentMethod(name: "Travel Card", type: .card, issuer: "Card Network", lastFour: "8088"),
+                PaymentMethod(name: "Digital Wallet", type: .wallet)
             ]
             methods.forEach(context.insert)
         }
@@ -37,8 +113,8 @@ enum SampleData {
                 bill.paymentMethodID = methods.first { $0.lastFour == "4242" }?.id
             } else if bill.paymentMethodLabel.contains("8088") {
                 bill.paymentMethodID = methods.first { $0.lastFour == "8088" }?.id
-            } else if bill.paymentMethodLabel.localizedCaseInsensitiveContains("Apple Pay") {
-                bill.paymentMethodID = methods.first { $0.type == .applePay }?.id
+            } else if bill.paymentMethodLabel.localizedCaseInsensitiveContains("Digital Wallet") {
+                bill.paymentMethodID = methods.first { $0.type == .wallet }?.id
             }
         }
 
@@ -53,7 +129,7 @@ enum SampleData {
     static var sampleBills: [Bill] {
         [
             Bill(
-                name: "Netflix",
+                name: "Streamly",
                 subtitle: "Standard Plan",
                 amount: 15.49,
                 category: .entertainment,
@@ -62,12 +138,11 @@ enum SampleData {
                 notes: "Primary household plan",
                 symbolName: "play.fill",
                 brandColorHex: "141414",
-                merchantIdentifier: "netflix",
-                cancellationURLString: "https://www.netflix.com/cancelplan",
-                paymentMethodLabel: "Visa •••• 4242"
+                merchantIdentifier: "streamly",
+                paymentMethodLabel: "Personal Card •••• 4242"
             ),
             Bill(
-                name: "Netflix Family",
+                name: "Streamly Family",
                 subtitle: "Family Plan",
                 amount: 22.99,
                 category: .entertainment,
@@ -76,11 +151,10 @@ enum SampleData {
                 notes: "Possible duplicate subscription",
                 symbolName: "person.2.fill",
                 brandColorHex: "B20710",
-                merchantIdentifier: "netflix",
-                cancellationURLString: "https://www.netflix.com/cancelplan"
+                merchantIdentifier: "streamly"
             ),
             Bill(
-                name: "Spotify",
+                name: "EchoBeat",
                 subtitle: "Premium Individual",
                 amount: 11.99,
                 currencyCode: "EUR",
@@ -89,12 +163,11 @@ enum SampleData {
                 nextDueDate: .billioDate(daysFromToday: 1),
                 symbolName: "waveform",
                 brandColorHex: "1DB954",
-                merchantIdentifier: "spotify",
-                cancellationURLString: "https://www.spotify.com/account/subscription/",
-                paymentMethodLabel: "Mastercard •••• 8088"
+                merchantIdentifier: "echobeat",
+                paymentMethodLabel: "Travel Card •••• 8088"
             ),
             Bill(
-                name: "iCloud+",
+                name: "CloudNest+",
                 subtitle: "200 GB Storage",
                 amount: 2.99,
                 category: .storage,
@@ -102,10 +175,10 @@ enum SampleData {
                 nextDueDate: .billioDate(daysFromToday: 1),
                 symbolName: "cloud.fill",
                 brandColorHex: "46A8F0",
-                merchantIdentifier: "icloud"
+                merchantIdentifier: "cloudnest"
             ),
             Bill(
-                name: "ChatGPT Plus",
+                name: "Nova AI",
                 subtitle: "Plus Subscription",
                 amount: 20,
                 category: .productivity,
@@ -113,11 +186,11 @@ enum SampleData {
                 nextDueDate: .billioDate(daysFromToday: 3),
                 symbolName: "sparkles",
                 brandColorHex: "10A37F",
-                merchantIdentifier: "chatgpt",
-                paymentMethodLabel: "Apple Pay"
+                merchantIdentifier: "nova-ai",
+                paymentMethodLabel: "Digital Wallet"
             ),
             Bill(
-                name: "Notion AI",
+                name: "NoteForge AI",
                 subtitle: "Free Trial",
                 amount: 10,
                 category: .productivity,
@@ -126,12 +199,11 @@ enum SampleData {
                 notes: "Trial converts to a paid plan",
                 symbolName: "doc.text.fill",
                 brandColorHex: "2F3437",
-                merchantIdentifier: "notion-ai",
+                merchantIdentifier: "noteforge-ai",
                 trialEndDate: .billioDate(daysFromToday: 5),
-                cancellationURLString: "https://www.notion.so/profile/billing"
             ),
             Bill(
-                name: "YouTube Premium",
+                name: "CinemaFlow Premium",
                 subtitle: "Family Plan",
                 amount: 128,
                 currencyCode: "HKD",
@@ -140,10 +212,10 @@ enum SampleData {
                 nextDueDate: .billioDate(daysFromToday: 6),
                 symbolName: "play.rectangle.fill",
                 brandColorHex: "FF0033",
-                merchantIdentifier: "youtube-premium"
+                merchantIdentifier: "cinemaflow-premium"
             ),
             Bill(
-                name: "Disney+",
+                name: "Starry+",
                 subtitle: "Monthly Plan",
                 amount: 55,
                 currencyCode: "CNY",
@@ -153,10 +225,10 @@ enum SampleData {
                 status: .paused,
                 symbolName: "sparkle",
                 brandColorHex: "163A70",
-                merchantIdentifier: "disney-plus"
+                merchantIdentifier: "starry-plus"
             ),
             Bill(
-                name: "Amazon Prime",
+                name: "ParcelPass",
                 subtitle: "Annual Plan",
                 amount: 139,
                 category: .other,
@@ -164,10 +236,10 @@ enum SampleData {
                 nextDueDate: .billioDate(daysFromToday: 20),
                 symbolName: "shippingbox.fill",
                 brandColorHex: "168A93",
-                merchantIdentifier: "amazon-prime"
+                merchantIdentifier: "parcelpass"
             ),
             Bill(
-                name: "Adobe Creative Cloud",
+                name: "PixelForge Suite",
                 subtitle: "Photography Plan",
                 amount: 19.99,
                 category: .productivity,
@@ -175,7 +247,7 @@ enum SampleData {
                 nextDueDate: .billioDate(daysFromToday: 12),
                 symbolName: "camera.aperture",
                 brandColorHex: "E83B3B",
-                merchantIdentifier: "adobe-creative-cloud"
+                merchantIdentifier: "pixelforge-suite"
             )
         ]
     }
@@ -204,10 +276,10 @@ enum SampleData {
                 }
 
                 let historicalAmount: Double
-                if bill.merchantIdentifier == "spotify", offset >= 2 {
+                if bill.merchantIdentifier == "echobeat", offset >= 2 {
                     historicalAmount = 10.99
-                } else if bill.merchantIdentifier == "netflix", offset >= 4 {
-                    historicalAmount = bill.name == "Netflix" ? 13.99 : bill.amount
+                } else if bill.merchantIdentifier == "streamly", offset >= 4 {
+                    historicalAmount = bill.name == "Streamly" ? 13.99 : bill.amount
                 } else {
                     historicalAmount = bill.amount
                 }
@@ -223,13 +295,13 @@ enum SampleData {
             }
         }
 
-        if let adobe = bills.first(where: { $0.merchantIdentifier == "adobe-creative-cloud" }) {
+        if let pixelForge = bills.first(where: { $0.merchantIdentifier == "pixelforge-suite" }) {
             records.append(
                 PaymentRecord(
-                    billID: adobe.id,
-                    billName: adobe.name,
-                    amount: adobe.amount,
-                    currencyCode: adobe.currencyCode,
+                    billID: pixelForge.id,
+                    billName: pixelForge.name,
+                    amount: pixelForge.amount,
+                    currencyCode: pixelForge.currencyCode,
                     paidAt: .billioDate(daysFromToday: -2),
                     status: .failed,
                     note: "Payment method declined"
