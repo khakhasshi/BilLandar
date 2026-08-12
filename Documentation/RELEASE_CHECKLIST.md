@@ -14,6 +14,7 @@ Connect.
   migration plan.
 - [x] Exchange-rate requests have a 20-second timeout and one transient retry.
 - [x] Local notification copy and model-backed labels use the selected app locale.
+- [x] Public draft legal hub, Privacy Policy, Terms of Use, EULA note, and support/data-request pages are published at https://khakhasshi.github.io/Billio/.
 - [ ] Run the full localization review on every supported device language and
   replace any catalog entry that is still English by design.
 - [ ] Archive with the distribution profile and export an App Store package.
@@ -33,7 +34,8 @@ Connect.
 
 ## App Store Connect
 
-- [ ] Add the privacy policy URL and support URL.
+- [ ] Add the final privacy policy URL and support URL in App Store Connect after
+  replacing the draft publisher identity/contact details.
 - [ ] Complete App Privacy answers for SwiftData, private CloudKit sync, local
   notifications, exchange-rate requests, and user-initiated CSV exports.
 - [ ] Set age rating, category, pricing, availability, and review contact data.
